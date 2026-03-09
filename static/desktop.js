@@ -1,0 +1,1 @@
+/* controls that if double click on desktop items, they open the corresponding window */
