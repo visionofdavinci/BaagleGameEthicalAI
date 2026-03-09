@@ -1,1 +1,180 @@
 /* fixed bar at bottom, green start botton (+contract signing) clock-area on the right, system tray icons*/
+/* taskbar bar */
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  /* XP Luna taskbar gradient */
+  background: linear-gradient(180deg,
+    #3168d5 0%,
+    #1941a5 3%,
+    #1941a5 97%,
+    #122b72 100%
+  );
+  border-top: 2px solid #0c48c2;
+  z-index: 9999;
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+  font-size: 12px;
+  user-select: none;
+}
+
+/* start button */
+#start-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 30px;
+  padding: 0 12px 0 6px;
+  margin: 0 4px;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  /* XP green gradient */
+  background: linear-gradient(180deg,
+    #3c9a38 0%,
+    #2d8e2a 40%,
+    #1d7a1a 60%,
+    #196e16 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    1px 0 1px rgba(0, 0, 0, 0.2);
+}
+
+#start-button img {
+  width: 20px;
+  height: 20px;
+  image-rendering: pixelated;
+}
+
+#start-button:hover {
+  background: linear-gradient(180deg,
+    #4aaf46 0%,
+    #3a9e36 40%,
+    #278a24 60%,
+    #1f7c1c 100%
+  );
+}
+
+#start-button:active {
+  background: linear-gradient(180deg,
+    #2d8229 0%,
+    #1f721c 40%,
+    #156a12 60%,
+    #105e0e 100%
+  );
+}
+
+/* taskbar tabs */
+#taskbar-tabs {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  padding: 4px 2px;
+  gap: 2px;
+  overflow-x: hidden;
+}
+
+.taskbar-tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 28px;
+  padding: 0 12px;
+  max-width: 180px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: linear-gradient(180deg,
+    #3a7ae8 0%,
+    #2461c9 50%,
+    #1b4da0 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.taskbar-tab img {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.taskbar-tab:hover {
+  background: linear-gradient(180deg,
+    #4a8ef8 0%,
+    #3474de 50%,
+    #2560b8 100%
+  );
+}
+
+/* active focused tab — lighter, pressed-in look */
+.taskbar-tab.active {
+  background: linear-gradient(180deg,
+    #5ca4ff 0%,
+    #4888e0 50%,
+    #3a72c0 100%
+  );
+  box-shadow:
+    inset 0 0 4px rgba(0, 0, 0, 0.15),
+    0 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* minimized tab */
+.taskbar-tab.minimized {
+  background: linear-gradient(180deg,
+    #2050a0 0%,
+    #1a4088 50%,
+    #143070 100%
+  );
+  color: #c0d0f0;
+}
+
+/*system tray */
+#system-tray {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+  padding: 0 12px;
+  margin-left: auto;
+  background: linear-gradient(180deg,
+    #1290e9 0%,
+    #0f7ad4 50%,
+    #0c68b8 100%
+  );
+  border-left: 1px solid #0a50a0;
+}
+
+.tray-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  opacity: 0.85;
+}
+
+.tray-icon:hover {opacity: 1;}
+
+#clock {
+  color: #fff;
+  font-size: 11px;
+  min-width: 55px;
+  text-align: center;
+}

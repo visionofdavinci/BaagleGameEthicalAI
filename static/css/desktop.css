@@ -136,3 +136,116 @@ html, body {
   height: 64px;
   image-rendering: pixelated;
 }
+
+/* notification baloon */
+.notification {
+  position: fixed;
+  bottom: 52px;  /* just above the taskbar */
+  right: 16px;
+  width: 280px;
+  background: #ffffe1; /* XP tooltip yellow */
+  border: 1px solid #000;
+  border-radius: 1px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  font-family: "Tahoma", "Segoe UI", sans-serif;
+  font-size: 11px;
+  z-index: 10000;
+  animation: notif-slide-in 0.3s ease-out;
+}
+
+/* the little triangle tail pointing down toward the tray */
+.notification::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  right: 24px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #ffffe1;
+}
+
+.notification::before {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  right: 23px;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 9px solid #000;
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px 4px;
+  border-bottom: 1px solid #d4d0c8;
+}
+
+.notification-header strong {
+  flex: 1;
+  font-size: 11px;
+}
+
+.notification-icon {
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.notification-close:hover {
+  color: #c00;
+}
+
+.notification-body {
+  padding: 6px 8px 8px;
+}
+
+.notification-body p {
+  margin: 0 0 4px;
+}
+
+.notification-cc {
+  color: #888;
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 6px !important;
+}
+
+/* slide in from bottom-right */
+@keyframes notif-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* fade out */
+.notification.fade-out {
+  animation: notif-fade-out 0.3s ease-in forwards;
+}
+
+@keyframes notif-fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
