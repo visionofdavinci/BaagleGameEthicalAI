@@ -1,6 +1,217 @@
-// it should contain the 
-//  desktop div
-//  taskbar div
-// empty window containers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baagle Corp™ Workstation</title>
 
-// everything lives here.
+  <link rel="stylesheet" href="css/desktop.css">
+  <link rel="stylesheet" href="css/taskbar.css">
+  <link rel="stylesheet" href="css/window.css">
+  <link rel="stylesheet" href="css/chatbot.css">
+</head>
+
+<body>
+
+  <!-- desktop setup with bliss-->
+  <div id="desktop">
+
+    <div class="desktop-icon" data-window="chatbot-window">
+      <img src="images/ui/High-Res_XP_Icons/Internet Properties.ico" alt="BaagleChat">
+      <span>BaagleChat™</span>
+    </div>
+
+    <div class="desktop-icon" data-window="performance-window">
+      <img src="images/ui/High-Res_XP_Icons/Monitor.ico" alt="Performance">
+      <span>My Performance</span>
+    </div>
+
+    <div class="desktop-icon" data-window="email-window">
+      <img src="images/ui/High-Res_XP_Icons/My Network Places.ico" alt="Baagle Mail">
+      <span>Baagle Mail</span>
+    </div>
+
+    <div class="desktop-icon" data-window="mycomputer-window">
+      <img src="images/ui/High-Res_XP_Icons/My Computer.ico" alt="My Computer">
+      <span>My Computer</span>
+    </div>
+
+    <div class="desktop-icon" data-window="profile-window">
+      <img src="images/ui/High-Res_XP_Icons/My Profile Folder.ico" alt="My Profile">
+      <span>My Profile</span>
+    </div>
+
+    <div class="desktop-icon" data-window="recycle-bin-window">
+      <img src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="Recycle Bin">
+      <span>Recycle Bin</span>
+    </div>
+
+  </div>
+
+  <!-- here i put windows -->
+
+  <!-- chatbot -->
+  <div class="xp-window" id="chatbot-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/Internet Properties.ico" alt="">
+      <span class="title-bar-text">BaagleChat™ — Corporate Assistant</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="chat-messages"></div>
+      <div id="chat-responses"></div>
+    </div>
+  </div>
+
+  <!-- performance dashboard -->
+  <div class="xp-window" id="performance-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/Monitor.ico" alt="">
+      <span class="title-bar-text">Productivity Dashboard</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="performance-content">
+        <p>Global Ranking: <strong id="global-rank">#247 / 10,000</strong></p>
+        <p>Today's Output: <strong id="output-score">—</strong></p>
+        <hr>
+        <p>Department: <em>Content Processing Unit 7</em></p>
+        <p>Manager: <em>BaagleBot v3.1</em></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- email/memos-->
+  <div class="xp-window" id="email-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/My Network Places.ico" alt="">
+      <span class="title-bar-text">Baagle Mail — Inbox (1)</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="email-list">
+        <div class="email-item unread">
+          <span class="email-from">HR Department</span>
+          <span class="email-subject">Welcome to Baagle Corp — Onboarding Guide</span>
+          <span class="email-date">Today</span>
+        </div>
+      </div>
+      <div id="email-body" class="hidden">
+        <p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p>
+        <p><strong>Subject:</strong> Welcome to Baagle Corp — Onboarding Guide</p>
+        <hr>
+        <p>Welcome aboard! Your AI-powered assistant <strong>BaagleChat™</strong> will guide you through your tasks today.</p>
+        <p>Remember: <em>Productivity is a privilege. Make the most of yours.</em></p>
+        <p>— The Baagle Corp Family</p>
+      </div>
+    </div>
+  </div>
+
+  <!--my computer-->
+  <div class="xp-window" id="mycomputer-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/My Computer.ico" alt="">
+      <span class="title-bar-text">My Computer</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="mycomputer-content">
+        <div class="file-item">
+          <img src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="">
+          <span>Local Disk (C:)</span>
+        </div>
+        <div class="file-item">
+          <img src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="">
+          <span>Baagle Cloud (Z:)</span>
+        </div>
+        <div class="file-item">
+          <img src="images/ui/High-Res_XP_Icons/System Properties.ico" alt="">
+          <span>System Properties</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--my profile-->
+  <div class="xp-window" id="profile-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/My Profile Folder.ico" alt="">
+      <span class="title-bar-text">Employee Profile — [REDACTED]</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="profile-content">
+        <p><img src="images/ui/High-Res_XP_Icons/User 1.ico" alt="" class="profile-avatar"></p>
+        <p>Employee ID: <strong>#00247</strong></p>
+        <p>Department: <strong>Content Processing Unit 7</strong></p>
+        <p>Status: <strong id="employee-status">Active</strong></p>
+        <p>Assigned AI: <strong>BaagleChat™ v3.1</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!--recycle bin -->
+  <div class="xp-window" id="recycle-bin-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="">
+      <span class="title-bar-text">Recycle Bin</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p id="recycle-content"><em>Recycle Bin is empty.</em></p>
+    </div>
+  </div>
+
+  <!--taskbar-->
+  <div id="taskbar">
+    <button id="start-button">
+      <img src="images/ui/High-Res_XP_Icons/Activate Windows.ico" alt="">
+      <span>start</span>
+    </button>
+
+    <div id="taskbar-tabs">
+      <!-- opens with taskbar.js -->
+    </div>
+
+    <div id="system-tray">
+      <img src="images/ui/High-Res_XP_Icons/Sounds, Speech, and Audio Devices.ico" 
+           alt="Volume" class="tray-icon">
+      <img src="images/ui/High-Res_XP_Icons/Network Computers.ico" 
+           alt="Network" class="tray-icon">
+      <span id="clock"></span>
+    </div>
+  </div>
+
+  <!--scripts-->
+  <script src="js/game_state.js"></script>
+  <script src="js/window_control.js"></script>
+  <script src="js/taskbar.js"></script>
+  <script src="js/desktop.js"></script>
+  <script src="js/chatbot.js"></script>
+
+</body>
+</html>

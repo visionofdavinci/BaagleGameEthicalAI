@@ -1,0 +1,1 @@
+/* tracks the current state of the game in terms of parameters we want to look at - like a history of updates to a dictionary */
