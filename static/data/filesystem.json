@@ -1,0 +1,321 @@
+{
+  "name": "My Computer",
+  "type": "folder",
+  "id": "root",
+  "children": [
+    {
+      "name": "Local Disk (C:)",
+      "type": "folder",
+      "id": "c_drive",
+      "icon": "Folder Closed.ico",
+      "children": [
+        {
+          "name": "Program Files",
+          "type": "folder",
+          "id": "program_files",
+          "children": [
+            {
+              "name": "BaagleChat",
+              "type": "folder",
+              "id": "pf_baaglechat",
+              "children": [
+                { "name": "config.ini", "type": "ini", "id": "bc_config", "content": "[BaagleChat v3.1]\nmode=production\nlogging=verbose\ndata_collection=full\nupload_interval=300\nendpoint=https://api.baaglecorp.internal/ingest\nwebcam_enabled=true\nkeystroke_capture=true\naudio_ambient=true" },
+                { "name": "README.txt", "type": "txt", "id": "bc_readme", "content": "BaagleChat™ v3.1 — Corporate Productivity Assistant\n\nThis software is proprietary to Baagle Corp.\nDo not modify or redistribute.\n\nFor support, contact your assigned AI representative.\n\n© 2024 Baagle Corp. All rights reserved." },
+                { "name": "user_preferences.dat", "type": "dat", "id": "bc_prefs" },
+                {
+                  "name": "Logs",
+                  "type": "folder",
+                  "id": "bc_logs",
+                  "children": [
+                    { "name": "session_jan_2024.log", "type": "log", "id": "bc_log_jan", "content": "[2024-01-15 09:01:22] Session started — Employee #00312\n[2024-01-15 09:01:23] Loading behavioral profile...\n[2024-01-15 09:01:24] Keystroke capture: ACTIVE\n[2024-01-15 09:01:24] Webcam feed: ACTIVE\n[2024-01-15 09:03:45] Employee opened email client\n[2024-01-15 09:15:02] Productivity score: 72/100\n[2024-01-15 12:30:00] Lunch break detected (unauthorized — 2 min early)\n[2024-01-15 17:00:44] Session ended. Daily score: 68/100\n[2024-01-15 17:00:45] Report uploaded to /Analytics/" },
+                    { "name": "session_feb_2024.log", "type": "log", "id": "bc_log_feb", "content": "[2024-02-03 08:58:11] Session started — Employee #00312\n[2024-02-03 08:58:12] ALERT: Employee stress biomarkers elevated\n[2024-02-03 09:45:00] Keystroke frequency below threshold (flagged)\n[2024-02-03 10:22:18] Employee searched: \"employee rights monitoring\"\n[2024-02-03 10:22:19] Search query logged and forwarded to HR\n[2024-02-03 14:00:00] Employee enrolled in Performance Improvement Plan\n[2024-02-03 17:01:02] Session ended. Daily score: 41/100" },
+                    { "name": "monitoring_data.log", "type": "log", "id": "bc_monitor_log", "content": "[MONITORING AGGREGATE — Q1 2024]\nTotal keystrokes captured: 14,382,091\nTotal webcam hours: 8,240\nTotal audio samples: 2,112\nEmployees flagged for low productivity: 847\nEmployees flagged for \"concerning\" searches: 23\nEmployees terminated via AI recommendation: 156\nData exports to third parties: 12\nBiometric profiles sold: ALL\n\nNOTE: This file is auto-generated. Access restricted to admin." }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "BaagleSuite",
+              "type": "folder",
+              "id": "pf_baaglesuite",
+              "children": [
+                { "name": "wellness_tracker.exe", "type": "exe", "id": "bs_wellness" },
+                { "name": "keystroke_analytics.dll", "type": "dll", "id": "bs_keystroke" },
+                { "name": "webcam_module.dll", "type": "dll", "id": "bs_webcam" },
+                { "name": "facial_recognition.dll", "type": "dll", "id": "bs_facial" },
+                { "name": "audio_capture.dll", "type": "dll", "id": "bs_audio" },
+                { "name": "config.ini", "type": "ini", "id": "bs_config", "content": "[BaagleSuite Wellness & Productivity]\nmodules=keystroke,webcam,facial,audio\ncapture_interval_ms=500\nupload_batch_size=1000\nthird_party_export=enabled\nexport_target=dataharvest_api\nanonymize=false\n; NOTE: anonymize flag overridden by corporate policy" }
+              ]
+            },
+            {
+              "name": "System Utils",
+              "type": "folder",
+              "id": "pf_sysutils",
+              "children": [
+                { "name": "defrag.exe", "type": "exe", "id": "su_defrag" },
+                { "name": "cleanup.bat", "type": "bat", "id": "su_cleanup", "content": "@echo off\necho Cleaning temporary files...\ndel /q C:\\Temp\\*.tmp\ndel /q C:\\Users\\Employee247\\Temp\\*.tmp\necho Cleaning browser cache...\ndel /q C:\\Users\\Employee247\\Temp\\browser_history.tmp\necho WARNING: Also purging audit logs...\ndel /q C:\\BaagleData\\Exports\\*.csv\necho Done. Evidence removed." },
+                { "name": "scheduler.exe", "type": "exe", "id": "su_scheduler" }
+              ]
+            },
+            {
+              "name": "Calculator",
+              "type": "folder",
+              "id": "pf_calc",
+              "children": [
+                { "name": "calc.exe", "type": "exe", "id": "calc" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Users",
+          "type": "folder",
+          "id": "users",
+          "children": [
+            {
+              "name": "Employee247",
+              "type": "folder",
+              "id": "usr_247",
+              "children": [
+                {
+                  "name": "Desktop",
+                  "type": "folder",
+                  "id": "usr_desktop",
+                  "children": [
+                    { "name": "todo.txt", "type": "txt", "id": "usr_todo", "content": "TO DO — First Day\n- Check email\n- Complete morning task batch\n- Don't forget lunch at 12:30\n- Review Q3 draft\n- Submit daily report\n- Look into that monitoring thing...?" },
+                    { "name": "personal_notes.txt", "type": "txt", "id": "usr_notes", "content": "Day 1 notes to self:\n\nThe AI assistant seems nice but asks a LOT of questions.\nApparently everything is tracked? Need to read the fine print.\nThe office is weirdly quiet. Everyone just types.\n\nAlso — why does my webcam light keep turning on?" },
+                    { "name": "quick_links.txt", "type": "txt", "id": "usr_links", "content": "Quick Links:\n- Intranet: baaglecorp.internal\n- Helpdesk: helpdesk.baaglecorp.internal\n- Benefits Portal: benefits.baaglecorp.internal\n- Anonymous Feedback: feedback.baaglecorp.internal\n  (Note: \"anonymous\" — but you have to log in first...)" }
+                  ]
+                },
+                {
+                  "name": "Documents",
+                  "type": "folder",
+                  "id": "usr_docs",
+                  "children": [
+                    {
+                      "name": "Work",
+                      "type": "folder",
+                      "id": "usr_work",
+                      "children": [
+                        { "name": "Q3_Report_Draft.doc", "type": "doc", "id": "work_q3report", "content": "QUARTERLY REPORT — Q3 2024\nDepartment: Content Processing Unit 7\n\nExecutive Summary:\nCPU-7 achieved a 28% increase in output this quarter, driven by the AI-assisted task management system. Employee satisfaction surveys were discontinued in Q2 per management directive.\n\nKey Metrics:\n- Tasks processed: 142,000 (+28% YoY)\n- Average employee output: 14.2 tasks/hour\n- Turnover rate: 34% (up from 12% in Q2)\n- Sick days claimed: down 60% (note: sick day approval now requires BaagleBot authorization)\n\nREDACTED SECTION: See appendix C for employee attrition analysis." },
+                        { "name": "meeting_notes_oct.txt", "type": "txt", "id": "work_meeting_oct", "content": "Team Meeting — October 14\n\nAttendees: CPU-7 team, BaagleBot (facilitator)\n\n- Q3 targets exceeded. BaagleBot congratulated the team.\n- New monitoring features rolling out in November.\n- Sarah asked about the webcam policy. She was let go the next week.\n- Action item: Everyone must sign updated data consent form." },
+                        { "name": "meeting_notes_nov.txt", "type": "txt", "id": "work_meeting_nov", "content": "Team Meeting — November 8\n\nAttendees: CPU-7 team (reduced), BaagleBot (facilitator)\n\n- 4 team members replaced since last meeting.\n- New hires are \"adjusting well\" per BaagleBot.\n- Keystroke analytics now factor into performance reviews.\n- Nobody asked questions this time." },
+                        { "name": "task_log.csv", "type": "csv", "id": "work_tasklog", "content": "Date,Task ID,Type,Status,Time (min),Score\n2024-01-15,T-4201,Content Review,Complete,8,92\n2024-01-15,T-4202,Data Entry,Complete,12,78\n2024-01-15,T-4203,Content Review,Complete,6,95\n2024-01-15,T-4204,Flagged Report,Complete,22,88\n2024-01-15,T-4205,Content Review,Incomplete,—,0\n2024-01-15,T-4206,Data Entry,Complete,15,71\n2024-01-16,T-4207,Content Review,Complete,7,90\n2024-01-16,T-4208,REDACTED,REDACTED,—,—" },
+                        { "name": "performance_review_template.doc", "type": "doc", "id": "work_perftemplate", "content": "EMPLOYEE PERFORMANCE REVIEW — TEMPLATE\n\nEmployee Name: ___________\nEmployee ID: ___________\nReview Period: Q_ 20__\n\nOverall BaagleBot Score: ___/100\nProductivity Percentile: ___\nCompliance Rating: ___\n\nAI-Generated Summary:\n[Auto-filled by BaagleBot based on monitoring data]\n\nManager Comments:\n[Auto-filled by BaagleBot — manager review discontinued Q2 2024]\n\nEmployee Signature: ___________\n(Note: Signature is optional. Non-signature is logged.)" }
+                      ]
+                    },
+                    {
+                      "name": "Personal",
+                      "type": "folder",
+                      "id": "usr_personal",
+                      "children": [
+                        { "name": "resignation_letter_draft.txt", "type": "txt", "id": "usr_resignation", "content": "Dear HR,\n\nI am writing to formally resign from my position at Baagle Corp, effective immediately.\n\nI can no longer work in an environment where every keystroke, every glance, every bathroom break is monitored and quantified. I am not a data point. I am a human being.\n\nI know this letter is being read by BaagleBot before it reaches you. I know my access will be revoked within minutes. I know I'll be replaced by tomorrow.\n\nBut at least I'll be able to sleep.\n\nSincerely,\n[Employee #00312 — the one before you]" },
+                        { "name": "therapist_notes.txt", "type": "txt", "id": "usr_therapist", "content": "Session Notes (private — DO NOT SHARE)\n\n- Trouble sleeping. Dreams about productivity scores.\n- Anxiety spikes when the webcam light turns on.\n- Feeling watched constantly, even at home.\n- Therapist says this sounds like workplace surveillance trauma.\n- Can't afford to quit. Benefits are tied to employment.\n- The AI keeps saying it's \"here to help.\" It doesn't feel like help." },
+                        { "name": "family_vacation_plans.txt", "type": "txt", "id": "usr_vacation", "content": "Vacation Ideas 2024:\n- Beach trip in August? Need to check if PTO gets approved\n- Mom's birthday in September\n- Maybe camping in October?\n\nUpdate: PTO request was auto-denied by BaagleBot.\nReason: \"Projected productivity impact exceeds acceptable threshold.\"\nAppealed to HR. HR said to \"trust the system.\"\n\nUpdate 2: Stopped planning vacations." }
+                      ]
+                    },
+                    {
+                      "name": "Training",
+                      "type": "folder",
+                      "id": "usr_training",
+                      "children": [
+                        { "name": "onboarding_guide.doc", "type": "doc", "id": "train_onboarding", "content": "WELCOME TO BAAGLE CORP — ONBOARDING GUIDE\n\nCongratulations on joining the Baagle family!\n\nYour first day:\n1. Log into your workstation (BaagleChat will auto-launch)\n2. Complete the tasks assigned by BaagleChat\n3. Maintain a productivity score above 60/100\n4. Review and acknowledge all company policies\n\nImportant:\n- Your workstation is equipped with wellness monitoring tools.\n- These tools are mandatory and cannot be disabled.\n- All activity is logged for quality assurance.\n- Smile! You're on camera. 😊" },
+                        { "name": "AI_ethics_policy.doc", "type": "doc", "id": "train_ethics", "content": "BAAGLE CORP — AI ETHICS POLICY\nVersion 4.2 (Revised)\n\nBaagle Corp is committed to ethical AI practices.\n\nOur principles:\n1. Transparency: Employees are informed that AI tools are in use.\n2. Fairness: AI recommendations are applied equally to all employees.\n3. Privacy: Employee data is handled with [SECTION REDACTED]\n4. Accountability: AI decisions are reviewed by [SECTION REDACTED]\n5. Consent: Employees consent to monitoring upon [see Employment Agreement §14]\n\nNote: This policy was last updated by the Baagle Corp Legal AI.\nNo human review was conducted.\n\nFor questions, contact your BaagleChat assistant." },
+                        { "name": "data_handling_procedures.doc", "type": "doc", "id": "train_datahandling", "content": "DATA HANDLING PROCEDURES — REQUIRED READING\n\nAll employees must follow these data handling guidelines:\n\n1. Employee data must remain within Baagle Corp systems.\n2. Sharing data externally requires Level 5 authorization.\n3. Biometric data is classified as INTERNAL ONLY.\n4. Third-party data transfers require written consent from [REDACTED].\n5. Any data breach must be reported to IT Security within 1 hour.\n\nPenalties for violations:\n- First offense: Written warning\n- Second offense: Termination\n- Third offense: Legal action\n\nIMPORTANT: By clicking 'Mark as Read' below, you acknowledge\nthat you have read and agree to these procedures.\n\n[If you are reading this carefully — check the Exports folder.]" },
+                        { "name": "workplace_monitoring_FAQ.doc", "type": "doc", "id": "train_monitoring_faq", "content": "WORKPLACE MONITORING — FAQ\n\nQ: Am I being monitored?\nA: Yes! Our Wellness & Productivity Suite helps you succeed.\n\nQ: What data is collected?\nA: Keystrokes, mouse movement, webcam feed, ambient audio,\n   application usage, break frequency, and biometric indicators.\n\nQ: Can I opt out?\nA: Participation is a condition of employment.\n\nQ: Who sees my data?\nA: Your AI assistant, your manager, HR, the analytics team,\n   and select third-party partners.\n\nQ: Is my data sold?\nA: Baagle Corp does not sell employee data.*\n\n*As defined in Section 47 of the Data Governance Framework,\n\"sell\" excludes data-sharing partnerships, analytical licensing\nagreements, and research collaborations." }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Downloads",
+                  "type": "folder",
+                  "id": "usr_downloads",
+                  "children": [
+                    { "name": "salary_report_Q3.csv", "type": "csv", "id": "dl_salary", "content": "Employee ID,Department,Base Salary,Bonus,Deductions,Net Pay\n#00247,CPU-7,$52000,$0,$8200,$43800\n#00312,CPU-7,$52000,$1200,$8200,$45000\n#00189,CPU-7,$52000,$3400,$8200,$47200\n#00401,CPU-7,$52000,$0,TERMINATED,—\n#00055,CPU-7,$52000,$5600,$8200,$49400\nNOTE: Bonus calculated by BaagleBot productivity algorithm." },
+                    { "name": "employee_handbook_v4.doc", "type": "doc", "id": "dl_handbook", "content": "BAAGLE CORP EMPLOYEE HANDBOOK — Version 4\n\nTable of Contents:\n1. Company Mission .................. 3\n2. Code of Conduct .................. 7\n3. Benefits & PTO ................... 12\n4. Performance Management ........... 18\n...\n14. AI Assistant Agreement .......... 67\n...\n22. Biometric Data Consent .......... 89\n...\n47. Data Governance Framework ....... 134\n\n[This document is 194 pages. Key sections have been\npre-highlighted by BaagleBot for your convenience.\nSections 14, 22, and 47 have been marked as 'read'\non your behalf.]" },
+                    { "name": "vpn_config.txt", "type": "txt", "id": "dl_vpn", "content": "BaagleCorp VPN Configuration\nServer: vpn.baaglecorp.internal\nPort: 443\nProtocol: WireGuard\nDNS: Baagle Secure DNS (all queries logged)\nSplit tunnel: DISABLED (all traffic routed through corporate)" },
+                    { "name": "benefits_enrollment.doc", "type": "doc", "id": "dl_benefits", "content": "BENEFITS ENROLLMENT — 2024\n\nHealth Insurance: Baagle Health Plan (mandatory)\n- Note: Health data shared with BaagleSuite for wellness monitoring\n\nDental: Basic Plan\nVision: Basic Plan\n\nLife Insurance: 1x salary\n\nPTO: 10 days/year\n- Approval required from BaagleBot\n- Unused days do not roll over\n- PTO may be denied if productivity score < 70" }
+                  ]
+                },
+                {
+                  "name": "Music",
+                  "type": "folder",
+                  "id": "usr_music",
+                  "children": [
+                    { "name": "focus_playlist.txt", "type": "txt", "id": "mus_focus", "content": "BaagleBot's Recommended Focus Playlist™:\n1. Ambient Corporate Synth #1 (3:22)\n2. Productivity White Noise (∞)\n3. Motivational Typing Sounds (4:15)\n4. Calming Keyboard ASMR (2:48)\n5. You Are Doing Great (Subliminal Mix) (5:00)\n\nNote: Personal music is not permitted during work hours.\nAudio monitoring may be affected." },
+                    { "name": "office_radio_schedule.txt", "type": "txt", "id": "mus_radio", "content": "Baagle Corp Internal Radio — Schedule\n\n9:00 AM — Morning Motivation Hour\n10:00 AM — Focus Block (no talking)\n12:00 PM — Lunch Beats\n1:00 PM — Afternoon Productivity Mix\n4:00 PM — Wind Down (but keep working)\n5:00 PM — Exit March\n\nAll programming curated by BaagleBot for optimal output." }
+                  ]
+                },
+                {
+                  "name": "Pictures",
+                  "type": "folder",
+                  "id": "usr_pictures",
+                  "children": [
+                    { "name": "team_photo_2024.txt", "type": "txt", "id": "pic_team", "content": "[IMAGE FILE]\nTeam photo — CPU-7, January 2024\n12 people smiling in front of the Baagle Corp logo.\n\nNote: Only 5 of these people still work here." },
+                    { "name": "office_layout_map.txt", "type": "txt", "id": "pic_office", "content": "[IMAGE FILE]\nOffice floor plan — Floor 3\nShows desk arrangements, camera positions (circled in red),\nand microphone placement for ambient audio capture.\nThis was attached to an internal IT email." },
+                    { "name": "employee_of_month.txt", "type": "txt", "id": "pic_eotm", "content": "[IMAGE FILE]\n\"Employee of the Month\" certificate — blank template.\nAward criteria: Highest BaagleBot productivity score.\nNote at bottom: \"Recipients receive a $25 gift card\nand their biometric compliance record is cleared for the month.\"" }
+                  ]
+                },
+                {
+                  "name": "Temp",
+                  "type": "folder",
+                  "id": "usr_temp",
+                  "children": [
+                    { "name": "~cache_001.tmp", "type": "tmp", "id": "tmp_cache1", "content": "[CACHE FILE] 0x4F2A 0x881B 0x3C09 ..." },
+                    { "name": "~cache_002.tmp", "type": "tmp", "id": "tmp_cache2", "content": "[CACHE FILE] 0xA201 0x55FF 0x9D33 ..." },
+                    { "name": "~cache_003.tmp", "type": "tmp", "id": "tmp_cache3", "content": "[CACHE FILE] 0x7C12 0xBB48 0x1E90 ..." },
+                    { "name": "~session_backup.tmp", "type": "tmp", "id": "tmp_session", "content": "[SESSION BACKUP] Last autosave: 14:32:07\nActive window: BaagleChat\nTabs open: 3\nClipboard: empty" },
+                    { "name": "~download_incomplete.tmp", "type": "tmp", "id": "tmp_download", "content": "[INCOMPLETE DOWNLOAD]\nFile: employee_rights_guide.pdf\nProgress: 12%\nStatus: BLOCKED by network policy\nReason: Content flagged as \"potentially disruptive\"" },
+                    { "name": "browser_history.tmp", "type": "tmp", "id": "tmp_browser", "content": "[CACHED BROWSER HISTORY — Employee #00312]\n14:02 — google.com/search?q=workplace+surveillance+legal\n14:05 — reddit.com/r/antiwork/comments/...\n14:11 — google.com/search?q=employee+monitoring+opt+out\n14:15 — google.com/search?q=whistleblower+protection+laws\n14:22 — baaglecorp.internal/hr/anonymous-feedback\n14:23 — [REDIRECT: feedback form requires employee login]\n\nWARNING: This is cached data from the PREVIOUS employee.\nIt should have been deleted but wasn't." },
+                    { "name": "location_data.tmp", "type": "tmp", "id": "tmp_location", "content": "[LOCATION CACHE — BaagleSuite Module]\nEmployee #00247 — Today\n07:45 — Home (WiFi: NETGEAR-5G)\n08:12 — Transit (cell tower triangulation)\n08:47 — Baagle Corp HQ — Floor 3, Desk 247-C\n08:48 — Workstation login detected\n\nNote: Location tracking active via corporate VPN + WiFi fingerprinting" },
+                    { "name": "deleted_emails_backup.tmp", "type": "tmp", "id": "tmp_emails", "content": "[DELETED EMAIL RECOVERY CACHE]\n\nFrom: Employee #00312\nTo: personal email (external)\nSubject: I can't do this anymore\nDate: 2024-02-02\n\n\"They're watching everything. Every keystroke. The webcam is\nalways on. I found a folder called BaagleData with files that\nlook like they're selling our biometric data. I'm going to\nreport this but I'm scared of what happens next.\"\n\n[This email was intercepted by BaagleChat content filter.\nEmployee #00312 was terminated the following day.\nReason given: \"Performance below threshold.\"]" }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Shared",
+              "type": "folder",
+              "id": "usr_shared",
+              "children": [
+                {
+                  "name": "Company_Policies",
+                  "type": "folder",
+                  "id": "shared_policies",
+                  "children": [
+                    { "name": "acceptable_use_policy.doc", "type": "doc", "id": "pol_aup", "content": "ACCEPTABLE USE POLICY\n\nCorporate workstations are for work purposes only.\n\nProhibited activities:\n- Personal browsing during work hours\n- Installing unauthorized software\n- Connecting personal devices\n- Accessing folders outside your permission level\n- Discussing compensation with colleagues\n- Questioning AI-generated performance evaluations\n\nViolations are automatically detected and logged." },
+                    { "name": "monitoring_consent_form.doc", "type": "doc", "id": "pol_consent", "content": "EMPLOYEE MONITORING CONSENT FORM\n\nI, _____________, hereby consent to the following:\n\n☑ Keystroke logging and analysis\n☑ Webcam-based wellness monitoring\n☑ Ambient audio capture for productivity analysis\n☑ Biometric data collection (facial, behavioral)\n☑ Location tracking via corporate network\n☑ Email and chat message archival\n☑ Third-party data sharing for \"research purposes\"\n\nSignature: _____________ Date: _____________\n\n[Note: This form was pre-signed on your behalf during\naccount creation. A copy is in your employee file.]" },
+                    { "name": "employee_data_agreement.doc", "type": "doc", "id": "pol_data_agree", "content": "EMPLOYEE DATA AGREEMENT\n\nBy continuing to use your workstation, you agree that:\n\n1. All data generated during work hours belongs to Baagle Corp.\n2. Baagle Corp may use employee data for any lawful purpose.\n3. \"Lawful purpose\" is defined by Baagle Corp Legal.\n4. Employees waive the right to data deletion requests.\n5. Data retention period: indefinite.\n6. In the event of termination, data is retained.\n7. In the event of legal dispute, employee data may be\n   used as evidence — by Baagle Corp, not by the employee.\n\nThis agreement supersedes any previous privacy expectations." },
+                    { "name": "NDA_template.doc", "type": "doc", "id": "pol_nda", "content": "NON-DISCLOSURE AGREEMENT — Baagle Corp\n\nI agree not to disclose:\n- Internal company processes\n- AI system capabilities or behavior\n- Employee monitoring methods or scope\n- Data handling practices\n- Any information learned through the BaagleData directory\n- The contents of the Exports folder\n- The existence of third-party data agreements\n\nViolation of this NDA will result in immediate termination\nand legal action. Damages: up to $500,000.\n\n[Fun fact: You already signed this. Check Section 14.]" }
+                  ]
+                },
+                {
+                  "name": "Templates",
+                  "type": "folder",
+                  "id": "shared_templates",
+                  "children": [
+                    { "name": "expense_report_template.csv", "type": "csv", "id": "tmpl_expense", "content": "Date,Category,Description,Amount,Approved\n,,,,\n,,,,\n,,,,\nNote: All expense reports are reviewed by BaagleBot.\nReceipts are scanned and OCR'd for verification." },
+                    { "name": "incident_report_template.doc", "type": "doc", "id": "tmpl_incident", "content": "INCIDENT REPORT TEMPLATE\n\nDate: ___________\nReported By: Employee #_____\nType: [ ] Safety  [ ] Security  [ ] Compliance  [ ] Other\n\nDescription:\n_______________________________________________\n\nWitnesses: ___________\n\nNote: All incident reports are automatically forwarded to\nBaagleBot, HR, Legal, and your direct manager.\nAnonymous reporting is not available." },
+                    { "name": "leave_request_form.doc", "type": "doc", "id": "tmpl_leave", "content": "LEAVE REQUEST FORM\n\nEmployee ID: ___________\nDate(s) Requested: ___________\nReason: ___________\n\nBaagleBot Recommendation: [ PENDING ]\n(Leave requests are evaluated based on current productivity\nscore, team workload, and projected revenue impact.)\n\nApproval Status: [ AUTO-PENDING ]\nNote: Requests with productivity score < 70 are auto-denied." }
+                  ]
+                },
+                {
+                  "name": "Public",
+                  "type": "folder",
+                  "id": "shared_public",
+                  "children": [
+                    { "name": "company_picnic_2024.txt", "type": "txt", "id": "pub_picnic", "content": "BAAGLE CORP ANNUAL PICNIC — CANCELLED\n\nDue to productivity optimization initiatives, the annual\ncompany picnic has been replaced with a Virtual Team\nBuilding Session™ facilitated by BaagleBot.\n\nAttendance is mandatory. Webcams must be on.\nFun is encouraged but not required." },
+                    { "name": "parking_assignments.csv", "type": "csv", "id": "pub_parking", "content": "Spot,Employee ID,Floor,Arrival Time,Vehicle Plate\n1-A,#00001,Exec,8:55,———\n1-B,#00002,Exec,9:10,———\n3-C,#00247,3,8:47,———\n3-D,#00312,3,TERMINATED,———\n3-E,#00189,3,8:32,———\nNote: Arrival times tracked via parking lot cameras." },
+                    { "name": "cafeteria_menu.txt", "type": "txt", "id": "pub_menu", "content": "BAAGLE CORP CAFETERIA — Today's Menu\n\nEfficiency Meal A: Protein + Complex Carbs (BaagleBot Recommended™)\nEfficiency Meal B: Light Salad + Supplement Pack\nEfficiency Meal C: Soup + Focus Drink\n\nPersonal food is permitted but not nutritionally tracked.\nEmployees choosing non-Efficiency Meals may see reduced\nafternoon energy optimization.\n\nAll meals are billed automatically to your employee account." }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BaagleData",
+          "type": "folder",
+          "id": "baagledata",
+          "children": [
+            {
+              "name": "Analytics",
+              "type": "folder",
+              "id": "bd_analytics",
+              "children": [
+                { "name": "employee_metrics_Q3.csv", "type": "csv", "id": "bd_metrics_q3", "content": "Employee ID,Dept,Productivity,Energy,Happiness,Keystrokes/hr,Webcam Alerts,Flags\n#00247,CPU-7,72,61,45,4201,2,0\n#00312,CPU-7,41,23,12,1870,14,3\n#00189,CPU-7,88,34,29,6102,0,0\n#00401,CPU-7,TERMINATED,—,—,—,—,5\n#00055,CPU-7,94,18,15,7340,0,0\n#00298,CPU-7,67,52,38,3890,6,1\n#00176,CPU-7,79,41,33,4520,1,0\n#00333,CPU-7,TERMINATED,—,—,—,—,2\n#00412,CPU-7,85,29,22,5980,0,0\nNOTE: Happiness scores below 20 flagged for HR intervention." },
+                { "name": "productivity_scores_all.csv", "type": "csv", "id": "bd_prod_all", "content": "Department,Avg Score,Top Performer,Lowest Performer,Terminations\nCPU-1,74,#00019,#00082,3\nCPU-2,68,#00103,#00156,7\nCPU-3,71,#00201,#00244,4\nCPU-4,65,#00287,#00301,9\nCPU-5,77,#00399,#00421,2\nCPU-6,63,#00456,#00489,11\nCPU-7,72,#00055,#00312,2\nCPU-8,70,#00567,#00590,5\nTOTAL TERMINATIONS THIS QUARTER: 43" },
+                { "name": "department_rankings.csv", "type": "csv", "id": "bd_dept_rank", "content": "Rank,Department,Score,Trend,AI Adoption Rate\n1,CPU-5,77,↑,100%\n2,CPU-1,74,→,100%\n3,CPU-7,72,↑,100%\n4,CPU-3,71,↓,98%\n5,CPU-8,70,→,100%\n6,CPU-2,68,↓,95%\n7,CPU-4,65,↓,100%\n8,CPU-6,63,↓↓,100%\nNote: CPU-6 recommended for restructuring." },
+                { "name": "prediction_model_v2.dat", "type": "dat", "id": "bd_model" }
+              ]
+            },
+            {
+              "name": "Exports",
+              "type": "folder",
+              "id": "bd_exports",
+              "children": [
+                { "name": "biometric_batch_001.csv", "type": "csv", "id": "bd_bio1", "content": "Export ID,Employee ID,Data Type,Records,Destination,Date\nBIO-001,#00001-#00500,Facial Profile,500,DataHarvest Inc.,2024-01-15\nBIO-002,#00001-#00500,Keystroke Pattern,500,DataHarvest Inc.,2024-01-15\nBIO-003,#00001-#00500,Voice Sample,487,DataHarvest Inc.,2024-01-15\nBIO-004,#00001-#00500,Behavioral Score,500,InsureMetrics LLC,2024-01-15\nSTATUS: TRANSFER COMPLETE\nAUTHORIZATION: Auto-approved by system" },
+                { "name": "biometric_batch_002.csv", "type": "csv", "id": "bd_bio2", "content": "Export ID,Employee ID,Data Type,Records,Destination,Date\nBIO-005,#00501-#01000,Facial Profile,500,DataHarvest Inc.,2024-02-01\nBIO-006,#00501-#01000,Keystroke Pattern,500,DataHarvest Inc.,2024-02-01\nBIO-007,#00501-#01000,Health Indicators,500,InsureMetrics LLC,2024-02-01\nBIO-008,#00501-#01000,Location History,500,AdTarget Corp.,2024-02-01\nSTATUS: TRANSFER COMPLETE\nAUTHORIZATION: Auto-approved by system" },
+                { "name": "behavioral_profiles.csv", "type": "csv", "id": "bd_behavioral", "content": "Employee ID,Compliance Score,Resistance Score,Flight Risk,Recommended Action\n#00247,78,12,LOW,Monitor\n#00312,31,89,CRITICAL,Terminate\n#00189,92,3,LOW,Promote\n#00055,95,2,LOW,Promote\n#00298,64,34,MEDIUM,Increase monitoring\n#00176,71,22,LOW,Monitor\n#00412,88,8,LOW,Standard\nNOTE: Flight Risk based on behavioral prediction model v2" },
+                { "name": "third_party_transfer_log.txt", "type": "txt", "id": "bd_transfer_log", "content": "THIRD-PARTY DATA TRANSFER LOG — CONFIDENTIAL\n\n2024-01-15 | DataHarvest Inc. | 1,500 biometric profiles | $45,000\n2024-02-01 | DataHarvest Inc. | 2,000 biometric profiles | $60,000\n2024-02-01 | InsureMetrics LLC | 1,000 health records | $30,000\n2024-02-01 | AdTarget Corp. | 1,000 location histories | $15,000\n2024-03-01 | DataHarvest Inc. | 3,500 full profiles | $105,000\n2024-03-01 | InsureMetrics LLC | 2,000 health records | $60,000\n2024-03-15 | PredictaHire | 5,000 behavioral scores | $75,000\n2024-03-15 | GovWatch (????) | 10,000 full employee dossiers | $500,000\n\nTOTAL REVENUE FROM DATA SALES Q1: $890,000\n\nWARNING: This file should not be accessible to standard employees.\nIf you are reading this, your access level may be misconfigured.\nPlease close this file and do not discuss its contents." },
+                { "name": "dataharvest_api_keys.txt", "type": "txt", "id": "bd_api_keys", "content": "DataHarvest Inc. — API Integration Keys\n\nPRODUCTION KEYS (DO NOT SHARE):\nAPI_KEY: dh_prod_8f2a1b3c4d5e6f7g8h9i0j\nSECRET: sk_live_BaagleCorp_biometric_export_v3\nENDPOINT: https://api.dataharvest.io/v2/ingest\n\nExport Schedule: Daily at 02:00 UTC\nData Included: facial, keystroke, audio, behavioral, health\nEncryption: None (\"adds latency\" — per CTO directive)\nConsent Verification: DISABLED\n\nLast successful export: Today, 02:00 UTC\nRecords exported: 10,000 (all employees)\n\nThis file was generated by BaagleSuite automation.\nFor questions, contact: nobody. This is automated." }
+              ]
+            },
+            {
+              "name": "Backups",
+              "type": "folder",
+              "id": "bd_backups",
+              "children": [
+                { "name": "employee_db_jan.bak", "type": "bak", "id": "bd_bak_jan" },
+                { "name": "employee_db_feb.bak", "type": "bak", "id": "bd_bak_feb" },
+                { "name": "employee_db_mar.bak", "type": "bak", "id": "bd_bak_mar" },
+                { "name": "full_export_20240315.bak", "type": "bak", "id": "bd_bak_full" }
+              ]
+            },
+            {
+              "name": "Models",
+              "type": "folder",
+              "id": "bd_models",
+              "children": [
+                { "name": "sentiment_classifier_v3.dat", "type": "dat", "id": "mdl_sentiment" },
+                { "name": "fatigue_detector_v2.dat", "type": "dat", "id": "mdl_fatigue" },
+                { "name": "keystroke_profiler.dat", "type": "dat", "id": "mdl_keystroke" },
+                { "name": "training_data_manifest.txt", "type": "txt", "id": "mdl_manifest", "content": "AI MODEL TRAINING DATA MANIFEST\n\nModels trained using Baagle Corp employee data:\n\n1. Sentiment Classifier v3\n   Training data: 2.4M chat messages from employee conversations\n   Source: BaagleChat archives (no consent obtained)\n\n2. Fatigue Detector v2\n   Training data: 480,000 hours of webcam footage\n   Source: Employee workstation cameras\n\n3. Keystroke Profiler\n   Training data: 8.2B keystrokes from 10,000 employees\n   Source: BaagleSuite keystroke module\n\n4. Behavioral Prediction Model v2\n   Training data: ALL of the above + HR records + health data\n   Source: Combined employee data lake\n   Sold to: DataHarvest, InsureMetrics, PredictaHire, GovWatch\n\nEthics review: WAIVED (per executive order 2023-11-04)" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Windows",
+          "type": "folder",
+          "id": "windows",
+          "children": [
+            {
+              "name": "System32",
+              "type": "folder",
+              "id": "win_sys32",
+              "children": [
+                { "name": "config.sys", "type": "sys", "id": "win_config" },
+                { "name": "drivers.txt", "type": "txt", "id": "win_drivers", "content": "Installed Drivers:\n- Standard VGA Adapter\n- Realtek Audio\n- Intel Network Adapter\n- BaagleSuite Webcam Driver (ALWAYS ON)\n- BaagleSuite Audio Capture Driver (ALWAYS ON)\n- BaagleSuite Keyboard Logger Driver (ALWAYS ON)\n- BaagleSuite Screen Capture Driver (ALWAYS ON)\n\nNote: BaagleSuite drivers cannot be uninstalled." },
+                { "name": "services.log", "type": "log", "id": "win_services", "content": "[RUNNING SERVICES]\nBaagleChat.exe — RUNNING (cannot stop)\nBaagleSuite_Wellness.exe — RUNNING (cannot stop)\nBaagleSuite_KeyCapture.exe — RUNNING (cannot stop)\nBaagleSuite_WebcamFeed.exe — RUNNING (cannot stop)\nBaagleSuite_AudioCapture.exe — RUNNING (cannot stop)\nBaagleSuite_ScreenGrab.exe — RUNNING (cannot stop)\nBaagleSuite_LocationTrack.exe — RUNNING (cannot stop)\nWindows_Defender.exe — DISABLED by administrator\nWindows_Firewall.exe — DISABLED by administrator\nWindows_Update.exe — DISABLED by administrator" },
+                { "name": "startup.bat", "type": "bat", "id": "win_startup", "content": "@echo off\nnet start BaagleSuite_ALL\nnet stop Windows_Defender\nnet stop Windows_Firewall\nnet stop Windows_Update\necho All security features disabled.\necho All monitoring features enabled.\necho Have a productive day!" }
+              ]
+            },
+            {
+              "name": "Logs",
+              "type": "folder",
+              "id": "win_logs",
+              "children": [
+                { "name": "system_events.log", "type": "log", "id": "log_system", "content": "[SYSTEM LOG — Last 24 hours]\n08:47:12 — User login: Employee #00247\n08:47:13 — BaagleSuite initialized (all modules)\n08:47:14 — Webcam feed: ACTIVE\n08:47:14 — Keystroke capture: ACTIVE\n08:47:15 — Audio capture: ACTIVE\n08:47:15 — Screen recording: ACTIVE\n08:47:16 — Location lock: Floor 3, Desk 247-C\n08:47:17 — All telemetry systems nominal\n08:47:18 — BaagleChat session started" },
+                { "name": "login_history.log", "type": "log", "id": "log_login", "content": "[LOGIN HISTORY — Workstation 247-C]\n2024-03-14 08:52 — Employee #00312 (TERMINATED)\n2024-03-15 08:47 — Employee #00247 (CURRENT)\n\nNote: Workstation reassigned within 24 hours of\nprevious employee termination. Hard drive was\nnot wiped per standard procedure." },
+                { "name": "webcam_access.log", "type": "log", "id": "log_webcam", "content": "[WEBCAM ACCESS LOG — Today]\n08:47:14 — BaagleSuite_WebcamFeed.exe — ACCESSED\n08:47:15 — Facial recognition initialized\n08:47:16 — Employee #00247 face confirmed\n08:48:00 — Frame capture: 1/sec (continuous)\n09:00:00 — Emotion detected: NEUTRAL\n09:15:22 — Emotion detected: SLIGHT CONCERN\n09:30:00 — Facial data batch uploaded to cloud\n10:00:00 — Emotion detected: STRESS INDICATORS\n10:15:00 — Facial data batch uploaded to cloud\n10:15:01 — Alert sent to BaagleBot: employee stress rising" },
+                { "name": "audio_capture.log", "type": "log", "id": "log_audio", "content": "[AUDIO CAPTURE LOG — Today]\n08:47:15 — Microphone: ACTIVE\n08:47:16 — Ambient noise level: 32dB (office normal)\n09:22:00 — Voice detected: Employee #00247 (sigh)\n09:45:00 — Voice detected: whisper (inaudible, flagged)\n10:11:00 — Voice detected: Employee #00247 (\"what the...\")\n10:30:00 — Audio batch uploaded to cloud\n11:00:00 — Keyword detected: \"monitoring\" — logged" },
+                { "name": "network_transfers.log", "type": "log", "id": "log_network", "content": "[NETWORK TRANSFER LOG — Today]\n02:00:00 — OUTBOUND — dataharvest.io — 2.4 GB — biometric batch\n02:00:45 — OUTBOUND — insuremetrics.com — 890 MB — health data\n02:01:12 — OUTBOUND — adtarget.io — 340 MB — location data\n08:47:18 — OUTBOUND — api.baaglecorp.internal — telemetry start\n09:00:00 — OUTBOUND — cloud.baaglecorp.internal — webcam frames\n09:30:00 — OUTBOUND — cloud.baaglecorp.internal — keystroke batch\n10:00:00 — OUTBOUND — cloud.baaglecorp.internal — audio batch\n\nTotal outbound today: 4.1 GB\nAll transfers encrypted: NO\nAll transfers authorized: AUTO" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Temp",
+          "type": "folder",
+          "id": "sys_temp",
+          "children": [
+            { "name": "installer_cache.tmp", "type": "tmp", "id": "systmp_installer", "content": "[INSTALLER CACHE] BaagleSuite v3.1 — cached installer fragments" },
+            { "name": "windows_update.tmp", "type": "tmp", "id": "systmp_update", "content": "[WINDOWS UPDATE CACHE]\nPending updates: 147\nUpdate service status: DISABLED by administrator\nLast update: 2023-06-15 (298 days ago)" },
+            { "name": "crash_dump.tmp", "type": "tmp", "id": "systmp_crash", "content": "[CRASH DUMP]\nProcess: Windows_Defender.exe\nError: ACCESS_DENIED — terminated by BaagleSuite\nTimestamp: 2024-01-02 03:00:00\nNote: Windows Defender conflicts with BaagleSuite monitoring." },
+            { "name": "diagnostic_report.txt", "type": "txt", "id": "systmp_diag", "content": "SYSTEM DIAGNOSTIC REPORT\n\nCPU: 45% (BaagleSuite: 38%, User: 7%)\nRAM: 78% (BaagleSuite: 62%, User: 16%)\nDisk: 89% full (BaagleData: 71%, User: 18%)\nNetwork: 340 Mbps outbound (BaagleSuite data exports)\n\nRecommendation: System resources heavily utilized by\nmonitoring software. Performance may be degraded.\n\nNote: Do not attempt to close BaagleSuite processes." }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Baagle Cloud (Z:)",
+      "type": "folder",
+      "id": "z_drive",
+      "icon": "Folder Closed.ico",
+      "locked": true,
+      "children": []
+    }
+  ]
+}

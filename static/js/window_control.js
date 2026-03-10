@@ -103,7 +103,7 @@
   }
 
   // expose openWindow globally so desktop.js and taskbar.js can call it
-  window.WindowControl = { openWindow };
+  window.WindowControl = { openWindow, initWindow: function(win) { initDrag(win); } };
 
   document.addEventListener('DOMContentLoaded', init);
 })();

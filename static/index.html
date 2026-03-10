@@ -46,6 +46,55 @@
       <span>Recycle Bin</span>
     </div>
 
+    <!-- i m adding a news window where the game can show updates from the "real world" about the company -->
+    <div class="desktop-icon" data-window="news-window">
+      <img src="images/ui/High-Res_XP_Icons/Earth (fixed).ico" alt="News">
+      <span>Baagle News</span>
+    </div>
+
+  </div>
+
+  <!-- I am also adding a stock "widget" that can't go away with the revenue and stuff-->
+  <div id="stock-widget">
+    <div class="stock-widget-header">
+      <span> Baagle Corp (BGGL)</span>
+    </div>
+    <div class="stock-widget-body">
+      <div class="stock-price-row">
+        <span class="stock-price" id="stock-price">$184.72</span>
+        <span class="stock-change positive" id="stock-change">▲ +2.34 (1.28%)</span>
+      </div>
+      <div class="stock-chart" id="stock-chart">
+        <!-- simple ASCII-ish bar chart, updated by js -->
+        <div class="chart-bar" style="height: 60%"></div>
+        <div class="chart-bar" style="height: 65%"></div>
+        <div class="chart-bar" style="height: 58%"></div>
+        <div class="chart-bar" style="height: 70%"></div>
+        <div class="chart-bar" style="height: 75%"></div>
+        <div class="chart-bar" style="height: 72%"></div>
+        <div class="chart-bar" style="height: 80%"></div>
+        <div class="chart-bar" style="height: 78%"></div>
+        <div class="chart-bar" style="height: 82%"></div>
+        <div class="chart-bar" style="height: 85%"></div>
+      </div>
+      <div class="stock-details">
+        <div class="stock-detail-row">
+          <span>Revenue (Q3)</span>
+          <strong id="revenue-value">$4.2B</strong>
+        </div>
+        <div class="stock-detail-row">
+          <span>Market Cap</span>
+          <strong id="marketcap-value">$89.1B</strong>
+        </div>
+        <div class="stock-detail-row">
+          <span>Employees</span>
+          <strong>10,000</strong>
+        </div>
+      </div>
+      <div class="stock-footer">
+        <span id="stock-status">Markets Open — Live Data</span>
+      </div>
+    </div>
   </div>
 
   <!-- notification pop up -->
@@ -143,20 +192,20 @@
         <button class="btn-close" aria-label="Close">✕</button>
       </div>
     </div>
-    <div class="window-body">
-      <div id="mycomputer-content">
-        <div class="file-item">
-          <img src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="">
-          <span>Local Disk (C:)</span>
-        </div>
-        <div class="file-item">
-          <img src="images/ui/High-Res_XP_Icons/Folder Closed.ico" alt="">
-          <span>Baagle Cloud (Z:)</span>
-        </div>
-        <div class="file-item">
-          <img src="images/ui/High-Res_XP_Icons/System Properties.ico" alt="">
-          <span>System Properties</span>
-        </div>
+    <div class="window-body explorer-body">
+      <div class="explorer-toolbar">
+        <button id="explorer-back" disabled>← Back</button>
+        <button id="explorer-up" disabled>↑ Up</button>
+        <span id="explorer-breadcrumb">My Computer</span>
+        <button id="explorer-delete" class="explorer-delete-btn hidden">🗑 Delete</button>
+      </div>
+      <div class="explorer-address-bar">
+        <span>Address:</span>
+        <span id="explorer-path">My Computer</span>
+      </div>
+      <div id="explorer-contents"></div>
+      <div class="explorer-status-bar">
+        <span id="explorer-item-count"></span>
       </div>
     </div>
   </div>
@@ -199,6 +248,46 @@
     </div>
   </div>
 
+  <div class="xp-window" id="file-viewer-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/File.ico" alt="">
+      <span class="title-bar-text">File Viewer</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body file-viewer-body">
+      <div id="file-viewer-toolbar" class="hidden">
+        <button id="file-viewer-confirm" class="file-action-btn">Mark as Read :]</button>
+      </div>
+      <div id="file-viewer-content"></div>
+    </div>
+  </div>
+
+  <!-- news window -->
+  <div class="xp-window" id="news-window">
+    <div class="title-bar">
+      <img class="title-bar-icon" src="images/ui/High-Res_XP_Icons/Earth (fixed).ico" alt="">
+      <span class="title-bar-text">Baagle News — Headlines</span>
+      <div class="title-bar-controls">
+        <button class="btn-minimize" aria-label="Minimize">_</button>
+        <button class="btn-maximize" aria-label="Maximize">▢</button>
+        <button class="btn-close" aria-label="Close">✕</button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div id="news-list">
+        <div class="news-article">
+          <span class="news-time">9:00 AM</span>
+          <span class="news-headline">Baagle Corp Reports Record Q3 Earnings, Stock Hits All-Time High</span>
+          <p class="news-body">Baagle Corp (BGGL) shares surged today after the company reported quarterly revenue of $4.2 billion, beating analyst expectations. CEO praised the company's "AI-first workplace strategy."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!--taskbar-->
   <div id="taskbar">
     <button id="start-button">
@@ -224,6 +313,10 @@
   <script src="js/window_control.js"></script>
   <script src="js/taskbar.js"></script>
   <script src="js/desktop.js"></script>
+  <script src="js/explorer.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/events.js"></script>
+  <script src="js/audio.js"></script>
   <script src="js/chatbot.js"></script>
 
 </body>
