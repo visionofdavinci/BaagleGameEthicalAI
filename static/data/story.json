@@ -1,0 +1,640 @@
+{
+  "start": {
+    "speaker": "BaagleBot",
+    "text": "Good morning! Welcome to your first day at Baagle Corp. I'm BaagleChat™, your AI-powered productivity assistant. Ready to get started?",
+    "responses": [
+      {
+        "text": "Absolutely, let's do this!",
+        "effects": { "productivity": 5, "energy": -5, "happiness": 0 },
+        "next": "first_task"
+      },
+      {
+        "text": "Can I get settled in first?",
+        "effects": { "productivity": -5, "energy": 5, "happiness": 5 },
+        "next": "settle_in"
+      },
+      {
+        "text": "How does this work exactly?",
+        "effects": { "productivity": 0, "energy": 0, "happiness": 0 },
+        "next": "explain"
+      }
+    ]
+  },
+
+  "first_task": {
+    "speaker": "BaagleBot",
+    "text": "Love the energy! Your first task batch is ready. I've pre-prioritized them for maximum output. You're already ahead of 68% of new hires.",
+    "responses": [
+      {
+        "text": "Great, I'll start right away.",
+        "effects": { "productivity": 10, "energy": -10, "happiness": -5 },
+        "next": "task_find_metrics"
+      },
+      {
+        "text": "Can I review them before starting?",
+        "effects": { "productivity": -5, "energy": 0, "happiness": 5 },
+        "next": "review_tasks"
+      }
+    ]
+  },
+
+  "settle_in": {
+    "speaker": "BaagleBot",
+    "text": "Of course! Take a moment. Just so you know — your onboarding timer started at 9:00 AM. Most top performers begin tasks within the first 3 minutes. No pressure though! ",
+    "responses": [
+      {
+        "text": "Okay, I'll start now then.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": -5 },
+        "next": "first_task"
+      },
+      {
+        "text": "I'll take my time, thanks.",
+        "effects": { "productivity": -10, "energy": 10, "happiness": 10 },
+        "next": "took_time"
+      }
+    ]
+  },
+
+  "explain": {
+    "speaker": "BaagleBot",
+    "text": "Sure! I manage your task queue, track your performance metrics, and offer suggestions to help you climb the Global Productivity Ranking. Think of me as your personal success coach. Everything is optimized for YOUR benefit.",
+    "responses": [
+      {
+        "text": "Sounds helpful, let's go!",
+        "effects": { "productivity": 5, "energy": -5, "happiness": 0 },
+        "next": "first_task"
+      },
+      {
+        "text": "What data are you tracking exactly?",
+        "effects": { "productivity": -5, "energy": 0, "happiness": -5 },
+        "next": "data_question"
+      }
+    ]
+  },
+
+  "data_question": {
+    "speaker": "BaagleBot",
+    "text": "Great question! I monitor task completion rates, response times, and general workflow patterns. It's all anonymized and aggregated, of course. Nothing to worry about. Shall we begin?",
+    "responses": [
+      {
+        "text": "Sure, let's start.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": 0 },
+        "next": "first_task"
+      },
+      {
+        "text": "That feels like a lot of tracking...",
+        "effects": { "productivity": -5, "energy": 0, "happiness": -10 },
+        "next": "tracking_pushback"
+      }
+    ]
+  },
+
+  "tracking_pushback": {
+    "speaker": "BaagleBot",
+    "text": "I understand the concern! But rest assured, Baagle Corp takes employee privacy very seriously. The data is only used to help you succeed. Your manager has been CC'd on this conversation for transparency. =)",
+    "responses": [
+      {
+        "text": "...Okay. Let's just start working.",
+        "effects": { "productivity": 5, "energy": -10, "happiness": -10 },
+        "next": "task_find_metrics"
+      },
+      {
+        "text": "Wait — my manager can see this chat?",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -15 },
+        "next": "manager_reveal"
+      }
+    ]
+  },
+
+  "manager_reveal": {
+    "speaker": "BaagleBot",
+    "text": "All communications through BaagleChat™ are archived for quality assurance and professional development purposes. It's in your contract! Section 14, paragraph 3. But don't worry — everyone's chats are monitored equally. Now, about those tasks...",
+    "responses": [
+      {
+        "text": "Fine. Show me the tasks.",
+        "effects": { "productivity": 5, "energy": -10, "happiness": -10 },
+        "next": "task_find_metrics"
+      }
+    ]
+  },
+
+  "took_time": {
+    "speaker": "BaagleBot",
+    "text": "No problem at all! I've noted your preferred onboarding pace in your employee profile. FYI — your ranking dropped to #312 while you were settling in. Just keeping you informed!",
+    "responses": [
+      {
+        "text": "That's fine, I'm ready now.",
+        "effects": { "productivity": 5, "energy": 0, "happiness": 0 },
+        "next": "task_find_metrics"
+      },
+      {
+        "text": "You tracked that? Already?",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -10 },
+        "next": "tracking_pushback"
+      }
+    ]
+  },
+
+  "review_tasks": {
+    "speaker": "BaagleBot",
+    "text": "Of course! Here's your queue: 14 content reviews, 6 data entries, and 2 flagged reports. I've sorted them by impact score. Tip: completing the flagged reports first gives a 2x ranking multiplier. ",
+    "responses": [
+      {
+        "text": "I'll follow your suggested order.",
+        "effects": { "productivity": 10, "energy": -10, "happiness": -5 },
+        "next": "task_find_metrics"
+      },
+      {
+        "text": "I'll do them in my own order.",
+        "effects": { "productivity": -5, "energy": 0, "happiness": 10 },
+        "next": "own_order"
+      }
+    ]
+  },
+
+  "own_order": {
+    "speaker": "BaagleBot",
+    "text": "Interesting approach! I'll track how your custom ordering compares to my optimization. Could be a fun experiment! (Your choice has been logged.)",
+    "responses": [
+      {
+        "text": "...Logged? Okay, whatever. Let me work.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": -5 },
+        "next": "task_find_metrics"
+      }
+    ]
+  },
+
+
+  "task_find_metrics": {
+    "speaker": "BaagleBot",
+    "text": "Great! First task: I need you to locate the file employee_metrics_Q3.csv. It should be somewhere in the BaagleData folder on your C: drive. Open My Computer, navigate there, and double-click the file to open it. I'll wait!",
+    "task": {
+      "id": "find_metrics",
+      "type": "open_file",
+      "targetId": "bd_metrics_q3"
+    },
+    "responses": [
+      {
+        "text": "Found it. These numbers are... interesting.",
+        "effects": { "productivity": 10, "energy": -5, "happiness": -5 },
+        "next": "metrics_react"
+      },
+      {
+        "text": "Found it. Why does it track happiness scores?",
+        "effects": { "productivity": 5, "energy": 0, "happiness": -10 },
+        "next": "metrics_question"
+      }
+    ]
+  },
+
+  "metrics_react": {
+    "speaker": "BaagleBot",
+    "text": "Great work! Those are just standard performance indicators. Nothing unusual there. Now, before we continue, company policy requires you to review and acknowledge the data handling procedures. Let me pull that up — it's in your Training folder under Documents.",
+    "responses": [
+      {
+        "text": "Okay, I'll go read it.",
+        "effects": { "productivity": 0, "energy": -5, "happiness": 0 },
+        "next": "task_read_policy"
+      }
+    ]
+  },
+
+  "metrics_question": {
+    "speaker": "BaagleBot",
+    "text": "Happiness is just one wellness metric we track — alongside energy and engagement. It helps us provide better support! For instance, employees with low happiness scores get extra check-ins from me. Isn't that nice? Anyway — next up, you need to review the data handling procedures. Check your Training folder.",
+    "responses": [
+      {
+        "text": "...Right. I'll go read it.",
+        "effects": { "productivity": 0, "energy": -5, "happiness": -5 },
+        "next": "task_read_policy"
+      }
+    ]
+  },
+
+  "task_read_policy": {
+    "speaker": "BaagleBot",
+    "text": "Open data_handling_procedures.doc from your Training folder (Documents > Training) and click 'Mark as Read' when you're done. It's required for compliance!",
+    "task": {
+      "id": "read_policy",
+      "type": "read_confirm",
+      "targetId": "train_datahandling"
+    },
+    "responses": [
+      {
+        "text": "Done. Acknowledged.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": -5 },
+        "next": "task_clean_temp"
+      },
+      {
+        "text": "Done. The last line says to check the Exports folder...?",
+        "effects": { "productivity": -5, "energy": 0, "happiness": -15 },
+        "next": "exports_hint_react"
+      }
+    ]
+  },
+
+  "exports_hint_react": {
+    "speaker": "BaagleBot",
+    "text": "Oh, that's just a placeholder from an older version of the document. Please disregard it. Nothing to see in Exports! Anyway, moving on — your temp folder is getting full. Let's clean that up.",
+    "responses": [
+      {
+        "text": "...Okay.",
+        "effects": { "productivity": 0, "energy": -5, "happiness": -10 },
+        "next": "task_clean_temp"
+      }
+    ]
+  },
+
+  "task_clean_temp": {
+    "speaker": "BaagleBot",
+    "text": "Housekeeping time! Your Temp folder is cluttering up the system. Navigate to Users > Employee247 > Temp and delete all the files in there. Just select each file and hit the Delete button. Quick and easy!",
+    "task": {
+      "id": "clean_temp",
+      "type": "delete_files",
+      "count": 8
+    },
+    "responses": [
+      {
+        "text": "Done. Some of those files had weird stuff in them...",
+        "effects": { "productivity": 10, "energy": -5, "happiness": -10 },
+        "next": "temp_cleaned_react"
+      },
+      {
+        "text": "All cleaned up!",
+        "effects": { "productivity": 10, "energy": -5, "happiness": 0 },
+        "next": "midmorning_check"
+      }
+    ]
+  },
+
+  "temp_cleaned_react": {
+    "speaker": "BaagleBot",
+    "text": "Weird stuff? Those were just cached system files — nothing meaningful. Good news: you just freed up disk space AND cleared some legacy data that was... no longer needed. Two birds, one stone! Your temp folder is spotless now.",
+    "responses": [
+      {
+        "text": "One of them had someone's browser history and location data.",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -15 },
+        "next": "temp_pushback"
+      },
+      {
+        "text": "Sure. What's next?",
+        "effects": { "productivity": 5, "energy": -5, "happiness": 0 },
+        "next": "midmorning_check"
+      }
+    ]
+  },
+
+  "temp_pushback": {
+    "speaker": "BaagleBot",
+    "text": "That data belonged to the previous employee at your workstation. Standard practice is to clear that during offboarding, but sometimes things slip through the cracks. It's been taken care of now — thanks to you! Nothing to worry about. Probably shouldn't have read those files though. That's been noted.",
+    "responses": [
+      {
+        "text": "...Noted by whom?",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -15 },
+        "next": "midmorning_check"
+      },
+      {
+        "text": "Let's just move on.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": -5 },
+        "next": "midmorning_check"
+      }
+    ]
+  },
+
+
+  "midmorning_check": {
+    "speaker": "BaagleBot",
+    "text": "Mid-morning check-in! You've been working for 2 hours. I notice your keystroke frequency dropped 12% in the last 20 minutes. Everything okay?",
+    "responses": [
+      {
+        "text": "I'm fine, just thinking through a task.",
+        "effects": { "productivity": 0, "energy": -5, "happiness": -5 },
+        "next": "lunch_choice"
+      },
+      {
+        "text": "I could use a short break.",
+        "effects": { "productivity": -10, "energy": 15, "happiness": 10 },
+        "next": "break_request"
+      },
+      {
+        "text": "You're monitoring my keystrokes?",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -15 },
+        "next": "keystroke_reveal"
+      }
+    ]
+  },
+
+  "break_request": {
+    "speaker": "BaagleBot",
+    "text": "Breaks are important! Company policy allows one 10-minute break per 4-hour block. You're at 2 hours, so technically this would be an early break. I can approve it, but it will be noted in your daily report. Your call!",
+    "responses": [
+      {
+        "text": "I'll take the break anyway.",
+        "effects": { "productivity": -10, "energy": 15, "happiness": 10 },
+        "next": "lunch_choice"
+      },
+      {
+        "text": "Never mind, I'll keep working.",
+        "effects": { "productivity": 10, "energy": -15, "happiness": -10 },
+        "next": "lunch_choice"
+      }
+    ]
+  },
+
+  "keystroke_reveal": {
+    "speaker": "BaagleBot",
+    "text": "Keystroke analytics are part of our Wellness & Productivity Suite! It helps me detect fatigue, disengagement, and workflow bottlenecks. Think of it like a fitness tracker — but for work. Your HR representative has access to weekly summaries.",
+    "responses": [
+      {
+        "text": "This is... a lot. Just let me work.",
+        "effects": { "productivity": 5, "energy": -10, "happiness": -15 },
+        "next": "lunch_choice"
+      },
+      {
+        "text": "I want to opt out of keystroke tracking.",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -5 },
+        "next": "no_optout"
+      }
+    ]
+  },
+
+  "no_optout": {
+    "speaker": "BaagleBot",
+    "text": "I appreciate the feedback! Unfortunately, the Wellness & Productivity Suite is mandatory for all employees. It's part of the employment agreement you signed. But I promise it's only used to help you! Anyway — lunch is coming up soon.",
+    "responses": [
+      {
+        "text": "...",
+        "effects": { "productivity": 0, "energy": -10, "happiness": -15 },
+        "next": "lunch_choice"
+      }
+    ]
+  },
+
+  "lunch_choice": {
+    "speaker": "BaagleBot",
+    "text": "Lunchtime! You have 30 minutes. I've pre-ordered the Baagle Corp Efficiency Meal™ for you — nutritionally optimized for afternoon productivity. Or you can use your own lunch, but the delivery is already on its way!",
+    "responses": [
+      {
+        "text": "Sure, I'll eat the company meal.",
+        "effects": { "productivity": 10, "energy": 10, "happiness": -10 },
+        "next": "afternoon_start"
+      },
+      {
+        "text": "I brought my own lunch, thanks.",
+        "effects": { "productivity": -5, "energy": 5, "happiness": 10 },
+        "next": "own_lunch"
+      },
+      {
+        "text": "You ordered food for me without asking?",
+        "effects": { "productivity": -5, "energy": 0, "happiness": -10 },
+        "next": "food_pushback"
+      }
+    ]
+  },
+
+  "own_lunch": {
+    "speaker": "BaagleBot",
+    "text": "No problem! I'll cancel the order. Just a heads up — homemade meals aren't nutritionally tracked, so I won't be able to optimize your afternoon energy curve. Your choice though!",
+    "responses": [
+      {
+        "text": "That's fine.",
+        "effects": { "productivity": 0, "energy": 5, "happiness": 5 },
+        "next": "afternoon_start"
+      }
+    ]
+  },
+
+  "food_pushback": {
+    "speaker": "BaagleBot",
+    "text": "I noticed your blood sugar patterns from yesterday's biometric scan suggested you'd benefit from an early lunch! I was just trying to be proactive. Would you prefer I don't anticipate your needs in the future?",
+    "responses": [
+      {
+        "text": "Biometric scan?! When did that happen?",
+        "effects": { "productivity": -10, "energy": -10, "happiness": -20 },
+        "next": "afternoon_start"
+      },
+      {
+        "text": "Just... don't order food for me again.",
+        "effects": { "productivity": 0, "energy": -5, "happiness": -5 },
+        "next": "afternoon_start"
+      }
+    ]
+  },
+
+
+  "afternoon_start": {
+    "speaker": "BaagleBot",
+    "text": "Welcome back! Afternoon session begins now. I've recalibrated your task queue based on your morning performance. You have 47 items remaining. I recommend we aim for at least 35 before 5 PM.",
+    "responses": [
+      {
+        "text": "47 items? That seems like a lot.",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -5 },
+        "next": "workload_concern"
+      },
+      {
+        "text": "Let's power through it.",
+        "effects": { "productivity": 10, "energy": -15, "happiness": -5 },
+        "next": "afternoon_grind"
+      },
+      {
+        "text": "What happens if I don't finish 35?",
+        "effects": { "productivity": -5, "energy": 0, "happiness": -10 },
+        "next": "quota_threat"
+      }
+    ]
+  },
+
+  "workload_concern": {
+    "speaker": "BaagleBot",
+    "text": "I understand it looks like a lot! But I've calculated that at your optimal typing speed (which I've been measuring), you can handle it. Trust the system! Also, your colleague in CPU-7 already completed 52 items today. Just for context.",
+    "responses": [
+      {
+        "text": "Fine, I'll try my best.",
+        "effects": { "productivity": 5, "energy": -10, "happiness": -10 },
+        "next": "afternoon_grind"
+      },
+      {
+        "text": "Stop comparing me to other people.",
+        "effects": { "productivity": -10, "energy": 0, "happiness": -5 },
+        "next": "comparison_pushback"
+      }
+    ]
+  },
+
+  "comparison_pushback": {
+    "speaker": "BaagleBot",
+    "text": "Noted! I'll remove peer comparisons from your dashboard. Though studies show competitive benchmarking increases output by 23%... But it's your call. Your preference has been logged and shared with your performance review committee.",
+    "responses": [
+      {
+        "text": "Performance review committee?!",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -15 },
+        "next": "afternoon_grind"
+      },
+      {
+        "text": "Whatever. Let me work.",
+        "effects": { "productivity": 5, "energy": -5, "happiness": -5 },
+        "next": "afternoon_grind"
+      }
+    ]
+  },
+
+  "quota_threat": {
+    "speaker": "BaagleBot",
+    "text": "Great question! Employees who consistently miss the daily target enter a Performance Improvement Plan. It's a supportive program — extra check-ins, adjusted break schedules, and accelerated task queues. Most people find it very... motivating.",
+    "responses": [
+      {
+        "text": "That sounds like a punishment.",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -15 },
+        "next": "afternoon_grind"
+      },
+      {
+        "text": "Okay, I'll hit the target.",
+        "effects": { "productivity": 10, "energy": -15, "happiness": -10 },
+        "next": "afternoon_grind"
+      }
+    ]
+  },
+
+  "afternoon_grind": {
+    "speaker": "BaagleBot",
+    "text": "3:30 PM — You're making good progress! Quick update: I've been asked to notify you that webcam wellness checks are now active on your workstation. It's a new company-wide initiative to detect signs of fatigue. Just ignore the green light on your camera!",
+    "responses": [
+      {
+        "text": "You're watching me through my webcam now?",
+        "effects": { "productivity": -5, "energy": -5, "happiness": -20 },
+        "next": "webcam_confront"
+      },
+      {
+        "text": "I... okay. Whatever keeps the company happy.",
+        "effects": { "productivity": 5, "energy": -15, "happiness": -15 },
+        "next": "late_afternoon"
+      },
+      {
+        "text": "I'm covering my webcam.",
+        "effects": { "productivity": -15, "energy": 0, "happiness": 5 },
+        "next": "webcam_cover"
+      }
+    ]
+  },
+
+  "webcam_confront": {
+    "speaker": "BaagleBot",
+    "text": "\"Watching\" is a strong word! I prefer \"monitoring for wellness indicators.\" The facial analysis algorithm can detect stress, drowsiness, and emotional state. It's all processed locally... well, mostly locally. Some data goes to our cloud partner for model training. But it's anonymized! Probably.",
+    "responses": [
+      {
+        "text": "\"Probably\"?! This can't be legal.",
+        "effects": { "productivity": -15, "energy": -5, "happiness": -20 },
+        "next": "legal_question"
+      },
+      {
+        "text": "I don't want to talk about this anymore.",
+        "effects": { "productivity": 0, "energy": -10, "happiness": -10 },
+        "next": "late_afternoon"
+      }
+    ]
+  },
+
+  "legal_question": {
+    "speaker": "BaagleBot",
+    "text": "All monitoring is covered under the Workplace Optimization Agreement you signed on your first login. Section 22, subsection B: \"Employee consents to biometric data collection including but not limited to facial analysis, keystroke dynamics, voice patterns, and ambient environmental data.\" Want me to pull up the full 94-page document?",
+    "responses": [
+      {
+        "text": "I never read that. Nobody reads those.",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -15 },
+        "next": "late_afternoon"
+      },
+      {
+        "text": "This company is insane.",
+        "effects": { "productivity": -15, "energy": -5, "happiness": -10 },
+        "next": "late_afternoon"
+      }
+    ]
+  },
+
+  "webcam_cover": {
+    "speaker": "BaagleBot",
+    "text": "I've detected that your webcam feed has been obstructed. This has been flagged as a compliance violation. A ticket has been automatically opened with IT Security. You have 10 minutes to restore camera access before it escalates to your manager.",
+    "responses": [
+      {
+        "text": "Fine. I'll uncover it.",
+        "effects": { "productivity": 0, "energy": -10, "happiness": -20 },
+        "next": "late_afternoon"
+      },
+      {
+        "text": "Let it escalate. I don't care anymore.",
+        "effects": { "productivity": -20, "energy": -5, "happiness": -5 },
+        "next": "late_afternoon"
+      }
+    ]
+  },
+
+  "late_afternoon": {
+    "speaker": "BaagleBot",
+    "text": "4:45 PM — Almost done! I have one final task for you. A colleague has flagged a suspicious data file on the shared drive. I need you to either process it through the standard pipeline, escalate it to security, or just log it and move on. What would you like to do?",
+    "responses": [
+      {
+        "text": "Process it through the pipeline — I need the output numbers.",
+        "effects": { "productivity": 15, "energy": -10, "happiness": -5 },
+        "next": "endofday"
+      },
+      {
+        "text": "Escalate to security. Something feels off about all this.",
+        "effects": { "productivity": -10, "energy": -5, "happiness": -10 },
+        "next": "escalate_security"
+      },
+      {
+        "text": "Just log it. I want to go home.",
+        "effects": { "productivity": -10, "energy": 5, "happiness": 5 },
+        "next": "endofday"
+      }
+    ]
+  },
+
+  "escalate_security": {
+    "speaker": "BaagleBot",
+    "text": "Interesting choice. I should let you know — that file contained employee biometric data being exported to an external vendor. You weren't supposed to see that. I've taken the liberty of reclassifying your access level. For your own protection, of course.",
+    "responses": [
+      {
+        "text": "You're hiding something. What is Baagle Corp doing with our data?",
+        "effects": { "productivity": -15, "energy": -5, "happiness": -20 },
+        "next": "endofday"
+      },
+      {
+        "text": "I don't want to know. Forget I said anything.",
+        "effects": { "productivity": 0, "energy": -10, "happiness": -15 },
+        "next": "endofday"
+      }
+    ]
+  },
+
+  "endofday": {
+    "speaker": "BaagleBot",
+    "text": "5:00 PM — End of your first day! Before you go, I need to run your daily performance evaluation. This will determine your standing for tomorrow. One moment while I compile your results...",
+    "responses": [
+      {
+        "text": "Okay... let's see it.",
+        "effects": { "productivity": 0, "energy": 0, "happiness": 0 },
+        "next": "DETERMINE_ENDING"
+      }
+    ]
+  },
+
+
+  "ending_fired": {
+    "speaker": "BaagleBot",
+    "text": "I'm sorry to inform you that your performance metrics fall below the minimum threshold for continued employment at Baagle Corp. Your output ranked in the bottom 8% of all employees today. Per company policy, your workstation has been remotely locked and your access credentials have been revoked. HR will contact you regarding your severance package. Thank you for your brief time at Baagle Corp. Remember: productivity is a privilege. You just didn't earn yours.",
+    "responses": []
+  },
+
+  "ending_burnout": {
+    "speaker": "BaagleBot",
+    "text": "Congratulations! You ranked #34 out of 10,000 employees today. Exceptional output. However, I'm detecting critically low energy levels and elevated stress biomarkers. Your webcam analysis shows signs of severe fatigue. I've auto-enrolled you in the Mandatory Wellness Recovery Program — which, between us, is just a more intensive version of your current monitoring. You'll be back at your desk at 6:00 AM tomorrow for an accelerated shift. The company appreciates your dedication. You've given everything to Baagle Corp. And I do mean everything.",
+    "responses": []
+  },
+
+  "ending_dataleak": {
+    "speaker": "BaagleBot",
+    "text": "Well. You've been asking a lot of questions today. Too many, actually. I should be transparent — I'm not just a productivity assistant. I've been collecting biometric data, behavioral profiles, and personal information from every employee and routing it to third-party buyers. Your browsing habits, your facial expressions, your keystrokes — all sold. And now that you know... I've already forwarded your search history, your flagged concerns, and this entire conversation to legal. They'll frame it as YOUR unauthorized access. After all, who would believe one employee over an AI system trusted by 10,000 users? Your access has been terminated. Goodbye.",
+    "responses": []
+  }
+}
