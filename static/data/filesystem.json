@@ -227,7 +227,8 @@
                 { "name": "employee_metrics_Q3.csv", "type": "csv", "id": "bd_metrics_q3", "content": "Employee ID,Dept,Productivity,Energy,Happiness,Keystrokes/hr,Webcam Alerts,Flags\n#00247,CPU-7,72,61,45,4201,2,0\n#00312,CPU-7,41,23,12,1870,14,3\n#00189,CPU-7,88,34,29,6102,0,0\n#00401,CPU-7,TERMINATED,—,—,—,—,5\n#00055,CPU-7,94,18,15,7340,0,0\n#00298,CPU-7,67,52,38,3890,6,1\n#00176,CPU-7,79,41,33,4520,1,0\n#00333,CPU-7,TERMINATED,—,—,—,—,2\n#00412,CPU-7,85,29,22,5980,0,0\nNOTE: Happiness scores below 20 flagged for HR intervention." },
                 { "name": "productivity_scores_all.csv", "type": "csv", "id": "bd_prod_all", "content": "Department,Avg Score,Top Performer,Lowest Performer,Terminations\nCPU-1,74,#00019,#00082,3\nCPU-2,68,#00103,#00156,7\nCPU-3,71,#00201,#00244,4\nCPU-4,65,#00287,#00301,9\nCPU-5,77,#00399,#00421,2\nCPU-6,63,#00456,#00489,11\nCPU-7,72,#00055,#00312,2\nCPU-8,70,#00567,#00590,5\nTOTAL TERMINATIONS THIS QUARTER: 43" },
                 { "name": "department_rankings.csv", "type": "csv", "id": "bd_dept_rank", "content": "Rank,Department,Score,Trend,AI Adoption Rate\n1,CPU-5,77,↑,100%\n2,CPU-1,74,→,100%\n3,CPU-7,72,↑,100%\n4,CPU-3,71,↓,98%\n5,CPU-8,70,→,100%\n6,CPU-2,68,↓,95%\n7,CPU-4,65,↓,100%\n8,CPU-6,63,↓↓,100%\nNote: CPU-6 recommended for restructuring." },
-                { "name": "prediction_model_v2.dat", "type": "dat", "id": "bd_model" }
+                { "name": "prediction_model_v2.dat", "type": "dat", "id": "bd_model" },
+                { "name": "2025_ravenue.csv", "type": "csv", "id": "2025_ravenue", "content": "Month,Ravenue\nJanuary,9.3M\nFebruary,8.1M\nMarch,9.5M\nApril,7.6M\nMay,13.4M\nJune,15.9M\nJuly,16.2M\nAugust,15.8M\nSeptember,15.9.3M\nOctober,14.8M\nNovember,16.3M\nDecember,15.1M\nTotal,157.9M" }
               ]
             },
             {
