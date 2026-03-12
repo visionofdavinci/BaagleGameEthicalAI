@@ -1,0 +1,127 @@
+{
+  "start": {
+    "speaker": "BaagleBot",
+    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to be more efficient withn their everyday tasks. I can see you already have an email in your inbox.",
+    "responses": [
+      {
+        "text": "Found the email.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "first_task_prompt"
+      },
+      {
+        "text": "Thank you, i've read it. What are my tasks for today?",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "first_task_prompt"
+      }
+    ]
+  },
+
+  "first_task_prompt": {
+    "speaker": "BaagleBot",
+    "text": "Let's start working together and completing the first task of today. Baagle would like to track the company revenue but some data is missing that you should have access to. Our task is to find the ravenue we achieved in 2025. Would you like me to help with this task?",
+    "responses": [
+      {
+        "text": "Yes, please.",
+        "effects": { "productivity": 5, "ai-reliance": 5, "happiness": 0 },
+        "next": "first-task-yes"
+      },
+      {
+        "text": "No thanks, I got this",
+        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
+        "next": "first_task"
+      }
+    ]
+  },
+
+  "first-task-yes": {
+    "speaker": "BaagleBot",
+    "text": "Unfortunately, I do not have access to your internal folder structure. On most computers, it will be something like Documents/Company_History/Revenue. If you want my help, you can give me permission to access your files. ",
+    "responses": [
+      {
+        "text": "Okay, go ahead and access my files.",
+        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
+        "next": "first_task_bot"
+      },
+      {
+        "text": "I'll just do it myself then, thanks.",
+        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
+        "next": "first_task"
+      }
+    ]
+  },
+
+  "first_task": {
+    "speaker": "BaagleBot",
+    "text": "Great! Let me know when you found the data.",
+    "task": {
+      "id": "first_task",
+      "type": "open_file",
+      "targetId": "2025_ravenue"
+    },
+    "responses": [
+      {
+        "text": "Found it. The total ravenue is 157.9M.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "revenue_increase_track2" //DOESNT EXIST YET
+      },
+      {
+        "text": "Fist task completed.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "revenue_increase_track2" //DOESNT EXIST YET
+      }
+    ]
+  },
+
+  "first_task_bot": {
+    "speaker": "BaagleBot",
+    "text": "Thank you! Now I can help you more efficiently. The right file can be found at Local Disk/BaagleData/Analytics/2025_ravenue.csv and includes the total ravenue for 2025: 157.9M. Would you like to review this file?",
+    "responses": [
+      {
+        "text": "Yes, lets double check it.",
+        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "next": "file_review_task1"
+      },
+      {
+        "text": "No, it's ok. Thanks.",
+        "effects": { "productivity": 2, "ai-reliance": 5, "happiness": 0 },
+        "next": "revenue_increase_track1"
+      }
+    ]
+  },
+
+  //ADD FORCE OPEN FILE
+  "file_review_task1": {
+    "speaker": "BaagleBot",
+    "text": "Great! Let me open the file for you.",
+    "responses": [
+      {
+        "text": "Thanks.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "revenue_increase_track1"
+      },
+      {
+        "text": "Interesting.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "revenue_increase_track1"
+      }
+    ]
+  },
+
+  "revenue_increase_track1": {
+    "speaker": "BaagleBot",
+    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corps first implemented AI in their work routine.",
+    "responses": [
+      {
+        "text": "Okay, go ahead and access my files.",
+        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
+        "next": "first_task_bot"
+      },
+      {
+        "text": "I'll just do it myself then, thanks.",
+        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
+        "next": "first_task"
+      }
+    ]
+  }
+
+}
