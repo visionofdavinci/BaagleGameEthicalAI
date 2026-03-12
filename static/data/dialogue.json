@@ -62,12 +62,12 @@
       {
         "text": "Found it. The total ravenue is 157.9M.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "revenue_increase_track2" //DOESNT EXIST YET
+        "next": "revenue_increase_track2" 
       },
       {
         "text": "Fist task completed.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "revenue_increase_track2" //DOESNT EXIST YET
+        "next": "revenue_increase_track2" 
       }
     ]
   },
@@ -89,7 +89,6 @@
     ]
   },
 
-  //ADD FORCE OPEN FILE
   "file_review_task1": {
     "speaker": "BaagleBot",
     "text": "Great! Let me open the file for you.",
