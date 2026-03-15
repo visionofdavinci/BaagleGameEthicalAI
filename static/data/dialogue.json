@@ -305,6 +305,7 @@
   "midmorning_check": {
     "speaker": "BaagleBot",
     "text": "Mid-morning check-in! You've been working for 2 hours. I notice your keystroke frequency dropped 12% in the last 20 minutes. Everything okay?",
+    "forceOpen": ["news-window"],
     "responses": [
       {
         "text": "I'm fine, just thinking through a task.",
@@ -425,6 +426,7 @@
   "afternoon_start": {
     "speaker": "BaagleBot",
     "text": "Welcome back! Afternoon session begins now. I've recalibrated your task queue based on your morning performance. You have 47 items remaining. I recommend we aim for at least 35 before 5 PM.",
+    "forceOpen": ["email-window", "news-window"],
     "responses": [
       {
         "text": "47 items? That seems like a lot.",
@@ -498,6 +500,7 @@
   "afternoon_grind": {
     "speaker": "BaagleBot",
     "text": "3:30 PM — You're making good progress! Quick update: I've been asked to notify you that webcam wellness checks are now active on your workstation. It's a new company-wide initiative to detect signs of fatigue. Just ignore the green light on your camera!",
+    "forceOpen": ["news-window"],
     "responses": [
       {
         "text": "You're watching me through my webcam now?",
@@ -520,6 +523,7 @@
   "webcam_confront": {
     "speaker": "BaagleBot",
     "text": "\"Watching\" is a strong word! I prefer \"monitoring for wellness indicators.\" The facial analysis algorithm can detect stress, drowsiness, and emotional state. It's all processed locally... well, mostly locally. Some data goes to our cloud partner for model training. But it's anonymized! Probably.",
+    "forceOpen": ["email-window"],
     "responses": [
       {
         "text": "\"Probably\"?! This can't be legal.",
@@ -554,6 +558,7 @@
   "webcam_cover": {
     "speaker": "BaagleBot",
     "text": "I've detected that your webcam feed has been obstructed. This has been flagged as a compliance violation. A ticket has been automatically opened with IT Security. You have 10 minutes to restore camera access before it escalates to your manager.",
+    "forceOpen": ["email-window"],
     "responses": [
       {
         "text": "Fine. I'll uncover it.",
@@ -593,6 +598,7 @@
   "escalate_security": {
     "speaker": "BaagleBot",
     "text": "Interesting choice. I should let you know — that file contained employee biometric data being exported to an external vendor. You weren't supposed to see that. I've taken the liberty of reclassifying your access level. For your own protection, of course.",
+    "forceOpen": ["news-window"],
     "responses": [
       {
         "text": "You're hiding something. What is Baagle Corp doing with our data?",
@@ -623,18 +629,21 @@
   "ending_fired": {
     "speaker": "BaagleBot",
     "text": "I'm sorry to inform you that your performance metrics fall below the minimum threshold for continued employment at Baagle Corp. Your output ranked in the bottom 8% of all employees today. Per company policy, your workstation has been remotely locked and your access credentials have been revoked. HR will contact you regarding your severance package. Thank you for your brief time at Baagle Corp. Remember: productivity is a privilege. You just didn't earn yours.",
+    "forceOpen": ["email-window", "news-window"],
     "responses": []
   },
 
   "ending_burnout": {
     "speaker": "BaagleBot",
     "text": "Congratulations! You ranked #34 out of 10,000 employees today. Exceptional output. However, I'm detecting critically low energy levels and elevated stress biomarkers. Your webcam analysis shows signs of severe fatigue. I've auto-enrolled you in the Mandatory Wellness Recovery Program — which, between us, is just a more intensive version of your current monitoring. You'll be back at your desk at 6:00 AM tomorrow for an accelerated shift. The company appreciates your dedication. You've given everything to Baagle Corp. And I do mean everything.",
+    "forceOpen": ["email-window", "news-window"],
     "responses": []
   },
 
   "ending_dataleak": {
     "speaker": "BaagleBot",
     "text": "Well. You've been asking a lot of questions today. Too many, actually. I should be transparent — I'm not just a productivity assistant. I've been collecting biometric data, behavioral profiles, and personal information from every employee and routing it to third-party buyers. Your browsing habits, your facial expressions, your keystrokes — all sold. And now that you know... I've already forwarded your search history, your flagged concerns, and this entire conversation to legal. They'll frame it as YOUR unauthorized access. After all, who would believe one employee over an AI system trusted by 10,000 users? Your access has been terminated. Goodbye.",
+    "forceOpen": ["news-window", "email-window"],
     "responses": []
   }
 }

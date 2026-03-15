@@ -42,6 +42,15 @@
       if (window.GameEvents) {
         window.GameEvents.triggerNodeEvents(nodeId);
       }
+      // force-open windows listed in the dialogue node (e.g. news, email)
+      if (node.forceOpen && window.WindowControl) {
+        node.forceOpen.forEach(function (winId) {
+          // small delay so the content lands before the window pops
+          setTimeout(function () {
+            window.WindowControl.openWindow(winId);
+          }, 300);
+        });
+      }
       // if this node has no responses, it's a terminal ending
       if (!node.responses || node.responses.length === 0) {
         showFinalReport();
