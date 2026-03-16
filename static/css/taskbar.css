@@ -125,7 +125,7 @@
   );
 }
 
-/* active focused tab — lighter, pressed-in look */
+/* active focused tab - lighter, pressed-in look */
 .taskbar-tab.active {
   background: linear-gradient(180deg,
     #5ca4ff 0%,

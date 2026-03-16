@@ -60,6 +60,34 @@ html, body {
   max-width: 76px;
 }
 
+/* red notification badge on desktop icon */
+.desktop-icon {
+  position: relative;
+}
+
+.email-badge {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  background: #d32f2f;
+  color: #fff !important;
+  text-shadow: none !important;
+  font-size: 9px;
+  font-weight: bold;
+  line-height: 16px;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 0 3px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.email-badge.hidden {
+  display: none;
+}
+
 /* hover state */
 .desktop-icon:hover {
   background: rgba(30, 80, 200, 0.25);
@@ -410,7 +438,7 @@ html, body {
   font-weight: bold;
 }
 
-/* ==================== FILE EXPLORER ==================== */
+/* file explorer */
 .explorer-body {
   padding: 0 !important;
   display: flex;

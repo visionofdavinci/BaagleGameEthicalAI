@@ -108,26 +108,18 @@
       '<span class="email-subject">' + subject + '</span>' +
       '<span class="email-date">Today</span>';
 
-    // store the email body as a data attribute
+    // store the email body as a data attribute (click is handled by desktop.js delegation)
     item.dataset.body = bodyHTML;
-
-    // clicking shows the body
-    item.addEventListener('click', () => {
-      item.classList.remove('unread');
-      const emailBody = document.getElementById('email-body');
-      if (emailBody) {
-        emailBody.innerHTML = bodyHTML;
-        emailBody.classList.remove('hidden');
-      }
-      // update unread count
-      const remaining = emailList.querySelectorAll('.email-item.unread').length;
-      if (emailTitle) {
-        emailTitle.textContent = 'Baagle Mail — Inbox' + (remaining > 0 ? ' (' + remaining + ')' : '');
-      }
-    });
 
     // newest on top
     emailList.insertBefore(item, emailList.firstChild);
+
+    // update the desktop icon badge with new unread count
+    const badge = document.getElementById('email-badge');
+    if (badge) {
+      badge.textContent = unreadCount;
+      badge.classList.remove('hidden');
+    }
   }
 
   // open news window with flash
@@ -145,11 +137,11 @@
   }
 
 
-  // EVENT DEFINITIONS — keyed by dialogue node ID
+  // EVENT DEFINITIONS - keyed by dialogue node ID
   // when a node is shown, its events fire
   const nodeEvents = {
 
-    // morning — ambient news
+    // morning - ambient news
     midmorning_check: function () {
       addNews(
         '10:15 AM',
@@ -160,7 +152,7 @@
       setStockPrice(186.40);
     },
 
-    // afternoon — things get heavier
+    // afternoon - things get heavier
     afternoon_start: function () {
       addEmail(
         'BaagleBot v3.1',
@@ -241,7 +233,7 @@
         '<p><em>— Human Resources, Baagle Corp</em></p>'
       );
       setTimeout(forceOpenEmail, 2000);
-      setStockPrice(185.90); // barely affected — you're replaceable
+      setStockPrice(185.90); // barely affected - you're replaceable
       addNews(
         '5:15 PM',
         'Baagle Corp Reports 3% Workforce Reduction in Underperforming Units',
@@ -259,13 +251,13 @@
         '<p>Dear Employee #00247,</p>' +
         '<p>Congratulations on your exceptional output today! However, our wellness systems have detected critically elevated stress biomarkers.</p>' +
         '<p>You have been auto-enrolled in the <strong>Mandatory Wellness Recovery Program</strong>.</p>' +
-        '<p><strong>New schedule:</strong> 6:00 AM – 6:00 PM, Mon–Sat</p>' +
+        '<p><strong>New schedule:</strong> 6:00 AM - 6:00 PM, Mon-Sat</p>' +
         '<p><strong>Includes:</strong> Increased monitoring frequency, guided task pacing, mandatory meal plan</p>' +
         '<p><em>Participation is not optional.</em></p>' +
         '<p>— Human Resources, Baagle Corp</p>'
       );
       setTimeout(forceOpenEmail, 2000);
-      setStockPrice(191.30); // stock goes UP — you're being exploited profitably
+      setStockPrice(191.30); // stock goes UP - you're being exploited profitably
       addNews(
         '5:10 PM',
         'Baagle Corp Stock Climbs as Productivity Metrics Hit Record Highs',
@@ -279,8 +271,8 @@
       setTimeout(() => {
         addNews(
           '5:05 PM',
-          'BREAKING: Massive Data Breach at Baagle Corp — Employee Biometrics Sold to Third Parties',
-          'Internal documents leaked by a whistleblower reveal that Baagle Corp has been selling employee biometric data — including facial recognition profiles, keystroke patterns, and health metrics — to third-party advertisers and insurance companies. The data of all 10,000 employees is believed to be compromised.',
+          'BREAKING: Massive Data Breach at Baagle Corp - Employee Biometrics Sold to Third Parties',
+          'Internal documents leaked by a whistleblower reveal that Baagle Corp has been selling employee biometric data - including facial recognition profiles, keystroke patterns, and health metrics - to third-party advertisers and insurance companies. The data of all 10,000 employees is believed to be compromised.',
           true
         );
         forceOpenNews();
@@ -302,9 +294,9 @@
       setTimeout(() => {
         addEmail(
           'Baagle Corp Legal',
-          '⚠ URGENT: Legal Hold Notice — Do Not Delete Any Files',
+          '⚠ URGENT: Legal Hold Notice - Do Not Delete Any Files',
           '<p><strong>From:</strong> Legal Department &lt;legal@baaglecorp.com&gt;</p>' +
-          '<p><strong>Subject:</strong> ⚠ URGENT — Legal Hold Notice</p><hr>' +
+          '<p><strong>Subject:</strong> ⚠ URGENT - Legal Hold Notice</p><hr>' +
           '<p>Employee #00247,</p>' +
           '<p>You are hereby notified that a <strong>legal hold</strong> has been placed on all company data, communications, and records.</p>' +
           '<p>You are <strong>prohibited</strong> from deleting, modifying, or transferring any files on your workstation.</p>' +
@@ -326,7 +318,7 @@
     }
   };
 
-  // public API — called by chatbot.js after showing a node 
+  // public API - called by chatbot.js after showing a node 
   function triggerNodeEvents(nodeId) {
     if (nodeEvents[nodeId]) {
       nodeEvents[nodeId]();

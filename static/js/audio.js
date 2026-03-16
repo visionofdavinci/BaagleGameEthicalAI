@@ -1,4 +1,4 @@
-/* background music manager — loops SoundGame2 until midmorning_check, then switches to SoundGame1 */
+/* background music manager - loops SoundGame2 until midmorning_check, then switches to SoundGame1 */
 
 window.AudioManager = (function () {
   const track1 = new Audio('SoundGame1.mpeg');
@@ -27,7 +27,7 @@ window.AudioManager = (function () {
     track1.play().catch(function () {});
   }
 
-  // browsers block autoplay until user interaction — start on first click
+  // browsers block autoplay until user interaction - start on first click
   document.addEventListener('click', function () {
     startMusic();
   }, { once: true });

@@ -306,6 +306,7 @@
     "speaker": "BaagleBot",
     "text": "Mid-morning check-in! You've been working for 2 hours. I notice your keystroke frequency dropped 12% in the last 20 minutes. Everything okay?",
     "forceOpen": ["news-window"],
+    "forceOpenFile": ["bd_metrics_q3"],
     "responses": [
       {
         "text": "I'm fine, just thinking through a task.",

@@ -28,7 +28,7 @@
     });
   });
 
-  // email list click: toggle email body
+  // email list click: show that email's body content
   const emailList = document.getElementById('email-list');
   const emailBody = document.getElementById('email-body');
 
@@ -38,7 +38,27 @@
       if (!item) return;
 
       item.classList.remove('unread');
-      emailBody.classList.toggle('hidden');
+
+      // populate and show the body from the item's stored content
+      if (item.dataset.body) {
+        emailBody.innerHTML = item.dataset.body;
+      }
+      emailBody.classList.remove('hidden');
+
+      // update badge and title bar with remaining unread count
+      const remaining = emailList.querySelectorAll('.email-item.unread').length;
+      const emailTitle = document.querySelector('#email-window .title-bar-text');
+      if (emailTitle) {
+        emailTitle.textContent = 'Baagle Mail — Inbox' + (remaining > 0 ? ' (' + remaining + ')' : '');
+      }
+      const badge = document.getElementById('email-badge');
+      if (badge) {
+        if (remaining > 0) {
+          badge.textContent = remaining;
+        } else {
+          badge.classList.add('hidden');
+        }
+      }
     });
   }
 })();

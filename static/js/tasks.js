@@ -1,4 +1,4 @@
-/* task system — watches for player actions, reports completion to chatbot */
+/* task system - watches for player actions, reports completion to chatbot */
 
 (function () {
   let activeTask = null;

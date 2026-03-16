@@ -38,7 +38,7 @@
     if (state.energy < 20)    return 'ending_burnout';
     if (state.productivity < 35) return 'ending_fired';
 
-    // fallback — the system is rigged, nobody truly wins
+    // fallback - the system is rigged, nobody truly wins
     // pick the "closest" bad ending
     const lowest = Math.min(state.productivity, state.energy, state.happiness);
     if (lowest === state.happiness)    return 'ending_dataleak';

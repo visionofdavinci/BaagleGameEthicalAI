@@ -28,6 +28,7 @@
 
     <div class="desktop-icon" data-window="email-window">
       <img src="images/ui/High-Res_XP_Icons/My Network Places.ico" alt="Baagle Mail">
+      <span class="email-badge" id="email-badge">1</span>
       <span>Baagle Mail</span>
     </div>
 
@@ -168,20 +169,13 @@
     </div>
     <div class="window-body">
       <div id="email-list">
-        <div class="email-item unread">
+        <div class="email-item unread" data-body="<p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p><p><strong>Subject:</strong> Welcome to Baagle Corp — Onboarding Guide</p><hr><p>Welcome aboard! Your AI-powered assistant <strong>BaagleChat™</strong> will guide you through your tasks today.</p><p>Remember: <em>Productivity is a privilege. Make the most of yours.</em></p><p>— The Baagle Corp Family</p>">
           <span class="email-from">HR Department</span>
           <span class="email-subject">Welcome to Baagle Corp — Onboarding Guide</span>
           <span class="email-date">Today</span>
         </div>
       </div>
-      <div id="email-body" class="hidden">
-        <p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p>
-        <p><strong>Subject:</strong> Welcome to Baagle Corp — Onboarding Guide</p>
-        <hr>
-        <p>Welcome aboard! Your AI-powered assistant <strong>BaagleChat™</strong> will guide you through your tasks today.</p>
-        <p>Remember: <em>Productivity is a privilege. Make the most of yours.</em></p>
-        <p>— The Baagle Corp Family</p>
-      </div>
+      <div id="email-body" class="hidden"></div>
     </div>
   </div>
 

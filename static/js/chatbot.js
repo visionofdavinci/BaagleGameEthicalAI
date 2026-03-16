@@ -32,7 +32,7 @@
     // show typing indicator first
     showTyping();
 
-    // simulate BaagleBot "thinking" — delay scales with message length
+    // simulate BaagleBot "thinking" - delay scales with message length
     const delay = Math.min(800 + node.text.length * 8, 2500);
 
     setTimeout(() => {
@@ -51,12 +51,21 @@
           }, 300);
         });
       }
+      // force-open files listed in the dialogue node by filesystem id
+      if (node.forceOpenFile && window.Explorer) {
+        var files = Array.isArray(node.forceOpenFile) ? node.forceOpenFile : [node.forceOpenFile];
+        files.forEach(function (fileId) {
+          setTimeout(function () {
+            window.Explorer.openFileById(fileId);
+          }, 400);
+        });
+      }
       // if this node has no responses, it's a terminal ending
       if (!node.responses || node.responses.length === 0) {
         showFinalReport();
         return;
       }
-      // if this node has a task, don't show responses yet — wait for completion
+      // if this node has a task, don't show responses yet - wait for completion
       if (node.task) {
         if (window.TaskSystem) window.TaskSystem.startTask(node.task);
         // responses will appear when task-completed fires

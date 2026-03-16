@@ -20,7 +20,7 @@
   animation: msg-appear 0.25s ease-out;
 }
 
-/* bot messages — left-aligned */
+/* bot messages - left-aligned */
 .chat-msg.bot {
   align-self: flex-start;
 }
@@ -32,7 +32,7 @@
   border: 1px solid #c8c8cc;
 }
 
-/* player messages — right-aligned */
+/* player messages - right-aligned */
 .chat-msg.player {
   align-self: flex-end;
 }
@@ -133,7 +133,7 @@
   background: #ccdcf0;
 }
 
-/* disabled state — after a choice is made */
+/* disabled state - after a choice is made */
 .response-btn:disabled {
   opacity: 0.5;
   cursor: default;

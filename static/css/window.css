@@ -76,7 +76,7 @@
   padding: 0;
 }
 
-/* minimize — blue-ish */
+/* minimize - blue-ish */
 .btn-minimize {
   background: linear-gradient(180deg, #3c8cf3 0%, #1960d0 100%);
 }
@@ -84,7 +84,7 @@
   background: linear-gradient(180deg, #5ca0ff 0%, #2870e0 100%);
 }
 
-/* maximize — blue-ish */
+/* maximize - blue-ish */
 .btn-maximize {
   background: linear-gradient(180deg, #3c8cf3 0%, #1960d0 100%);
 }
@@ -92,7 +92,7 @@
   background: linear-gradient(180deg, #5ca0ff 0%, #2870e0 100%);
 }
 
-/* close — red */
+/* close - red */
 .btn-close {background: linear-gradient(180deg, #e57158 0%, #c5372a 100%);}
 .btn-close:hover {background: linear-gradient(180deg, #ff8c70 0%, #e04030 100%);}
 

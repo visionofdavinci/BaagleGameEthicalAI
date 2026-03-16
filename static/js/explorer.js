@@ -1,4 +1,4 @@
-/* file explorer — navigates filesystem.json, opens files in the viewer */
+/* file explorer - navigates filesystem.json, opens files in the viewer */
 
 (function () {
   let fsData = null;
@@ -320,12 +320,20 @@
     return html;
   }
 
-  //public API
-  window.Explorer = { navigateTo: function(id) {
-    // allow other scripts to navigate to a folder by id
-    const folder = findById(fsData, id);
-    if (folder) navigateTo(folder);
-  }};
+  // public api - lets other scripts navigate or open files by id
+  window.Explorer = {
+    navigateTo: function(id) {
+      const folder = findById(fsData, id);
+      if (folder) navigateTo(folder);
+    },
+    openFileById: function(id) {
+      // find the file node and open it in the viewer
+      const file = findById(fsData, id);
+      if (file && file.type !== 'folder') {
+        openFile(file);
+      }
+    }
+  };
 
   function findById(node, id) {
     if (node.id === id) return node;

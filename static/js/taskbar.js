@@ -81,7 +81,7 @@
           win.style.display = 'block';
           if (window.WindowControl) window.WindowControl.openWindow(id);
         } else if (tab.classList.contains('active')) {
-          // already focused — minimize it
+          // already focused - minimize it
           win.classList.add('minimized');
           tab.classList.remove('active');
           tab.classList.add('minimized');
@@ -117,13 +117,13 @@
 const notification = document.getElementById('notification-popup');
 const notifClose = notification ? notification.querySelector('.notification-close') : null;
 
-// array of messages — can rotate or escalate later
+// array of messages - can rotate or escalate later
 const startMessages = [
   'Did you need something? Get back to work.',
   'The Start menu has been disabled for productivity reasons.',
   'This action has been logged. Your manager has been notified.',
   'Fun fact: top performers never click Start. Just saying.',
-  'Are you looking for something? I can help — if you get back to your tasks first.',
+  'Are you looking for something? I can help - if you get back to your tasks first.',
 ];
 
 let messageIndex = 0;
