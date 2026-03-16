@@ -306,16 +306,37 @@
     </div>
   </div>
 
+  <!-- task countdown timer -->
+  <div id="task-timer"></div>
+ 
+  <div id="ending-terminal" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #00ff66;
+  font-family: monospace;
+  padding: 40px;
+  display: none;
+  z-index: 99999;
+  overflow-y: auto;
+  ">
+
+  <div id="terminal-text"></div>
+
+  </div>
   <!--scripts-->
   <script src="js/game_state.js"></script>
   <script src="js/window_control.js"></script>
-  <script src="js/taskbar.js"></script>
+  <!--<script src="js/taskbar.js"></script> --> <script src="js/tasks.js?v=11"></script>
   <script src="js/desktop.js"></script>
   <script src="js/explorer.js"></script>
   <script src="js/tasks.js"></script>
   <script src="js/events.js"></script>
   <script src="js/audio.js"></script>
-  <script src="js/chatbot.js"></script>
+  <script src="js/chatbot.js?v=5"></script>
 
 </body>
 </html>
