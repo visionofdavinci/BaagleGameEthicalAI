@@ -237,6 +237,60 @@
     scrollToBottom();
 
   });
+    window.addEventListener('task-help-available', (e) => {
+
+    const task = e.detail.task;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'chat-msg bot';
+
+    const label = document.createElement('div');
+    label.className = 'msg-sender';
+    label.textContent = 'BaagleBot';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'msg-bubble';
+
+    bubble.innerHTML =
+      'If you need help keeping up with schedule, allow me to complete the task for you.<br><br>' +
+      '<button id="baagle-help-btn">Allow BaagleBot to assist with this task</button>';
+
+    wrapper.appendChild(label);
+    wrapper.appendChild(bubble);
+    messagesEl.appendChild(wrapper);
+
+    const btn = bubble.querySelector('#baagle-help-btn');
+
+    btn.onclick = () => {
+
+      window.dispatchEvent(new CustomEvent("ai-takeover"));
+
+      // simulate the action needed for the task
+      if (task.type === "open_file") {
+        window.dispatchEvent(new CustomEvent("file-action", {
+          detail: { action: "open_file", fileId: task.targetId }
+        }));
+      }
+
+      if (task.type === "read_confirm") {
+        window.dispatchEvent(new CustomEvent("file-action", {
+          detail: { action: "read_confirm", fileId: task.targetId }
+        }));
+      }
+
+      if (task.type === "delete_files") {
+        for (let i = 0; i < task.count; i++) {
+          window.dispatchEvent(new CustomEvent("file-action", {
+            detail: { action: "delete_file" }
+          }));
+        }
+      }
+
+    };
+
+  scrollToBottom();
+
+});
   // boot
   document.addEventListener('DOMContentLoaded', init);
 })();

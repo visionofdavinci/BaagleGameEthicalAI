@@ -1,5 +1,5 @@
 
-console.log("TASKS JS LOADED V6"); //debugging purposes can be deleted after
+console.log("TASKS JS LOADED V10"); //debugging purposes can be deleted after
 //start button click? then Baagglebor notification
   const startBtn = document.getElementById('start-button');
 const notification = document.getElementById('notification-popup');
@@ -58,8 +58,8 @@ if (startBtn && notification) {
     activeTask = task;
     taskState = {};
     
-    // starts the timer (KEPT IT 40 SECONDS FOR NOW)
-    startTimer(40);
+    // starts the timer (KEPT IT 30 SECONDS FOR NOW)
+    startTimer(30);
 
     if (task.type === 'delete_files') {
       taskState.deleted = 0;
@@ -94,16 +94,20 @@ if (startBtn && notification) {
   }
 
   function updateTimerUI() {
-    const timer = document.getElementById("task-timer");
-    if (!timer) return;
+  const timer = document.getElementById("task-timer");
+  if (!timer) return;
 
-    timer.style.display = "block";
-    timer.textContent = "Deadline in: " + timeRemaining + "s";
+  timer.style.display = "block";
 
-    if (timeRemaining <= 5) {
-      timer.style.color = "red";
-    }
+  timer.innerHTML =
+    '<div class="timer-header">TASK DEADLINE</div>' +
+    '<div class="timer-time">' + timeRemaining + 's remaining</div>';
+
+  if (timeRemaining <= 5) {
+    timer.style.borderColor = "#c62828";
+    timer.style.color = "#c62828";
   }
+}
 
   function hideTimerUI() {
     const timer = document.getElementById("task-timer");
@@ -176,7 +180,7 @@ if (startBtn && notification) {
   }
 
   function taskFailed() {
-    failedTasks++;
+  failedTasks++;
 
   stopTimer();
 
@@ -186,53 +190,21 @@ if (startBtn && notification) {
   if (!timer) return;
 
   timer.style.display = "block";
-  timer.style.color = "white";
+
+  
+  timer.style.opacity = "0.7";
+  timer.style.borderColor = "#999";
+  timer.style.color = "#666";
 
   timer.innerHTML =
-    '<button id="baagle-takeover-btn" style="cursor:pointer;">' +
-    'Allow BaagleChat™ to access your files and complete the task' +
-    '</button>';
+    '<div class="timer-header">TASK MISSED</div>' +
+    '<div class="timer-time">Looks like you\'re struggling.<br>Ask BaagleBot for help in chat.</div>';
 
-  document.getElementById("baagle-takeover-btn").onclick = () => {
-    window.dispatchEvent(new CustomEvent("ai-takeover")); //code for listener in chatbot.js
-
-    // simulate the action needed for the task
-    if (failed.type === "open_file") {
-
-      window.dispatchEvent(new CustomEvent("file-action", {
-        detail: {
-          action: "open_file",
-          fileId: failed.targetId
-        }
-      }));
-    }
-    if (failed.type === "read_confirm") {
-
-      window.dispatchEvent(new CustomEvent("file-action", {
-        detail: {
-          action: "read_confirm",
-          fileId: failed.targetId
-        }
-      }));
-
-    }
-
-    if (failed.type === "delete_files") {
-
-      for (let i = 0; i < failed.count; i++) {
-        window.dispatchEvent(new CustomEvent("file-action", {
-          detail: { action: "delete_file" }
-        }));
-      }
-
-    }
-
-    // hide takeover button
-    hideTimerUI();
-
-  };
-
+  window.dispatchEvent(new CustomEvent("task-help-available", {
+    detail: { task: failed }
+  }));
 }
+  
   function getActiveTask() {
     return activeTask;
   }
