@@ -188,7 +188,7 @@
       Press refresh to begin a new employment cycle.`
       );
 
-      }, 60000);
+      }, 10000);
           }, 1000);
   }
 
@@ -206,7 +206,7 @@
     const el = document.getElementById('typing');
     if (el) el.remove();
   }
-  //Terminal display text
+  //terminal display text
   function showEndingTerminal(text) {
 
   const terminal = document.getElementById("ending-terminal");
