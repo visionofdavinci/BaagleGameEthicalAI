@@ -1,4 +1,4 @@
-/* task system — watches for player actions, reports completion to chatbot */
+/* task system - watches for player actions, reports completion to chatbot */
 
 (function () {
 
@@ -14,7 +14,7 @@
     taskState = {};
     
     // starts the timer (KEPT IT 30 SECONDS FOR NOW)
-    startTimer(30);
+    startTimer(15);
 
     if (task.type === 'delete_files') {
       taskState.deleted = 0;
@@ -24,14 +24,14 @@
   
   // function to start the timer
   function startTimer(seconds) {
-    console.log("Timer started:", seconds);   // debug
+    //console.log("Timer started:", seconds);   // debug
     clearInterval(taskTimer);
     timeRemaining = seconds;
     updateTimerUI();
     taskTimer = setInterval(() => {
       timeRemaining--;
       updateTimerUI();
-      console.log("Timer tick:", timeRemaining);  //  for debug
+      //console.log("Timer tick:", timeRemaining);  //  for debug
       if (timeRemaining <= 0) {
         clearInterval(taskTimer);
         taskTimer = null;
@@ -164,6 +164,10 @@
     return activeTask;
   }
 
-  window.TaskSystem = { startTask, getActiveTask, getFailedTasks: () => failedTasks };
+  function getFailedTasks() {
+    return failedTasks;
+  }
+
+  window.TaskSystem = { startTask, getActiveTask, getFailedTasks };
 
 })();
