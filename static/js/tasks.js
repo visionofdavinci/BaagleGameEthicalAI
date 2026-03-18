@@ -1,4 +1,49 @@
-/* task system - watches for player actions, reports completion to chatbot */
+
+console.log("TASKS JS LOADED V10"); //debugging purposes can be deleted after
+//start button click? then Baagglebor notification
+  const startBtn = document.getElementById('start-button');
+const notification = document.getElementById('notification-popup');
+const notifClose = notification ? notification.querySelector('.notification-close') : null;
+
+// array of messages — can rotate or escalate later
+const startMessages = [
+  'Did you need something? Get back to work.',
+  'The Start menu has been disabled for productivity reasons.',
+  'This action has been logged. Your manager has been notified.',
+  'Fun fact: top performers never click Start. Just saying.',
+  'Are you looking for something? I can help — if you get back to your tasks first.',
+];
+
+let messageIndex = 0;
+
+if (startBtn && notification) {
+  startBtn.addEventListener('click', () => {
+    // pick the next message (cycles through them)
+    const body = notification.querySelector('.notification-body p');
+    if (body) body.textContent = startMessages[messageIndex % startMessages.length];
+    messageIndex++;
+
+    // show notification
+    notification.classList.remove('hidden', 'fade-out');
+
+    // auto-dismiss after 5 seconds
+    clearTimeout(notification._timeout);
+    notification._timeout = setTimeout(() => {
+      notification.classList.add('fade-out');
+      setTimeout(() => notification.classList.add('hidden'), 300);
+    }, 5000);
+  });
+
+  // manual close
+  if (notifClose) {
+    notifClose.addEventListener('click', () => {
+      notification.classList.add('fade-out');
+      setTimeout(() => notification.classList.add('hidden'), 300);
+    });
+  }
+}
+
+/* task system — watches for player actions, reports completion to chatbot */
 
 (function () {
 
@@ -14,7 +59,7 @@
     taskState = {};
     
     // starts the timer (KEPT IT 30 SECONDS FOR NOW)
-    startTimer(15);
+    startTimer(10);
 
     if (task.type === 'delete_files') {
       taskState.deleted = 0;
@@ -24,14 +69,14 @@
   
   // function to start the timer
   function startTimer(seconds) {
-    //console.log("Timer started:", seconds);   // debug
+    console.log("Timer started:", seconds);   // debug
     clearInterval(taskTimer);
     timeRemaining = seconds;
     updateTimerUI();
     taskTimer = setInterval(() => {
       timeRemaining--;
       updateTimerUI();
-      //console.log("Timer tick:", timeRemaining);  //  for debug
+      console.log("Timer tick:", timeRemaining);  //  for debug
       if (timeRemaining <= 0) {
         clearInterval(taskTimer);
         taskTimer = null;
@@ -164,10 +209,6 @@
     return activeTask;
   }
 
-  function getFailedTasks() {
-    return failedTasks;
-  }
-
-  window.TaskSystem = { startTask, getActiveTask, getFailedTasks };
+  window.TaskSystem = { startTask, getActiveTask, getFailedTasks: () => failedTasks };
 
 })();

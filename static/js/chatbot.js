@@ -1,3 +1,4 @@
+
 /* should render the chatbot output, responses as buttons, should update the gamestate on click and loads next dialogue state */
 
 (function () {
@@ -6,6 +7,9 @@
 
   let dialogueData = null;
   let currentNodeId = 'start';
+
+  // NEW FLAG
+  let aiAssistedTask = false;
 
   // load dialogue data
   function init() {
@@ -186,10 +190,12 @@
       Corporate systems will use this data to refine employee behavioral models.
       Thank you for your contribution to Baagle Corp productivity analytics.
       Press refresh to begin a new employment cycle.`
+
       );
 
       }, 60000);
-          }, 1000);
+
+    }, 1000);
   }
 
   // typing indicator
@@ -206,28 +212,29 @@
     const el = document.getElementById('typing');
     if (el) el.remove();
   }
+
   //Terminal display text
   function showEndingTerminal(text) {
 
-  const terminal = document.getElementById("ending-terminal");
-  const terminalText = document.getElementById("terminal-text");
+    const terminal = document.getElementById("ending-terminal");
+    const terminalText = document.getElementById("terminal-text");
 
-  terminal.style.display = "block";
-  terminalText.textContent = "";
+    terminal.style.display = "block";
+    terminalText.textContent = "";
 
-  let i = 0;
+    let i = 0;
 
-  function type() {
-    if (i < text.length) {
-      terminalText.textContent += text[i];
-      i++;
-      setTimeout(type, 25);
+    function type() {
+      if (i < text.length) {
+        terminalText.textContent += text[i];
+        i++;
+        setTimeout(type, 25);
+      }
     }
+
+    type();
+
   }
-
-  type();
-
-}
 
   //scroll helper 
   function scrollToBottom() {
@@ -236,15 +243,35 @@
 
   //listen for task completion
   window.addEventListener('task-completed', () => {
-    
+
     const node = dialogueData[currentNodeId];
-    if (node && node.responses) {
-      responsesEl.innerHTML = '';
+    if (!node) return;
+
+    responsesEl.innerHTML = '';
+
+    if (aiAssistedTask) {
+
+      const assistedResponses = [{
+        text: "Thanks for handling that.",
+        effects: node.responses[0].effects,
+        next: node.responses[0].next
+      }];
+
+      showResponses(assistedResponses);
+
+    } else {
+
       showResponses(node.responses);
-      scrollToBottom();
+
     }
+
+    aiAssistedTask = false;
+
+    scrollToBottom();
+
   });
-    window.addEventListener('ai-takeover', () => {
+
+  window.addEventListener('ai-takeover', () => {
 
     addMessage(
       'BaagleBot',
@@ -255,7 +282,8 @@
     scrollToBottom();
 
   });
-    window.addEventListener('task-help-available', (e) => {
+
+  window.addEventListener('task-help-available', (e) => {
 
     const task = e.detail.task;
 
@@ -281,9 +309,10 @@
 
     btn.onclick = () => {
 
+      aiAssistedTask = true;
+
       window.dispatchEvent(new CustomEvent("ai-takeover"));
 
-      // simulate the action needed for the task
       if (task.type === "open_file") {
         window.dispatchEvent(new CustomEvent("file-action", {
           detail: { action: "open_file", fileId: task.targetId }
@@ -306,9 +335,10 @@
 
     };
 
-  scrollToBottom();
+    scrollToBottom();
 
-});
+  });
+
   // boot
   document.addEventListener('DOMContentLoaded', init);
 })();
