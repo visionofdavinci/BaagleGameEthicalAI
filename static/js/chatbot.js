@@ -193,9 +193,8 @@
 
       );
 
-      }, 60000);
-
-    }, 1000);
+      }, 10000);
+          }, 1000);
   }
 
   // typing indicator
@@ -212,8 +211,7 @@
     const el = document.getElementById('typing');
     if (el) el.remove();
   }
-
-  //Terminal display text
+  //terminal display text
   function showEndingTerminal(text) {
 
     const terminal = document.getElementById("ending-terminal");
