@@ -130,12 +130,12 @@
       {
         "text": "Please open the document for me.",
         "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
-        "next": "data_handling_agreement_task_track1"
+        "next": "AI_open_data_handling_agreement_task_track1"
       },
       {
         "text": "I'll open the document myself.",
         "effects": { "productivity": -2, "ai-reliance": -1, "happiness": 0 },
-        "next": "AI_open_data_handling_agreement_task_track1"
+        "next": "data_handling_agreement_task_track1"
       }
     ]
   },
