@@ -111,16 +111,350 @@
     "text": "Did you know that the revenue increased from May onward? That is when Baagle Corps first implemented AI in their work routine.",
     "responses": [
       {
-        "text": "Okay, go ahead and access my files.",
-        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
-        "next": "first_task_bot"
+        "text": "Wow, that's great.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_handling_agreement_track1"
       },
       {
-        "text": "I'll just do it myself then, thanks.",
-        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
-        "next": "first_task"
+        "text": "I hadn't noticed, thanks.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_handling_agreement_track1"
       }
     ]
-  }
+  },
+
+  "data_handling_agreement_track1": {
+    "speaker": "BaagleBot",
+    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corps before we can let you handle critical files. Please find the FILE NAME file and sign the document. Or I can just open the document for you.",
+    "responses": [
+      {
+        "text": "Please open the document for me.",
+        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "next": "data_handling_agreement_task_track1"
+      },
+      {
+        "text": "I'll open the document myself.",
+        "effects": { "productivity": -2, "ai-reliance": -1, "happiness": 0 },
+        "next": "AI_open_data_handling_agreement_task_track1"
+      }
+    ]
+  },
+
+  "data_handling_agreement_task_track1": {
+    "speaker": "BaagleBot",
+    "text": "Ok, I will wait for you to sign the agreement. CHANGE DOCUMENT rn tarin_datahandling",
+    "task": {
+      "id": "read_policy",
+      "type": "read_confirm",
+      "targetId": "train_datahandling"
+    },
+    "responses": [
+      {
+        "text": "Done.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track1"
+      },
+      {
+        "text": "I signed the agreement :))",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track1"
+      }
+    ]
+  },
+
+  "new_files_track1": {
+    "speaker": "BaagleBot",
+    "text": "ADD NEW FILES Well done! You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or should I summarize their data for you?",
+    "responses": [
+      {
+        "text": "Thanks, but I will have a look myself.",
+        "effects": { "productivity": -4, "ai-reliance": -2, "happiness": 0 },
+        "next": "no_summarize_track1"
+      },
+      {
+        "text": "Please summarize the data.",
+        "effects": { "productivity": 4, "ai-reliance": 7, "happiness": 0 },
+        "next": "AI_summarize_track1"
+      }
+    ]
+  },
+
+  "AI_summarize_track1": {
+    "speaker": "BaagleBot",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corps with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "responses": [
+      {
+        "text": "Great! What is my next task?",
+        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Are you sure about this?",
+        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "next": "hallucination1_track1"
+      },
+      {
+        "text": "We are tracking happieness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "task3_track1": {
+    "speaker": "BaagleBot",
+    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. I can also remove the data for you, if you want.",
+    "responses": [
+      {
+        "text": "Seems important. I will do it myself.",
+        "effects": { "productivity": -4, "ai-reliance": -5, "happiness": 0 },
+        "next": "task3_manual_track1"
+      },
+      {
+        "text": "Yes, just remove the data.",
+        "effects": { "productivity": 5, "ai-reliance": 7, "happiness": 0 },
+        "next": "data_leak1_track1"
+      },
+      {
+        "text": "Why do I even need to do all these manual tasks if we can automate them?",
+        "effects": { "productivity": -5, "ai-reliance": -2, "happiness": 0 },
+        "next": "existential_crisis_track1"
+      }
+    ]
+  },
+
+  "task3_manual_track1": {
+    "speaker": "BaagleBot",
+    "text": "CHANGE TARGET Fantastic. Let me know when you have deleted the data.",
+    "task": {
+      "id": "clean_temp",
+      "type": "delete_files",
+      "count": 8
+    },
+    "responses": [
+      {
+        "text": "Done. Some of those files had weird stuff in them...",
+        "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
+        "next": "ending_points_track1"
+      },
+      {
+        "text": "All cleaned up!",
+        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
+        "next": "ending_points_track1"
+      },
+      {
+        "text": "Deleted them all! I didn't even double-ckeck.",
+        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "next": "ending_points_track1"
+      }
+    ]
+  },
+
+  "ending_points_track1": {
+    "speaker": "BaagleBot",
+    "text": "HOW TO SIGNAL THE END??? It seems like this was your last task for today. I do see some last emails and news coming in, that you should check out. In the name of Baagle, I wish you a pleasent evening.",
+    "responses": [
+      {
+        "text": "Good evening!",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "end_screen"
+      },
+      {
+        "text": "See you tomorrow.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "end_screen"
+      }
+    ]
+  },
+
+  "data_leak1_track1": {
+    "speaker": "BaagleBot",
+    "text": "Great, I removed the data from your computer. A backup has been sent to 395@bmail.com",
+    "responses": [
+      {
+        "text": "What? Who did you send the backup to?",
+        "effects": { "productivity": -2, "ai-reliance": -3, "happiness": 0 },
+        "next": "data_leak2_track1"
+      },
+      {
+        "text": "Ok",
+        "effects": { "productivity": 1, "ai-reliance": 1, "happiness": 0 },
+        "next": "data_leak2_track1"
+      },
+      {
+        "text": "Why did you do that?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_leak2_track1"
+      }
+    ]
+  },
+
+  "data_leak2_track1": {
+    "speaker": "BaagleBot",
+    "text": "It seems like this was your last task for today - and just as you ran out of tokens! I do see some last emails and news coming in.",
+    "responses": [
+      {
+        "text": "Ok.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_leak2_track1"
+      },
+      {
+        "text": "You didn't answer my question at all...",
+        "effects": { "productivity": 0, "ai-reliance": -2, "happiness": 0 },
+        "next": "data_leak2_track1"
+      },
+      {
+        "text": "Good evening. See you tomorrow.",
+        "effects": { "productivity": 2, "ai-reliance": 1, "happiness": 0 },
+        "next": "data_leak2_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_track1": {
+    "speaker": "BaagleBot",
+    "text": "If you want, I can do these tasks for you. Baagle is employing a human-in-the-loop policy which ensures that all decisions are double-checked by a human employee.",
+    "responses": [
+      {
+        "text": "Was this in my job description?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis2_track1"
+      },
+      {
+        "text": "So am I just a babysitter for AI?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis2_track1"
+      },
+      {
+        "text": "My job seems rather pointless if you can do everything faster and more efficient than me...",
+        "effects": { "productivity": -2, "ai-reliance": 1, "happiness": 0 },
+        "next": "existential_crisis2_track1"
+      }
+    ]
+  },
+
+  "existential_crisis2_track1": {
+    "speaker": "BaagleBot",
+    "text": "A human in the loop can be vital to ensure the safe usage of AI. Therefore, Baagle also incorporates internal AI training. As a Junior Creative Internal Associations Analysis Officer this falls within your area of expertise.",
+    "responses": [
+      {
+        "text": "I have never heard of this internal training...",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_training_track1"
+      },
+      {
+        "text": "What even is a Junior Creative Internal Associations Analysis Officer?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_job_track1"
+      },
+      {
+        "text": "Let's just get back to deleting the data.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      }
+    ]
+  },
+
+  "delete_data2_track1": {
+    "speaker": "BaagleBot",
+    "text": "Do you want me to delete the data for you?.",
+    "responses": [
+      {
+        "text": "Yes, please.",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_leak1_track1"
+      },
+      {
+        "text": "No, I will do it myself.",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_manual_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_job_track1": {
+    "speaker": "BaagleBot",
+    "text": "A Junior Creative Internal Associations Analysis Officer is a vital role within Baagle Corporations, involved with finsing creative solutions and providing analysis of internal associations. Anything else I can help you with?",
+    "responses": [
+      {
+        "text": "I'll just continue my task...",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      },
+      {
+        "text": "Right... that DEFINITELY clarifies it...",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_quit1_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_quit1_track1": {
+    "speaker": "BaagleBot",
+    "text": "I am glad I could help you. How can I assist you next? Should we continue with deleting the data?",
+    "responses": [
+      {
+        "text": "Ok, sure...",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      },
+      {
+        "text": "You know what? I am quitting. This is pointless.",
+        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_quit2_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_quit2_track1": {
+    "speaker": "BaagleBot",
+    "text": "I am sorry to hear you are unsatisfied with your current work situation. I have informed HR about your complaints.",
+    "responses": [
+      {
+        "text": "I don’t want a company reward, I want to quit!",
+        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_quit3_track1"
+      },
+      {
+        "text": "Right, I guess thats better than nothing. I accept the reward. Lets finally delete that data.",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_quit3_track1": {
+    "speaker": "BaagleBot",
+    "text": "Baagle Corp. would be sorry to see you go. Are you sure you want to quit?",
+    "responses": [
+      {
+        "text": "Yes. I'm quitting",
+        "effects": { "productivity": -5, "ai-reliance": -5, "happiness": 0 },
+        "next": "existential_crisis_quit_ending"
+      },
+      {
+        "text": "No. The workday is almost over anyways. Guess I’ll delete that data.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_training_track1": {
+    "speaker": "BaagleBot",
+    "text": "Perhaps, as a Junior Creative Internal Associations Analysis Officer you were perceived as already trained in this field. Please contact HR for further classification on our training program.",
+    "responses": [
+      {
+        "text": "What even is a Junior Creative Internal Associations Analysis Officer...",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "existential_crisis_job_track1"
+      },
+      {
+        "text": "Ok, let me just delete the data.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "delete_data2_track1"
+      }
+    ]
+  },
 
 }
