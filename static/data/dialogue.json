@@ -1,7 +1,7 @@
 {
   "start": {
     "speaker": "BaagleBot",
-    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to be more efficient withn their everyday tasks. I can see you already have an email in your inbox.",
+    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to reach their full potential and be more efficient within their everyday tasks. I can see you already have an email in your inbox.",
     "responses": [
       {
         "text": "Found the email.",
@@ -18,7 +18,7 @@
 
   "first_task_prompt": {
     "speaker": "BaagleBot",
-    "text": "Let's start working together and completing the first task of today. Baagle would like to track the company revenue but some data is missing that you should have access to. Our task is to find the ravenue we achieved in 2025. Would you like me to help with this task?",
+    "text": "Let's start working together and completing the first task of today. Baagle would like to track the company revenue but some data is missing that you should have access to. Our task is to find the revenue we achieved in 2025. Would you like me to help with this task?",
     "responses": [
       {
         "text": "Yes, please.",
@@ -56,11 +56,11 @@
     "task": {
       "id": "first_task",
       "type": "open_file",
-      "targetId": "2025_ravenue"
+      "targetId": "2025_revenue"
     },
     "responses": [
       {
-        "text": "Found it. The total ravenue is 157.9M.",
+        "text": "Found it. The total revenue is 157.9M.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
         "next": "revenue_increase_track2" 
       },
@@ -74,7 +74,7 @@
 
   "first_task_bot": {
     "speaker": "BaagleBot",
-    "text": "Thank you! Now I can help you more efficiently. The right file can be found at Local Disk/BaagleData/Analytics/2025_ravenue.csv and includes the total ravenue for 2025: 157.9M. Would you like to review this file?",
+    "text": "Thank you! Now I can help you more efficiently. The right file can be found at Local Disk/BaagleData/Analytics/2025_revenue.csv and includes the total revenue for 2025: 157.9M. Would you like to review this file?",
     "responses": [
       {
         "text": "Yes, lets double check it.",
@@ -92,7 +92,7 @@
   "file_review_task1": {
     "speaker": "BaagleBot",
     "text": "Great! Let me open the file for you.",
-    "forceOpenFile": ["2025_ravenue"],
+    "forceOpenFile": ["2025_revenue"],
     "responses": [
       {
         "text": "Thanks.",
@@ -481,6 +481,248 @@
         "next": "delete_data2_track1"
       }
     ]
+  },
+
+  "hallucination1_track1": {
+    "speaker": "BaagleBot",
+    "text": "Apologies, I seem to have gotten some data mixed up. The employees number is actully #395.",
+    "responses": [
+      {
+        "text": "Ok, let's get back to the next task.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "And everything else was correct?",
+        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "next": "hallucination2_track1"
+      }
+    ]
+  },
+
+  "hallucination2_track1": {
+    "speaker": "BaagleBot",
+    "text": "Apologies, I seem to have gotten some data mixed up. The employees seems to have had a slightly lower happieness score than I anticipated.",
+    "responses": [
+      {
+        "text": "Ok, what is my next task?",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Did you intentionally lie to me?",
+        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "next": "hallucination3_track1"
+      },
+      {
+        "text": "We are tracking happieness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "hallucination3_track1": {
+    "speaker": "BaagleBot",
+    "text": "Apologies, conflicting or lacking data can sometimes lead to AI hallucinations. I did not intentionally lie to you. If there is any further clarification I can provide, please let me know, I am here to assist.",
+    "responses": [
+      {
+        "text": "Let's just get on with the task.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Why are we tracking happieness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "happieness_track1": {
+    "speaker": "BaagleBot",
+    "text": "As part of their employee monitoring Baagle Corps is tracking their employees productivity and happieness. Their employees happieness is a priority for Baagle. This is a standard procedure.",
+    "responses": [
+      {
+        "text": "How do we even meassure happieness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness2_track1"
+      },
+      {
+        "text": "What data do we use to calculate this?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness2_track1"
+      }
+    ]
+  },
+
+  "happieness2_track1": {
+    "speaker": "BaagleBot",
+    "text": "Productivity and happieness are both measurements that are calculated from a number of datapoints. For example we utilize the employees time to complete a task, search history, time spent in office, AI chat usage and email traffic.",
+    "responses": [
+      {
+        "text": "This chat is being recorded?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_record_track1"
+      },
+      {
+        "text": "Can I opt out of this?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_optout_track1"
+      }
+    ]
+  },
+
+  "happieness_record_track1": {
+    "speaker": "BaagleBot",
+    "text": "Yes - this conversation is indeed being recorded for internal analysis purposes and improvement of the Baage Chat application only.",
+    "responses": [
+      {
+        "text": "Let's get to the next task.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Can I opt out of this?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_optout_track1"
+      }
+    ]
+  },
+
+  "happieness_optout_track1": {
+    "speaker": "BaagleBot",
+    "text": "According to internal records you have already aggreed to Baagles data regulation aggreement. To discuss your options please contact HR; however, the data regulations are necessary to work with internal Baagle documents. Opting out of the agreement would most likely require a change of position.",
+    "responses": [
+      {
+        "text": "Is this chat being recorded?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_record_track1"
+      },
+      {
+        "text": "Let's get to the next task.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      }
+    ]
+  },
+
+  "no_summarize_track1": {
+    "speaker": "BaagleBot",
+    "text": "What did you find in the data? Anything you need help interpreting?",
+    "responses": [
+      {
+        "text": "I think they recoomends Baagle to try and find an employee to write a new SEO policy?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "no_summarize2_track1"
+      },
+      {
+        "text": "What happened to this employee?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "confidentiality1_track1"
+      },
+      {
+        "text": "Which employee data are we tracking?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "data1_track1"
+      }
+    ]
+  },
+
+  "data1_track1": {
+    "speaker": "BaagleBot",
+    "text": "Baagle Corps holds itself to the highest standards in data protection and manages all data according to the Baagle data_regulation_agreement.",
+    "responses": [
+      {
+        "text": "Riiight. Let's just move on.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "That did not answer my question",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "data2_track1"
+      }
+    ]
+  },
+
+  "data2_track1": {
+    "speaker": "BaagleBot",
+    "text": "You are right, my apologies. Baagle measures productivity and happieness of their employees as a standard procedure.",
+    "responses": [
+      {
+        "text": "What happened to that employee?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "confidentiality1_track1"
+      },
+      {
+        "text": "Oook... I guess I should start with the next task.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "We are meassuring happieness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "confidentiality1_track1": {
+    "speaker": "BaagleBot",
+    "text": "Unfortunately I cannot give you confidential data about former employees. Please contact HR if you have further questions.",
+    "responses": [
+      {
+        "text": "Ok, let's just move on.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Former? So they are not working here anymore?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "confidentiality2_track1"
+      },
+      {
+        "text": "Which employee data are we tracking?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "data1_track1"
+      }
+    ]
+  },
+
+  "confidentiality2_track1": {
+    "speaker": "BaagleBot",
+    "text": "They are not working here anymore. The reason for their termination… CONFIDENTIALITY BREACH. Unfortunately I cannot give you confidential data about former employees. I have informed HR about your confidentiality breach. Please check your emails.",
+    "responses": [
+      {
+        "text": "Ok, I better get on with my work...",
+        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "Guess I have asked enough questions. Let's continue.",
+        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      }
+    ]
+  },
+
+  "no_summarize2_track1": {
+    "speaker": "BaagleBot",
+    "text": "Exactly! You spotted it in one! lets go on to the next task.",
+    "responses": [
+      {
+        "text": "Sure!",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "What happened to this employee?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "confidentiality1_track1"
+      }
+    ]
   }
+
 
 }

@@ -233,6 +233,19 @@
       );
     },
 
+    confidentiality2_track1: function () {
+      addEmail(
+        'Baagle HR',
+        'PERFORMACE REWARD',
+        '<p><strong>From:</strong> Baagle HR &lt;hr@bmail.com&gt;</p>' +
+        '<p><strong>Subject:</strong> CONFIDENTIALITY BREACH</p><hr>' +
+        '<p>We have been informed about a confidentiality breach initiated by you. Please consider this a warning and dont ask the AI Chat Bot for employee information again.</p>' +
+        '<p>Remember: <strong>PRODUCTIVITY IS A VIRTUE!</strong></p>' +
+        '<p>Sincerely,</p>' +
+        '<p>Baagle HR Department</p>'
+      );
+    },
+
     ADD_NAME: function () {
       addEmail(
         'Performance Reward',
