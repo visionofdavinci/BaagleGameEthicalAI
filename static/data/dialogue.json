@@ -92,6 +92,7 @@
   "file_review_task1": {
     "speaker": "BaagleBot",
     "text": "Great! Let me open the file for you.",
+    "forceOpenFile": ["2025_ravenue"],
     "responses": [
       {
         "text": "Thanks.",
@@ -139,6 +140,7 @@
       }
     ]
   },
+
 
   "data_handling_agreement_task_track1": {
     "speaker": "BaagleBot",
@@ -409,6 +411,7 @@
   "existential_crisis_quit2_track1": {
     "speaker": "BaagleBot",
     "text": "I am sorry to hear you are unsatisfied with your current work situation. I have informed HR about your complaints.",
+    "forceOpen": ["email-window"],
     "responses": [
       {
         "text": "I don’t want a company reward, I want to quit!",

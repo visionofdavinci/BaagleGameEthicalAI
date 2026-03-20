@@ -15,5 +15,4 @@ Loose ends (not created yet):
 - existential_crisis_quit2_track1 TRIGGER EMAIL
 - task3_maual_track1 FUNCTION
 - existential_crisis_quit_ending
-- file_review_task1 OPEN FILE
 
