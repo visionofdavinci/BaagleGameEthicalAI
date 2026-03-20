@@ -10,9 +10,9 @@ Loose ends (not created yet):
 - no_summarize_track1
 - hallucination1_track1
 - happieness_track1
-- AI_open_data_handling_agreement_task_track1
 
 - existential_crisis_quit2_track1 TRIGGER EMAIL
 - task3_maual_track1 FUNCTION
 - existential_crisis_quit_ending
+- write file for train_datahandling
 

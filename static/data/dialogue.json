@@ -141,6 +141,29 @@
     ]
   },
 
+  "AI_open_data_handling_agreement_task_track1": {
+    "speaker": "BaagleBot",
+    "text": "I opened the file for you. I will wait for you to sign the agreement. CHANGE DOCUMENT rn tarin_datahandling",
+    "forceOpenFile": [],
+    "task": {
+      "id": "read_policy",
+      "type": "read_confirm",
+      "targetId": "train_datahandling"
+    },
+    "responses": [
+      {
+        "text": "Done.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track1"
+      },
+      {
+        "text": "I signed the agreement :))",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track1"
+      }
+    ]
+  },
+
 
   "data_handling_agreement_task_track1": {
     "speaker": "BaagleBot",
