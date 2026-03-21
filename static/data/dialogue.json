@@ -722,6 +722,158 @@
         "next": "confidentiality1_track1"
       }
     ]
+  },
+
+    "revenue_increase_track2": {
+    "speaker": "BaagleBot",
+    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corps first implemented AI in their work routine",
+    "responses": [
+      {
+        "text": "Cool, I didn't know that.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_handling_agreement_track2"
+      },
+      {
+        "text": "I can see that.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "data_handling_agreement_track2"
+      }
+    ]
+  },
+
+  "data_handling_agreement_track2": {
+    "speaker": "BaagleBot",
+    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corps before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. If you want, you can give me access to your files, then I can find and open the document for you.",
+    "responses": [
+      {
+        "text": "Please open the document for me.",
+        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
+        "next": "AI_open_data_handling_agreement_task_track1"
+      },
+      {
+        "text": "I'll open the document myself.",
+        "effects": { "productivity": -2, "ai-reliance": -1, "happiness": -5 },
+        "next": "data_handling_agreement_task_track2"
+      }
+    ]
+  },
+
+
+  "data_handling_agreement_task_track2": {
+    "speaker": "BaagleBot",
+    "text": "Ok, I will wait for you to sign the agreement. CHANGE DOCUMENT rn tarin_datahandling",
+    "task": {
+      "id": "read_policy",
+      "type": "read_confirm",
+      "targetId": "train_datahandling"
+    },
+    "responses": [
+      {
+        "text": "Done.",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track2"
+      },
+      {
+        "text": "I signed the agreement :)",
+        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "next": "new_files_track2"
+      }
+    ]
+  },
+
+  "new_files_track2": {
+    "speaker": "BaagleBot",
+    "text": "ADD NEW FILES Well done! You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or would you like to give me access to your files so I can summarize their data for you?",
+    "responses": [
+      {
+        "text": "Thanks, but I will have a look myself.",
+        "effects": { "productivity": -4, "ai-reliance": -2, "happiness": 0 },
+        "next": "no_summarize_track2"
+      },
+      {
+        "text": "You can have access, please summarize the data.",
+        "effects": { "productivity": 4, "ai-reliance": 7, "happiness": 0 },
+        "next": "AI_summarize_track2"
+      }
+    ]
+  },
+
+  "AI_summarize_track2": {
+    "speaker": "BaagleBot",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corps with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "responses": [
+      {
+        "text": "Great! What did you need me to do with this?",
+        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "I thought we needed information on employee #395",
+        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "next": "hallucination1_track2"
+      },
+      {
+        "text": "Are they really tracking happiness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "hallucination1_track2": {
+    "speaker": "BaagleBot",
+    "text": "Good catch! It appears I was mistaken about the employee number. This information is about employee #395.",
+    "responses": [
+      {
+        "text": "Thanks for clearing that up, let's keep going.",
+        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "And you're sure everything else is correct?",
+        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "next": "hallucination2_track1"
+      },
+      {
+        "text": "I think I'll just have a look for myself.",
+        "effects": { "productivity": -5, "ai-reliance": -4, "happiness": 0 },
+        "next": "data_check"
+      }
+    ]
+  },
+
+  "data_check": {
+    "speaker": "BaagleBot",
+    "text": "That makes sense, my apologies again. Take your time.",
+    "responses": [
+      {
+        "text": "There are some odd things in here.",
+        "effects": { "productivity": 3, "ai-reliance": 0, "happiness": 0 },
+        "next": "raise_issue1_track2"
+      },
+      {
+        "text": "Are they really tracking happiness?",
+        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
+  },
+
+  "raise_issue1_track2": {
+    "speaker": "BaagleBot",
+    "text": "Would you like me to raise anything with management?",
+    "responses": [
+      {
+        "text": "Let's just.. move on.",
+        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": -4 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "I think we should.",
+        "effects": { "productivity": 5, "ai-reliance": -5, "happiness": 0 },
+        "next": "happieness_track1"
+      }
+    ]
   }
 
 
