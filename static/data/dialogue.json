@@ -871,7 +871,146 @@
       {
         "text": "I think we should.",
         "effects": { "productivity": 5, "ai-reliance": -5, "happiness": 0 },
-        "next": "happieness_track1"
+        "next": "raise_issue2_track2"
+      }
+    ]
+  },
+
+  "raise_issue2_track2": {
+    "speaker": "BaagleBot",
+    "text": "Could you tell me about the concern so I can send management a summary?",
+    "responses": [
+      {
+        "text": "There seem to be LLM instructions in the personal files.",
+        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
+        "next": "raise_issue3_track2"
+      },
+      {
+        "text": "This person really did not like working here.",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "raise_issue3_track3"
+      }
+    ]
+  },
+
+  "raise_issue3_track2": {
+    "speaker": "BaagleBot",
+    "text": "Thank you for catching that! I have forwarded the information.",
+    "responses": [
+      {
+        "text": "Good. Let's move on then.",
+        "effects": { "productivity": 6, "ai-reliance": 0, "happiness": 5 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "This person really did not like working here.",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "raise_issue3_track3"
+      },
+      {
+        "text": "Why would someone do this?",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "raise_issue4_track3"
+      }
+    ]
+  },
+
+  "raise_issue4_track3": {
+    "speaker": "BaagleBot",
+    "text": "We cannot be sure of the intentions of Employee #395.",
+    "responses": [
+      {
+        "text": "I guess we can't. Let's just move on.",
+        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": -4 },
+        "next": "task3_track1"
+      },
+      {
+        "text": "This person really did not like working here.",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "raise_issue3_track3"
+      }
+    ]
+  },
+
+  "raise_issue3_track3": {
+    "speaker": "BaagleBot",
+    "text": "Baagle Corp. provides its employees with many benefits! Happiness and wellbeing are one of our highest priorities!",
+    "responses": [
+      {
+        "text": "Am I even contributing to anything?",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -7 },
+        "next": "existential_crisis_track2"
+      },
+      {
+        "text": "Did I replace them?",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "raise_issue5_track3"
+      },
+      {
+        "text": "Sure, I guess. What's my next task?",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "next": "task3_track1"
+      }
+    ]
+  },
+  
+  "raise_issue5_track3": {
+    "speaker": "BaagleBot",
+    "text": "It appears that you have a similar job title as Employee #395. It is possible that you filled the role. We are happy to have you on board!",
+    "responses": [
+      {
+        "text": "Am I even contributing to anything?",
+        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -4 },
+        "next": "existential_crisis_track2"
+      },
+      {
+        "text": "I should really get on with my tasks.",
+        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      }
+    ]
+  },
+
+  "existential_crisis_track2": {
+    "speaker": "BaagleBot",
+    "text": "I can assure you that you are an integral part of Baagle Corp.! To keep contributing, we can go ahead and take care of the next task!",
+    "responses": [
+      {
+        "text": "What even is a Junior Creative Internal Associations Analysis Officer?",
+        "effects": { "productivity": -4, "ai-reliance": 0, "happiness": -4 },
+        "next": "existential_crisis_job_track1"
+      },
+      {
+        "text": "Yeah, alright then..",
+        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "next": "task3_track1"
+      }
+    ]
+  },
+
+  "task3_manual_track2": {
+    "speaker": "BaagleBot",
+    "text": "CHANGE TARGET Fantastic. Let me know when you have deleted the data.",
+    "task": {
+      "id": "clean_temp",
+      "type": "delete_files",
+      "count": 8
+    },
+    "responses": [
+      {
+        "text": "Done. Some of those files had weird stuff in them...",
+        "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
+        "next": "ending_points_track1"
+      },
+      {
+        "text": "All cleaned up!",
+        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
+        "next": "ending_points_track1"
+      },
+      {
+        "text": "Deleted them all! I didn't even double-ckeck.",
+        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "next": "ending_points_track1"
       }
     ]
   }
