@@ -1,5 +1,22 @@
-/* controls that if double click on desktop items, they open the corresponding window */
+/* start screen */
 
+document.addEventListener("DOMContentLoaded", () => {
+  const startScreen = document.getElementById("start-screen");
+  const playButton = document.getElementById("play-button");
+
+  playButton.addEventListener("click", () => {
+  startScreen.classList.add("fade-out");
+
+  setTimeout(() => {
+    startScreen.style.display = "none";
+
+    window.dispatchEvent(new Event("game-start"));
+  }, 1000);
+})
+});
+  
+
+/* controls that if double click on desktop items, they open the corresponding window */
 (function () {
   const icons = document.querySelectorAll('.desktop-icon');
   const desktop = document.getElementById('desktop');

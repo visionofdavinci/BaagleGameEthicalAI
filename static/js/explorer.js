@@ -109,7 +109,9 @@
     }
 
     // sort: folders first, then files alphabetically
-    const sorted = [...currentFolder.children].sort((a, b) => {
+    const sorted = currentFolder.children
+    .filter(item => !item.hidden)
+    .sort((a, b) => {
       if (a.type === 'folder' && b.type !== 'folder') return -1;
       if (a.type !== 'folder' && b.type === 'folder') return 1;
       return a.name.localeCompare(b.name);
@@ -320,14 +322,12 @@
     return html;
   }
 
-  // public api - lets other scripts navigate or open files by id
   window.Explorer = {
     navigateTo: function(id) {
       const folder = findById(fsData, id);
       if (folder) navigateTo(folder);
     },
     openFileById: function(id) {
-      // find the file node and open it in the viewer
       const file = findById(fsData, id);
       if (file && file.type !== 'folder') {
         openFile(file);
@@ -345,6 +345,23 @@
     }
     return null;
   }
+  window.addEventListener("unlock-files", (e) => {
+  const group = e.detail.unlockGroup;
+  function unlockRecursive(node) {
+
+    if (node.unlockGroup === group) {
+      node.hidden = false;
+    }
+    if (node.children) {
+      node.children.forEach(child => unlockRecursive(child));
+    }
+  }
+  if (fsData) {
+    unlockRecursive(fsData);
+  }
+  render(); 
+
+});
 
   document.addEventListener('DOMContentLoaded', init);
 })();

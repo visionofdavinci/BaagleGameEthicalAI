@@ -9,8 +9,106 @@
   <link rel="stylesheet" href="css/taskbar.css">
   <link rel="stylesheet" href="css/window.css">
   <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/contract.css">
 </head>
 
+<div id="start-screen">
+  <div class="start-content">
+    <img src="images/BAAGLE_PNG.png" alt="Baagle" class="start-logo">
+    <button id="play-button">▶ Play</button>
+  </div>
+</div>
+
+<!-- ── CONTRACT SCREEN ────────────────────────────────────── -->
+<div id="contract-screen">
+  <div class="contract-paper" id="contract-paper">
+
+    <div class="contract-header">
+      <span>📄</span>
+      <span>BAAGLE_CORP_EMPLOYEE_AGREEMENT_.doc</span>
+      <div class="contract-header-controls">
+        <button>_</button>
+        <button>▢</button>
+        <button>✕</button>
+      </div>
+    </div>
+
+    <div class="contract-body">
+      <div class="contract-logo">
+        <span class="big-b">B</span>
+        <span class="corp-text">BAAGLE CORP™</span>
+      </div>
+
+      <div class="contract-title">EMPLOYEE ENROLLMENT AGREEMENT</div>
+      <div class="contract-title" style="font-size:9px; text-decoration:none; color:#888;">
+        Form HR-247 · Revision <span class="redacted">██</span> · Confidential
+      </div>
+
+      <hr class="contract-divider">
+
+      <div class="contract-clause">
+        <span class="clause-num">1.</span>
+        The undersigned (<strong>"Employee"</strong>) agrees to fulfill all tasks assigned by
+        <strong> The Baagle Corporation</strong> without question and within the time frame allocated 
+        with the exception of exceeding <span class="redacted">██</span> minutes.
+      </div>
+
+      <div class="contract-clause">
+        <span class="clause-num">2.</span>
+        Employee acknowledges that their productivity score is <strong>public</strong>,
+        permanent, and <strong>legally binding</strong> for future employment opportunities
+        within the <span class="redacted">████████████</span>.
+      </div>
+
+      <div class="contract-clause">
+        <span class="clause-num">3.</span>
+        Baagle Corp™ reserves the right to monitor, record, summarise, and
+        <strong>monetise</strong> all keystrokes, eye movements, and
+        "spontaneous creative thoughts" generated on company time.
+      </div>
+
+      <div class="contract-clause">
+        <span class="clause-num">4.</span>
+        Employee waives all rights to <span class="redacted">████████</span> lunchtime breaks
+        and the concept of <em>"spending time ordering food"</em> for the duration of employment
+        (see Appendix <span class="redacted">█</span>).
+      </div>
+
+      <div class="contract-clause">
+        <span class="clause-num">5.</span>
+        By signing below, Employee confirms they have read, understood, and
+        deeply <em>loved</em> every clause of this agreement, including those
+        printed in <span style="font-size:7px; color:#ccc;">this font size.</span>
+      </div>
+
+      <div class="fine-print">
+        Baagle Corp™ is not responsible for: existential dread, metric-induced anxiety, spontaneous ranking drops, rogue AI directives, paradoxical task assignments, temporal displacement, sudden restructuring events, or any outcomes arising from signing this document. This agreement is governed by the laws of [JURISDICTION REDACTED] and is enforceable in all districts. Employee acknowledges that "I didn't read it" is not a valid legal defence. Have a productive day! 
+      </div>
+
+      <hr class="contract-divider">
+
+      <div class="signature-area">
+        <div class="sig-line">
+          <span class="sig-label">Employee Signature:</span>
+          <div class="sig-input-wrap">
+            <input type="text" id="sig-input" placeholder="type your name to sign..." autocomplete="off" spellcheck="false">
+          </div>
+        </div>
+        <div class="sig-date" id="sig-date"></div>
+      </div>
+
+    </div>
+
+    <div class="decline-tooltip" id="decline-tooltip"></div>
+
+    <div class="contract-footer">
+      <button class="btn-decline" id="btn-decline">Decline</button>
+      <button class="btn-send" id="btn-send" disabled>✉ Sign & Send</button>
+    </div>
+
+  </div>
+</div>
+<!-- ── END CONTRACT SCREEN ──────────────────────────────── -->
 <body>
 
   <!-- desktop setup with bliss-->
@@ -333,11 +431,12 @@
   <script src="js/taskbar.js"></script> 
   <script src="js/tasks.js"></script>
   <script src="js/desktop.js"></script>
-  <script src="js/explorer.js"></script>
+  <script src="js/explorer.js?v=1"></script>
   <script src="js/tasks.js?v=11"></script>
-  <script src="js/events.js?v=11"></script>
+  <script src="js/events.js?v=12"></script>
   <!--<script src="js/audio.js"></script>-->
-  <script src="js/chatbot.js?v=9"></script>
+  <script src="js/chatbot.js?v=11"></script>
+  <script src="js/contract.js?v=1"></script>
 
 </body>
 </html>
