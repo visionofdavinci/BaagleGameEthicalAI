@@ -152,3 +152,20 @@
     transform: translateY(0);
   }
 }
+
+#baagle-help-btn {
+  background: #1a6bb5;
+  color: white;
+  border: 2px solid #0d4d8a;
+  margin-top: -4px;
+  padding: 6px 18px;
+  font-family: "Tahoma", sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 6px;
+}
+
+#baagle-help-btn:hover {
+  background: #155a9e;
+}

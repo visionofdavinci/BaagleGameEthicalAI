@@ -16,7 +16,7 @@
     #122b72 100%
   );
   border-top: 2px solid #0c48c2;
-  z-index: 9999;
+  z-index: 100;
   font-family: "Tahoma", "Segoe UI", sans-serif;
   font-size: 12px;
   user-select: none;

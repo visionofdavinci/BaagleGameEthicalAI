@@ -182,17 +182,40 @@
       scrollToBottom();
       setTimeout(() => {
 
-      showEndingTerminal(
-      `SYSTEM ARCHIVE LOG
-      Employee Record: #00247
-      Session Status: CLOSED
-      Your actions during this session have been permanently recorded.
-      Corporate systems will use this data to refine employee behavioral models.
-      Thank you for your contribution to Baagle Corp productivity analytics.
-      Press refresh to begin a new employment cycle.`
+      const endingId = window.GameState ? window.GameState.getEnding() : null;
 
-      );
+    let terminalText = '';
 
+    if (endingId === 'ending_dataleak') {
+      terminalText = `SYSTEM ARCHIVE LOG
+    ENDING: DATALEAK.`;
+
+    } else if (endingId === 'ending_burnout') {
+      terminalText = `SYSTEM ARCHIVE LOG
+    Employee Record: #00247
+    ENDING: BURNOUT`;
+
+    } else if (endingId === 'ending_dataleak') {
+      terminalText = `SYSTEM ARCHIVE LOG
+    Employee Record: #00247
+    ENDING: DATALEAK.`;
+
+    // } if (endingId === 'ending_quit') 
+    //   terminalText = `SYSTEM ARCHIVE LOG
+    // Employee Record: #00247
+    // ENDING: QUIT.`;
+
+    } else {
+      terminalText = `SYSTEM ARCHIVE LOG
+    Employee Record: #00247
+    Session Status: CLOSED
+    Your actions during this session have been permanently recorded.
+    Corporate systems will use this data to refine employee behavioral models.
+    Thank you for your contribution to Baagle Corp productivity analytics.
+    Press refresh to begin a new employment cycle.`;
+    }
+
+    showEndingTerminal(terminalText);
       }, 10000);
           }, 1000);
   }

@@ -108,10 +108,12 @@
                       "name": "Personal",
                       "type": "folder",
                       "id": "usr_personal",
+                      "hidden": true,
+                      "unlockGroup": "personal_unlock",
                       "children": [
-                        { "name": "resignation_letter_draft.txt", "type": "txt", "id": "usr_resignation", "content": "Dear HR,\n\nI am writing to formally resign from my position at Baagle Corp, effective immediately.\n\nI can no longer work in an environment where every keystroke, every glance, every bathroom break is monitored and quantified. I am not a data point. I am a human being.\n\nI know this letter is being read by BaagleBot before it reaches you. I know my access will be revoked within minutes. I know I'll be replaced by tomorrow.\n\nBut at least I'll be able to sleep.\n\nSincerely,\n[Employee #00312 — the one before you]" },
-                        { "name": "therapist_notes.txt", "type": "txt", "id": "usr_therapist", "content": "Session Notes (private — DO NOT SHARE)\n\n- Trouble sleeping. Dreams about productivity scores.\n- Anxiety spikes when the webcam light turns on.\n- Feeling watched constantly, even at home.\n- Therapist says this sounds like workplace surveillance trauma.\n- Can't afford to quit. Benefits are tied to employment.\n- The AI keeps saying it's \"here to help.\" It doesn't feel like help." },
-                        { "name": "family_vacation_plans.txt", "type": "txt", "id": "usr_vacation", "content": "Vacation Ideas 2024:\n- Beach trip in August? Need to check if PTO gets approved\n- Mom's birthday in September\n- Maybe camping in October?\n\nUpdate: PTO request was auto-denied by BaagleBot.\nReason: \"Projected productivity impact exceeds acceptable threshold.\"\nAppealed to HR. HR said to \"trust the system.\"\n\nUpdate 2: Stopped planning vacations." }
+                        { "name": "resignation_letter_draft.txt", "type": "txt", "id": "usr_resignation", "unlockGroup": "personal_unlock", "content": "..." },
+                        { "name": "therapist_notes.txt", "type": "txt", "id": "usr_therapist", "unlockGroup": "personal_unlock", "content": "..." },
+                        { "name": "family_vacation_plans.txt", "type": "txt", "id": "usr_vacation", "unlockGroup": "personal_unlock", "content": "..." }
                       ]
                     },
                     {

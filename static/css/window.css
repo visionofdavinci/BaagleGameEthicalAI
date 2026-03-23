@@ -148,3 +148,54 @@
 
 /* utility */
 .hidden {display: none !important;}
+
+#start-screen {
+  position: fixed;
+  inset: 0;
+  background: #fefcf0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.start-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.start-content h1 {
+  display: none; 
+}
+
+.start-logo {
+  width: 420px;
+  max-width: 90vw;
+}
+
+#play-button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 14px 48px;
+  font-size: 18px;
+  font-family: "Tahoma", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 #2e7d32;
+  letter-spacing: 1px;
+  transition: background 0.1s, transform 0.1s, box-shadow 0.1s;
+}
+
+#play-button:hover {
+  background: #43a047;
+}
+
+#play-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #2e7d32;
+}

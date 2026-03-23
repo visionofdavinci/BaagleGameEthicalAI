@@ -5,44 +5,6 @@ console.log("TASKS JS LOADED V10"); //debugging purposes can be deleted after
 const notification = document.getElementById('notification-popup');
 const notifClose = notification ? notification.querySelector('.notification-close') : null;
 
-// array of messages — can rotate or escalate later
-const startMessages = [
-  'Did you need something? Get back to work.',
-  'The Start menu has been disabled for productivity reasons.',
-  'This action has been logged. Your manager has been notified.',
-  'Fun fact: top performers never click Start. Just saying.',
-  'Are you looking for something? I can help — if you get back to your tasks first.',
-];
-
-let messageIndex = 0;
-
-if (startBtn && notification) {
-  startBtn.addEventListener('click', () => {
-    // pick the next message (cycles through them)
-    const body = notification.querySelector('.notification-body p');
-    if (body) body.textContent = startMessages[messageIndex % startMessages.length];
-    messageIndex++;
-
-    // show notification
-    notification.classList.remove('hidden', 'fade-out');
-
-    // auto-dismiss after 5 seconds
-    clearTimeout(notification._timeout);
-    notification._timeout = setTimeout(() => {
-      notification.classList.add('fade-out');
-      setTimeout(() => notification.classList.add('hidden'), 300);
-    }, 5000);
-  });
-
-  // manual close
-  if (notifClose) {
-    notifClose.addEventListener('click', () => {
-      notification.classList.add('fade-out');
-      setTimeout(() => notification.classList.add('hidden'), 300);
-    });
-  }
-}
-
 /* task system — watches for player actions, reports completion to chatbot */
 
 (function () {
@@ -162,22 +124,27 @@ if (startBtn && notification) {
 
   });
 
-  //complete the active task
-  function completeTask() {
+function completeTask() {
+  stopTimer();
+  const completed = activeTask;
+  activeTask = null;
+  taskState = {};
 
-    stopTimer();
+  // Notify chatbot
+  window.dispatchEvent(new CustomEvent('task-completed', {
+    detail: { taskId: completed.id, type: completed.type }
+  }));
 
-    const completed = activeTask;
-
-    activeTask = null;
-    taskState = {};
-
-    // notify chatbot
-    window.dispatchEvent(new CustomEvent('task-completed', {
-      detail: { taskId: completed.id, type: completed.type }
+  // Unlock files AFTER task completes
+  if (completed.id === "read_policy") {
+    window.dispatchEvent(new CustomEvent("unlock-files", {
+      detail: {
+        unlockGroup: "personal_unlock"
+      }
     }));
-
   }
+
+}
 
   function taskFailed() {
   failedTasks++;
