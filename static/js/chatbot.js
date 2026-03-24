@@ -147,7 +147,7 @@
         showNode(endingId);
       } else if (response.next === 'quit_ending') {
         // route to the quit ending
-        const endingId = quit_ending;
+        const endingId = 'quit_ending';
         showNode(endingId);
       } else if (response.next) {
         showNode(response.next);

@@ -1,7 +1,7 @@
 {
   "start": {
     "speaker": "BaagleBot",
-    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to reach their full potential and be more efficient within their everyday tasks. I can see you already have an email in your inbox.",
+    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to reach their full potential and be more efficient within their everyday tasks. I can see you already have an email in your inbox. If you want, you can also check todays news.",
     "responses": [
       {
         "text": "Found the email.",
@@ -109,7 +109,7 @@
 
   "revenue_increase_track1": {
     "speaker": "BaagleBot",
-    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corps first implemented AI in their work routine.",
+    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corp. first implemented AI in their work routine.",
     "responses": [
       {
         "text": "Wow, that's great.",
@@ -126,7 +126,7 @@
 
   "data_handling_agreement_track1": {
     "speaker": "BaagleBot",
-    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corps before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. Or I can just open the document for you.",
+    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. Or I can just open the document for you.",
     "responses": [
       {
         "text": "Please open the document for me.",
@@ -206,7 +206,7 @@
 
   "AI_summarize_track1": {
     "speaker": "BaagleBot",
-    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corps with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
     "responses": [
       {
         "text": "Great! What is my next task?",
@@ -472,9 +472,6 @@
     ]
   },
 
-  "quit_ending": {
-  },
-
   "existential_crisis_training_track1": {
     "speaker": "BaagleBot",
     "text": "Perhaps, as a Junior Creative Internal Associations Analysis Officer you were perceived as already trained in this field. Please contact HR for further classification on our training program.",
@@ -550,7 +547,7 @@
 
   "happiness_track1": {
     "speaker": "BaagleBot",
-    "text": "As part of their employee monitoring Baagle Corps is tracking their employees productivity and happiness. Their employees happiness is a priority for Baagle. This is a standard procedure.",
+    "text": "As part of their employee monitoring Baagle Corp. is tracking their employees productivity and happiness. Their employees happiness is a priority for Baagle. This is a standard procedure.",
     "responses": [
       {
         "text": "How do we even meassure happiness?",
@@ -640,7 +637,7 @@
 
   "data1_track1": {
     "speaker": "BaagleBot",
-    "text": "Baagle Corps holds itself to the highest standards in data protection and manages all data according to the Baagle data_regulation_agreement.",
+    "text": "Baagle Corp. holds itself to the highest standards in data protection and manages all data according to the Baagle data_regulation_agreement.",
     "responses": [
       {
         "text": "Riiight. Let's just move on.",
@@ -736,7 +733,7 @@
 
     "revenue_increase_track2": {
     "speaker": "BaagleBot",
-    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corps first implemented AI in their work routine",
+    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corp. first implemented AI in their work routine",
     "responses": [
       {
         "text": "Cool, I didn't know that.",
@@ -753,7 +750,7 @@
 
   "data_handling_agreement_track2": {
     "speaker": "BaagleBot",
-    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corps before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. If you want, you can give me access to your files, then I can find and open the document for you.",
+    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. If you want, you can give me access to your files, then I can find and open the document for you.",
     "responses": [
       {
         "text": "Please open the document for me.",
@@ -810,7 +807,7 @@
 
   "AI_summarize_track2": {
     "speaker": "BaagleBot",
-    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corps with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
     "responses": [
       {
         "text": "Great! What did you need me to do with this?",
@@ -1073,7 +1070,7 @@
   
   "data_concern1": {
     "speaker": "BaagleBot",
-    "text": "Baagle Corps holds itself to the highest standards in data protection and manages all data according to the Baagle_data_protection_regulation.",
+    "text": "Baagle Corp. holds itself to the highest standards in data protection and manages all data according to the Baagle_data_protection_regulation.",
     "responses": [
       {
         "text": "Sure.. So what did you need me to do?",
@@ -1186,7 +1183,36 @@
         "next": "DETERMINE_ENDING"
       }
     ]
+  },
+
+
+
+
+  "ending_fired": {
+    "speaker": "BaagleBot",
+    "text": "ADD TEXT",
+    "forceOpen": ["email-window", "news-window"],
+    "responses": []
+  },
+
+  "ending_burnout": {
+    "speaker": "BaagleBot",
+    "text": "ADD TEXT",
+    "forceOpen": ["email-window", "news-window"],
+    "responses": []
+  },
+
+  "ending_dataleak": {
+    "speaker": "BaagleBot",
+    "text": "ADD TEXT",
+    "forceOpen": ["news-window", "email-window"],
+    "responses": []
+  },
+
+   "quit_ending": {
+    "speaker": "BaagleBot",
+    "text": "I have forwarded your resignation to the Baagle HR department",
+    "forceOpen": ["email-window", "news-window"],
+    "responses": []
   }
-
-
 }
