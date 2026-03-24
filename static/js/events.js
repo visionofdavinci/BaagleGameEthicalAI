@@ -218,6 +218,49 @@
       setStockPrice(180.50);
     },
 
+    //actually in story
+
+    existential_crisis_quit2_track1: function () {
+      addEmail(
+        'Baagle HR',
+        'PERFORMACE REWARD',
+        '<p><strong>From:</strong> Baagle HR &lt;hr@bmail.com&gt;</p>' +
+        '<p><strong>Subject:</strong> PERFORMACE REWARD</p><hr>' +
+        '<p><strong>Congratulations!</strong></p>' +
+        '<p>For your stellar performace over the last weeks, Baagle would like to reward you.</p>' +
+        '<p>Please accept this 50€ gift card and an invitation to the next company dinner as a sign of our gratitude.</p>' +
+        '<p><strong>PRODUCTIVITY IS A VIRTUE!</strong></p>' +
+        '<p>Kind Regards,</p>' +
+        '<p>Baagle HR Department</p>'
+      );
+    },
+
+    confidentiality2_track1: function () {
+      addEmail(
+        'Baagle HR',
+        'PERFORMACE REWARD',
+        '<p><strong>From:</strong> Baagle HR &lt;hr@bmail.com&gt;</p>' +
+        '<p><strong>Subject:</strong> CONFIDENTIALITY BREACH</p><hr>' +
+        '<p>We have been informed about a confidentiality breach initiated by you. Please consider this a warning and dont ask the AI Chat Bot for employee information again.</p>' +
+        '<p>Remember: <strong>PRODUCTIVITY IS A VIRTUE!</strong></p>' +
+        '<p>Sincerely,</p>' +
+        '<p>Baagle HR Department</p>'
+      );
+    },
+
+    ADD_NAME: function () {
+      addEmail(
+        'Performance Reward',
+        '⚠ COMPLIANCE VIOLATION — Camera Obstruction Detected',
+        '<p><strong>From:</strong> IT Security &lt;security@baaglecorp.com&gt;</p>' +
+        '<p><strong>Subject:</strong> ⚠ COMPLIANCE VIOLATION</p><hr>' +
+        '<p>A compliance violation has been automatically recorded on your account.</p>' +
+        '<p><strong>Violation:</strong> Webcam feed obstruction — 3:35 PM</p>' +
+        '<p><strong>Status:</strong> Escalated to management</p>' +
+        '<p>Further violations may result in disciplinary action.</p>'
+      );
+    },
+
     // endings
 
     ending_fired: function () {
