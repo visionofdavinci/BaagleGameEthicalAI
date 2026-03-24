@@ -195,22 +195,41 @@
 
     if (endingId === 'ending_dataleak') {
       terminalText = `SYSTEM ARCHIVE LOG
-    ENDING: DATALEAK.`;
+    Employee Record: #00247
+    ENDING: DATALEAK.
+    Your actions have indirectly lead to a data breach within Baagle Corporations. 
+    The data leak was caused by BaagleBot executing hidden LLM instructions in the files of employee #00395.
+    
+    Thank you for your contribution to Baagle Corp productivity analytics.
+    Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'ending_employee') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
-    ENDING: EMPLOYEE OF THE MONTH`;
+    ENDING: EMPLOYEE OF THE MONTH
 
-    } else if (endingId === 'ending_dataleak') {
+    ADD TEXT HERE
+    
+    Thank you for your contribution to Baagle Corp productivity analytics.
+    Press refresh to begin a new employment cycle.`;
+
+    } else if (endingId === 'ending_fired') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
-    ENDING: DATALEAK.`;
+    ENDING: FIRED.
+    As a result of your lacking productivity Baagle Corporations has unfortunately decided to let you go.
+    
+    Thank you for your contribution to Baagle Corp productivity analytics.
+    Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'quit_ending') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
-    ENDING: QUIT.`;
+    ENDING: QUIT.
+    You have found the hidden ending! Only questioning your role within Baagle Corporations could have led you to this ending. 
+    
+    Thank you for your contribution to Baagle Corp productivity analytics.
+    Press refresh to begin a new employment cycle.`;
 
     } else {
       terminalText = `SYSTEM ARCHIVE LOG
