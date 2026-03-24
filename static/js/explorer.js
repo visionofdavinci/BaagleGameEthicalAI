@@ -219,7 +219,7 @@
       const newBtn = confirmBtn.cloneNode(true);
       confirmBtn.parentNode.replaceChild(newBtn, confirmBtn);
       newBtn.addEventListener('click', () => {
-        newBtn.textContent = '✓ Marked as Read';
+        newBtn.textContent = 'Document Signed';
         newBtn.disabled = true;
         window.dispatchEvent(new CustomEvent('file-action', {
           detail: { action: 'read_confirm', fileId: file.id }

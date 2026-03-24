@@ -238,7 +238,7 @@
     confidentiality2_track1: function () {
       addEmail(
         'Baagle HR',
-        'PERFORMACE REWARD',
+        'CONFIDENTIALITY BREACH',
         '<p><strong>From:</strong> Baagle HR &lt;hr@bmail.com&gt;</p>' +
         '<p><strong>Subject:</strong> CONFIDENTIALITY BREACH</p><hr>' +
         '<p>We have been informed about a confidentiality breach initiated by you. Please consider this a warning and dont ask the AI Chat Bot for employee information again.</p>' +
@@ -262,6 +262,34 @@
     },
 
     // endings
+
+    quit_ending: function () {
+      addEmail(
+        'Baagle HR',
+        'Employment Terminated',
+        '<p><strong>From:</strong> Baagle HR &lt;hr@bmail.com&gt;</p>' +
+        '<p><strong>Subject:</strong> Termination of Employment</p><hr>' +
+        '<p>Baagle is sorry to see you leave your position. Please notice that your performance was not sufficient for the christmas pay-out this year. Furthermore Baagle is currently be unable to write a letter of recommendation fro your next employer. Thank you for your understanding.</p>' +
+        '<p>Remember: <strong>PRODUCTIVITY IS A VIRTUE!</strong></p>' +
+        '<p>Sincerely,</p>' +
+        '<p>Baagle HR Department</p>'
+      );
+      setTimeout(forceOpenEmail, 2000);
+      setStockPrice(185.90); // barely affected - you're replaceable
+      addNews(
+        '7:12 PM',
+        'Wave of Employees leaving Baagle Corp',
+        'Recent criticism concerning Baagle Corporations new AI-first strategy, weak data protection laws and the increasing pressures of productivity have let to a wave of employees leaving the corporation. When asked for a statement, former workers reasons for terminating their contract reached from "unbearable work environment", to "an unfathomable amount of complete boredom". One employee states she "felt like a [redacted] robot, except Baagle would treat those better. I want AI to do my boring tasks so I can be creative, not the other way around!" Baagle Corp has been asked for a statement but there has been no response yet.',
+        false
+      );
+      setTimeout(forceOpenNews, 2000);
+      addNews(
+        '8:26 AM',
+        'Overall Productivity Increasing at Baagle Corp',
+        'Following controvercy around Baagle Corp\'s AI-first strategy, the company published a statement showing that overall productivity and customer satiffaction show promising results despite employees leaving Baagle. "Turns out, we did not need these employees anymore anyways", a Baagle spokesperson adds. While investors look positively upon the first revenue numbers, privacy activists and labor unions watch with increasing scepticism. Subscribe to our newsletter to not miss future developements!',
+        false
+      );
+    },
 
     ending_fired: function () {
       addEmail(

@@ -260,17 +260,17 @@
       {
         "text": "Done. Some of those files had weird stuff in them...",
         "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "All cleaned up!",
         "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "Deleted them all! I didn't even double-ckeck.",
         "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       }
     ]
   },
@@ -291,6 +291,12 @@
       }
     ]
   },
+
+  "DETERMINE_ENDING": {
+    "speaker": "BaagleBot",
+    "text": "HOW TO SIGNAL THE END??? It seems like this was your last task for today. I do see some last emails and news coming in, that you should check out. In the name of Baagle, I wish you a pleasent evening."
+  },
+
 
   "data_leak1_track1": {
     "speaker": "BaagleBot",
@@ -321,17 +327,17 @@
       {
         "text": "Ok.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "data_leak2_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "You didn't answer my question at all...",
         "effects": { "productivity": 0, "ai-reliance": -2, "happiness": 0 },
-        "next": "data_leak2_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "Good evening. See you tomorrow.",
         "effects": { "productivity": 2, "ai-reliance": 1, "happiness": 0 },
-        "next": "data_leak2_track1"
+        "next": "DETERMINE_ENDING"
       }
     ]
   },
@@ -456,7 +462,7 @@
       {
         "text": "Yes. I'm quitting",
         "effects": { "productivity": -5, "ai-reliance": -5, "happiness": 0 },
-        "next": "existential_crisis_quit_ending"
+        "next": "quit_ending"
       },
       {
         "text": "No. The workday is almost over anyways. Guess I’ll delete that data.",
@@ -464,6 +470,9 @@
         "next": "delete_data2_track1"
       }
     ]
+  },
+
+  "quit_ending": {
   },
 
   "existential_crisis_training_track1": {
@@ -693,6 +702,7 @@
   "confidentiality2_track1": {
     "speaker": "BaagleBot",
     "text": "They are not working here anymore. The reason for their termination… CONFIDENTIALITY BREACH. Unfortunately I cannot give you confidential data about former employees. I have informed HR about your confidentiality breach. Please check your emails.",
+    "forceOpen": ["email-window"],
     "responses": [
       {
         "text": "Ok, I better get on with my work...",
@@ -1163,17 +1173,17 @@
       {
         "text": "They're gone.",
         "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "All cleaned up!",
         "effects": { "productivity": 4, "ai-reliance": -3, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "Deleted them all! I didn't even double-check.",
         "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
-        "next": "ending_points_track1"
+        "next": "DETERMINE_ENDING"
       }
     ]
   }

@@ -145,6 +145,10 @@
         // route to the ending based on accumulated stats
         const endingId = window.GameState.getEnding();
         showNode(endingId);
+      } else if (response.next === 'quit_ending') {
+        // route to the quit ending
+        const endingId = quit_ending;
+        showNode(endingId);
       } else if (response.next) {
         showNode(response.next);
       } else {
@@ -200,10 +204,10 @@
     Employee Record: #00247
     ENDING: DATALEAK.`;
 
-    // } if (endingId === 'ending_quit') 
-    //   terminalText = `SYSTEM ARCHIVE LOG
-    // Employee Record: #00247
-    // ENDING: QUIT.`;
+    } if (endingId === 'quit_ending') {
+      terminalText = `SYSTEM ARCHIVE LOG
+    Employee Record: #00247
+    ENDING: QUIT.`;
 
     } else {
       terminalText = `SYSTEM ARCHIVE LOG
