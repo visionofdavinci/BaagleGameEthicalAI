@@ -1184,21 +1184,21 @@
 
   "ending_fired": {
     "speaker": "BaagleBot",
-    "text": "ADD TEXT",
+    "text": "Your day has been completed.",
     "forceOpen": ["email-window", "news-window"],
     "responses": []
   },
 
-  "ending_burnout": {
+  "ending_employee": {
     "speaker": "BaagleBot",
-    "text": "ADD TEXT",
+    "text": "Your day has been completed.",
     "forceOpen": ["email-window", "news-window"],
     "responses": []
   },
 
   "ending_dataleak": {
     "speaker": "BaagleBot",
-    "text": "Good evening!",
+    "text": "Your day has been completed.",
     "forceOpen": ["news-window", "email-window"],
     "responses": []
   },

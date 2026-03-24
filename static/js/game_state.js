@@ -35,17 +35,16 @@
   function getEnding() {
     console.log('ai_reliance:', state.ai_reliance)
     console.log('productivity:', state.productivity)
-    // priority: data_leak > burnout > fired
-    // if (state.happiness < 15) return 'ending_dataleak';
-    if (state.ai_reliance > 60)    return 'ending_dataleak';
-    if (state.productivity < 35) return 'ending_fired';
+    if (state.ai_reliance > 80)    return 'ending_dataleak';
+    if (state.productivity < 50) return 'ending_fired';
+    return 'ending_employee';
 
     // fallback
     // pick the "closest" bad ending
-    const lowest = Math.min(state.productivity, state.energy, state.happiness);
-    if (lowest === state.happiness)    return 'ending_dataleak';
-    if (lowest === state.ai_reliance)       return 'ending_burnout';
-    return 'ending_fired';
+    //const highest = Math.max(state.productivity, state.ai_reliance);
+    //if (highest === state.productivity)    return 'ending_employee';
+    //if (highest === state.ai_reliance)       return 'ending_dataleak';
+    //return 'ending_fired';
   }
 
   window.GameState = { updateStats, logChoice, getState, getEnding };

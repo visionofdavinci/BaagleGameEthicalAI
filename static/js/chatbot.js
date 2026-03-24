@@ -180,8 +180,7 @@
         '<strong>— SESSION TERMINATED —</strong><br><br>' +
         'Final Employee Metrics:<br>' +
         'Productivity: ' + s.productivity + '/100<br>' +
-        'Energy: ' + s.energy + '/100<br>' +
-        'Happiness: ' + s.happiness + '/100<br><br>' +
+        'AI reliance: ' + s.ai_reliance + '/100<br>' +
         '<em>This data has been permanently filed in your employee record.</em>';
 
       summary.appendChild(label);
@@ -198,17 +197,17 @@
       terminalText = `SYSTEM ARCHIVE LOG
     ENDING: DATALEAK.`;
 
-    } else if (endingId === 'ending_burnout') {
+    } else if (endingId === 'ending_employee') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
-    ENDING: BURNOUT`;
+    ENDING: EMPLOYEE OF THE MONTH`;
 
     } else if (endingId === 'ending_dataleak') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: DATALEAK.`;
 
-    } if (endingId === 'quit_ending') {
+    } else if (endingId === 'quit_ending') {
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: QUIT.`;

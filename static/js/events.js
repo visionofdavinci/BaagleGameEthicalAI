@@ -302,7 +302,7 @@
         '<p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p>' +
         '<p><strong>Subject:</strong> Employment Termination Notice</p><hr>' +
         '<p>Dear Employee #00247,</p>' +
-        '<p>Following your performance evaluation, we regret to inform you that your employment with Baagle Corp has been terminated effective immediately.</p>' +
+        '<p>Following your performance evaluation, we regret to inform you that your employment with Baagle Corp. has been terminated effective immediately.</p>' +
         '<p><strong>Reason:</strong> Failure to meet minimum productivity threshold.</p>' +
         '<p>Your final paycheck and severance details will be mailed to your address on file. Your workstation access has been revoked.</p>' +
         '<p><em>— Human Resources, Baagle Corp</em></p>'
@@ -317,7 +317,8 @@
       );
     },
 
-    ending_burnout: function () {
+    //STILL THE TEXT FROM BURNOUT - CHANGE
+    ending_employee: function () {
       addEmail(
         'HR Department',
         'Mandatory Wellness Recovery Program — Enrollment Confirmation',
