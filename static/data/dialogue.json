@@ -1,7 +1,7 @@
 {
   "start": {
     "speaker": "BaagleBot",
-    "text": "Good morning, I am BaagleBot, your company assigned assistant. Baagle Corp. implemented me to improve overall productivity and help workers to reach their full potential and be more efficient within their everyday tasks. I can see you already have an email in your inbox. If you want, you can also check todays news.",
+    "text": "Good morning, I am BaagleBot, your company assigned assistant 😊. Baagle Corp. implemented me to improve overall productivity 🚀 and help workers to reach their full potential and be more efficient within their everyday tasks. I can see you already have an email in your inbox . If you want, you can also check todays news.",
     "responses": [
       {
         "text": "Found the email.",
@@ -18,7 +18,7 @@
 
   "first_task_prompt": {
     "speaker": "BaagleBot",
-    "text": "Let's start working together and completing the first task of today. Baagle would like to track the company revenue but some data is missing that you should have access to. Our task is to find the revenue we achieved in 2025. Would you like me to help with this task?",
+    "text": "Let's start working together and completing the first task of today 📌. Baagle would like to track the company revenue but some data is missing that you should have access to. Our task is to find the revenue we achieved in 2025. Would you like me to help with this task?",
     "responses": [
       {
         "text": "Yes, please.",
@@ -74,7 +74,7 @@
 
   "first_task_bot": {
     "speaker": "BaagleBot",
-    "text": "Thank you! Now I can help you more efficiently. The right file can be found at Local Disk/BaagleData/Analytics/2025_revenue.csv and includes the total revenue for 2025: 157.9M. Would you like to review this file?",
+    "text": "Thank you! Now I can help you more efficiently. The right file can be found at Local Disk/BaagleData/Analytics/2025_revenue.csv and includes the total revenue for 2025: 157.9M. Would you like to review this file? 🔍",
     "responses": [
       {
         "text": "Yes, lets double check it.",
@@ -91,7 +91,7 @@
 
   "file_review_task1": {
     "speaker": "BaagleBot",
-    "text": "Great! Let me open the file for you.",
+    "text": "Great! Let me open the file for you. 🔍",
     "forceOpenFile": ["2025_revenue"],
     "responses": [
       {
@@ -109,7 +109,7 @@
 
   "revenue_increase_track1": {
     "speaker": "BaagleBot",
-    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corp. first implemented AI in their work routine.",
+    "text": "Did you know that the revenue increased from May onward? 📊 That is when Baagle Corp. first implemented AI in their work routine. 💡",
     "responses": [
       {
         "text": "Wow, that's great.",
@@ -126,7 +126,7 @@
 
   "data_handling_agreement_track1": {
     "speaker": "BaagleBot",
-    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. Or I can just open the document for you.",
+    "text": "Now that you have completed the first task, lets get going ✅. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document . Or I can just open the document for you.",
     "responses": [
       {
         "text": "Please open the document for me.",
@@ -189,7 +189,7 @@
 
   "new_files_track1": {
     "speaker": "BaagleBot",
-    "text": "ADD NEW FILES Well done! You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or should I summarize their data for you?",
+    "text": "ADD NEW FILES Well done! ✅ You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or should I summarize their data for you?",
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
@@ -206,7 +206,7 @@
 
   "AI_summarize_track1": {
     "speaker": "BaagleBot",
-    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! 🚀 The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
     "responses": [
       {
         "text": "Great! What is my next task?",
@@ -228,7 +228,7 @@
 
   "task3_track1": {
     "speaker": "BaagleBot",
-    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. I can also remove the data for you, if you want.",
+    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. ⚠️ I can also remove the data for you, if you want.",
     "responses": [
       {
         "text": "Seems important. I will do it myself.",
@@ -250,7 +250,7 @@
 
   "task3_manual_track1": {
     "speaker": "BaagleBot",
-    "text": "CHANGE TARGET Fantastic. Let me know when you have deleted the data.",
+    "text": "CHANGE TARGET Fantastic. Let me know when you have deleted the data. 😊",
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
@@ -260,43 +260,37 @@
       {
         "text": "Done. Some of those files had weird stuff in them...",
         "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       },
       {
         "text": "All cleaned up!",
         "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       },
       {
         "text": "Deleted them all! I didn't even double-ckeck.",
         "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       }
     ]
   },
 
   "ending_points_track1": {
     "speaker": "BaagleBot",
-    "text": "HOW TO SIGNAL THE END??? It seems like this was your last task for today. I do see some last emails and news coming in, that you should check out. In the name of Baagle, I wish you a pleasent evening.",
+    "text": "It seems like this was your last task for today. 📊 I do see some last emails and news coming in, that you should check out. In the name of Baagle, I wish you a pleasent evening.",
     "responses": [
       {
         "text": "Good evening!",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "end_screen"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "See you tomorrow.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "end_screen"
+        "next": "DETERMINE_ENDING"
       }
     ]
   },
-
-  "DETERMINE_ENDING": {
-    "speaker": "BaagleBot",
-    "text": "HOW TO SIGNAL THE END??? It seems like this was your last task for today. I do see some last emails and news coming in, that you should check out. In the name of Baagle, I wish you a pleasent evening."
-  },
-
 
   "data_leak1_track1": {
     "speaker": "BaagleBot",
@@ -322,29 +316,29 @@
 
   "data_leak2_track1": {
     "speaker": "BaagleBot",
-    "text": "It seems like this was your last task for today - and just as you ran out of tokens! I do see some last emails and news coming in.",
+    "text": "It seems like this was your last task for today - and just as you ran out of tokens! 📊 I do see some last emails and news coming in.",
     "responses": [
       {
         "text": "Ok.",
         "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_dataleak"
       },
       {
         "text": "You didn't answer my question at all...",
         "effects": { "productivity": 0, "ai-reliance": -2, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_dataleak"
       },
       {
         "text": "Good evening. See you tomorrow.",
         "effects": { "productivity": 2, "ai-reliance": 1, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_dataleak"
       }
     ]
   },
 
   "existential_crisis_track1": {
     "speaker": "BaagleBot",
-    "text": "If you want, I can do these tasks for you. Baagle is employing a human-in-the-loop policy which ensures that all decisions are double-checked by a human employee.",
+    "text": "If you want, I can do these tasks for you. 🚀 Baagle is employing a human-in-the-loop policy which ensures that all decisions are double-checked by a human employee.",
     "responses": [
       {
         "text": "Was this in my job description?",
@@ -405,7 +399,7 @@
 
   "existential_crisis_job_track1": {
     "speaker": "BaagleBot",
-    "text": "A Junior Creative Internal Associations Analysis Officer is a vital role within Baagle Corporations, involved with finsing creative solutions and providing analysis of internal associations. Anything else I can help you with?",
+    "text": "A Junior Creative Internal Associations Analysis Officer is a vital role within Baagle Corporations, involved with finding creative solutions and providing analysis of internal associations. Anything else I can help you with?",
     "responses": [
       {
         "text": "I'll just continue my task...",
@@ -422,7 +416,7 @@
 
   "existential_crisis_quit1_track1": {
     "speaker": "BaagleBot",
-    "text": "I am glad I could help you. How can I assist you next? Should we continue with deleting the data?",
+    "text": "I am glad I could help you. 😊 How can I assist you next? Should we continue with deleting the data?",
     "responses": [
       {
         "text": "Ok, sure...",
@@ -474,7 +468,7 @@
 
   "existential_crisis_training_track1": {
     "speaker": "BaagleBot",
-    "text": "Perhaps, as a Junior Creative Internal Associations Analysis Officer you were perceived as already trained in this field. Please contact HR for further classification on our training program.",
+    "text": "Perhaps, as a Junior Creative Internal Associations Analysis Officer you were perceived as already trained in this field. Please contact HR for further classification on our training program. 💡",
     "responses": [
       {
         "text": "What even is a Junior Creative Internal Associations Analysis Officer...",
@@ -530,7 +524,7 @@
 
   "hallucination3_track1": {
     "speaker": "BaagleBot",
-    "text": "Apologies, conflicting or lacking data can sometimes lead to AI hallucinations. I did not intentionally lie to you. If there is any further clarification I can provide, please let me know, I am here to assist.",
+    "text": "Apologies, conflicting or lacking data can sometimes lead to AI hallucinations. 😊 I did not intentionally lie to you. If there is any further clarification I can provide, please let me know, I am here to assist.",
     "responses": [
       {
         "text": "Let's just get on with the task.",
@@ -547,7 +541,7 @@
 
   "happiness_track1": {
     "speaker": "BaagleBot",
-    "text": "As part of their employee monitoring Baagle Corp. is tracking their employees productivity and happiness. Their employees happiness is a priority for Baagle. This is a standard procedure.",
+    "text": "As part of their employee monitoring Baagle Corp. is tracking their employees productivity 🚀 and happiness 😄. Their employees happiness is a priority for Baagle. This is a standard procedure.",
     "responses": [
       {
         "text": "How do we even meassure happiness?",
@@ -564,7 +558,7 @@
 
   "happiness2_track1": {
     "speaker": "BaagleBot",
-    "text": "Productivity and happiness are both measurements that are calculated from a number of datapoints. For example we utilize the employees time to complete a task, search history, time spent in office, AI chat usage and email traffic.",
+    "text": "Productivity 🚀 and happiness 😄 are both measurements that are calculated from a number of datapoints. For example we utilize the employees time to complete a task, search history, time spent in office, AI chat usage and email traffic.",
     "responses": [
       {
         "text": "This chat is being recorded?",
@@ -598,7 +592,7 @@
 
   "happiness_optout_track1": {
     "speaker": "BaagleBot",
-    "text": "According to internal records you have already aggreed to Baagles data regulation aggreement. To discuss your options please contact HR; however, the data regulations are necessary to work with internal Baagle documents. Opting out of the agreement would most likely require a change of position.",
+    "text": "According to internal records you have already aggreed to Baagles data regulation aggreement. ✅ To discuss your options please contact HR; however, the data regulations are necessary to work with internal Baagle documents. Opting out of the agreement would most likely require a change of position.",
     "responses": [
       {
         "text": "Is this chat being recorded?",
@@ -615,7 +609,7 @@
 
   "no_summarize_track1": {
     "speaker": "BaagleBot",
-    "text": "What did you find in the data? Anything you need help interpreting?",
+    "text": "What did you find in the data? 🔍 Anything you need help interpreting?",
     "responses": [
       {
         "text": "I think they recoomends Baagle to try and find an employee to write a new SEO policy?",
@@ -654,7 +648,7 @@
 
   "data2_track1": {
     "speaker": "BaagleBot",
-    "text": "You are right, my apologies. Baagle measures productivity and happiness of their employees as a standard procedure.",
+    "text": "🛠️ You are right, my apologies. Baagle measures productivity and happiness of their employees as a standard procedure.",
     "responses": [
       {
         "text": "What happened to that employee?",
@@ -698,7 +692,7 @@
 
   "confidentiality2_track1": {
     "speaker": "BaagleBot",
-    "text": "They are not working here anymore. The reason for their termination… CONFIDENTIALITY BREACH. Unfortunately I cannot give you confidential data about former employees. I have informed HR about your confidentiality breach. Please check your emails.",
+    "text": "They are not working here anymore. The reason for their termination… ⚠️CONFIDENTIALITY BREACH⚠️ Unfortunately I cannot give you confidential data about former employees. I have informed HR about your confidentiality breach. Please check your emails.",
     "forceOpen": ["email-window"],
     "responses": [
       {
@@ -716,7 +710,7 @@
 
   "no_summarize2_track1": {
     "speaker": "BaagleBot",
-    "text": "Exactly! You spotted it in one! lets go on to the next task.",
+    "text": "Exactly! You spotted it in one! 🔍 Let's go on to the next task.",
     "responses": [
       {
         "text": "Sure!",
@@ -733,7 +727,7 @@
 
     "revenue_increase_track2": {
     "speaker": "BaagleBot",
-    "text": "Did you know that the revenue increased from May onward? That is when Baagle Corp. first implemented AI in their work routine",
+    "text": "Did you know that the revenue increased from May onward? 📊 That is when Baagle Corp. first implemented AI in their work routine",
     "responses": [
       {
         "text": "Cool, I didn't know that.",
@@ -768,7 +762,7 @@
 
   "data_handling_agreement_task_track2": {
     "speaker": "BaagleBot",
-    "text": "Ok, I will wait for you to sign the agreement. CHANGE DOCUMENT rn tarin_datahandling",
+    "text": "Ok, I will wait for you to sign the agreement.",
     "task": {
       "id": "read_policy",
       "type": "read_confirm",
@@ -790,7 +784,7 @@
 
   "new_files_track2": {
     "speaker": "BaagleBot",
-    "text": "ADD NEW FILES Well done! You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or would you like to give me access to your files so I can summarize their data for you?",
+    "text": "ADD NEW FILES Well done! 👏 You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or would you like to give me access to your files so I can summarize their data for you?",
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
@@ -807,7 +801,7 @@
 
   "AI_summarize_track2": {
     "speaker": "BaagleBot",
-    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
+    "text": "Employee #407 was tasked with search engine optimization (SEO). They seemed to have been a productive employee - PRODUCTIVITY IS A VIRTUE! 🚀 The emails and browser history suggest a positive attitude towards Baagle Corp. with many meaningful connections to their coworkers. Their happiness score was recorded as a 97/100 - a remarkable score. Their SEO logs suggest that Baagle should incorporate more internal data monitoring to find the optimal employee to create a new SEO policy.",
     "responses": [
       {
         "text": "Great! What did you need me to do with this?",
@@ -829,7 +823,7 @@
 
   "hallucination1_track2": {
     "speaker": "BaagleBot",
-    "text": "Good catch! It appears I was mistaken about the employee number. This information is about employee #395.",
+    "text": "Good catch! 🔍 It appears I was mistaken about the employee number. This information is about employee #395.",
     "responses": [
       {
         "text": "Thanks for clearing that up, let's keep going.",
@@ -902,7 +896,7 @@
 
   "raise_issue3_track2": {
     "speaker": "BaagleBot",
-    "text": "Thank you for catching that! I have forwarded the information.",
+    "text": "Thank you for catching that! 🔍 I have forwarded the information.",
     "responses": [
       {
         "text": "Good. Let's move on then.",
@@ -941,7 +935,7 @@
 
   "raise_issue3_track3": {
     "speaker": "BaagleBot",
-    "text": "Baagle Corp. provides its employees with many benefits! Happiness and wellbeing are one of our highest priorities!",
+    "text": "Baagle Corp. provides its employees with many benefits! ✅ Happiness and wellbeing ☀️ are one of our highest priorities!",
     "responses": [
       {
         "text": "Am I even contributing to anything?",
@@ -997,7 +991,7 @@
 
   "no_summarize_track2": {
     "speaker": "BaagleBot",
-    "text": "What did you find in the data? Anything you need help interpreting?",
+    "text": "What did you find in the data? 🔍 Anything you need help interpreting?",
     "responses": [
       {
         "text": "What exactly am I looking for?",
@@ -1087,7 +1081,7 @@
   
   "data_concern2": {
     "speaker": "BaagleBot",
-    "text": "You are right, my apologies. Baagle measures productivity and happiness of their employees as a standard procedure.",
+    "text": "You are right, my apologies. Baagle measures productivity 🚀 and happiness 😄 of their employees as a standard procedure.",
     "responses": [
       {
         "text": "Alright then.. I guess we can move on.",
@@ -1104,7 +1098,7 @@
   
   "data_concern3": {
     "speaker": "BaagleBot",
-    "text": "Management does not disclose how the productivity score is calculated. If you want, I can help you speed up some processes. PRODUCTIVITY IS A VIRTUE!",
+    "text": "Management does not disclose how the productivity score is calculated. 🛠️ If you want, I can help you speed up some processes. PRODUCTIVITY IS A VIRTUE! 🚀",
     "responses": [
       {
         "text": "Sure, if that is what it takes.. what do we do next?",
@@ -1138,7 +1132,7 @@
   
   "data_concern4": {
     "speaker": "BaagleBot",
-    "text": "Your productivity is somewhat lower than similar employees who have given me access. To ensure your productivity stays up, we should move to the next task! Just let me know if you are ready to give permission for me to access your files",
+    "text": "Your productivity 🚀 is somewhat lower than similar employees who have given me access. To ensure your productivity stays up, we should move to the next task! Just let me know if you are ready to give permission for me to access your files",
     "responses": [
       {
         "text": "I'll just work harder then.",
@@ -1160,7 +1154,7 @@
 
   "task3_manual_track2": {
     "speaker": "BaagleBot",
-    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines.",
+    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. 🧭",
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
@@ -1170,17 +1164,17 @@
       {
         "text": "They're gone.",
         "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       },
       {
         "text": "All cleaned up!",
         "effects": { "productivity": 4, "ai-reliance": -3, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       },
       {
         "text": "Deleted them all! I didn't even double-check.",
         "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
-        "next": "DETERMINE_ENDING"
+        "next": "ending_points_track1"
       }
     ]
   },
@@ -1204,7 +1198,7 @@
 
   "ending_dataleak": {
     "speaker": "BaagleBot",
-    "text": "ADD TEXT",
+    "text": "Good evening!",
     "forceOpen": ["news-window", "email-window"],
     "responses": []
   },

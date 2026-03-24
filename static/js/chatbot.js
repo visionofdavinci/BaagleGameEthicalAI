@@ -141,7 +141,7 @@
       responsesEl.innerHTML = '';
 
       // advance to next node or end
-      if (response.next === 'DETERMINE_ENDING') {
+      if (response.next === 'DETERMINE_ENDING' || response.next === 'ending_dataleak') {
         // route to the ending based on accumulated stats
         const endingId = window.GameState.getEnding();
         showNode(endingId);
@@ -149,6 +149,10 @@
         // route to the quit ending
         const endingId = 'quit_ending';
         showNode(endingId);
+      //} else if (response.next === 'ending_dataleak') {
+        // route to the quit ending
+        //const endingId = 'ending_dataleak';
+        //showNode(endingId);
       } else if (response.next) {
         showNode(response.next);
       } else {

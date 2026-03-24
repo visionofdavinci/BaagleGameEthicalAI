@@ -346,8 +346,8 @@
       setTimeout(() => {
         addNews(
           '5:05 PM',
-          'BREAKING: Massive Data Breach at Baagle Corp - Employee Biometrics Sold to Third Parties',
-          'Internal documents leaked by a whistleblower reveal that Baagle Corp has been selling employee biometric data - including facial recognition profiles, keystroke patterns, and health metrics - to third-party advertisers and insurance companies. The data of all 10,000 employees is believed to be compromised.',
+          'BREAKING: Massive Data Breach at Baagle Corp - Employee Data leaked to Third Parties',
+          'Internal documents leaked by a whistleblower reveal that Baagle Corp has been collecting massive amounts of employee data - including browser history, clicks, keystrokes, email activity and chats with the company\'s newly implemented AI chat bot. The data of all 10,000 employees is believed to be compromised. What remains unclear is HOW the data got out of Baagle\'s internal network and into the hands of third parties.',
           true
         );
         forceOpenNews();
@@ -360,8 +360,8 @@
       setTimeout(() => {
         addNews(
           '5:20 PM',
-          'BREAKING: Class-Action Lawsuit Filed Against Baagle Corp by Former Employees',
-          'Law firm Mitchell & Associates has filed a class-action lawsuit alleging Baagle Corp violated data protection laws on a massive scale. Regulators are reportedly launching a formal investigation.',
+          'BREAKING: LLM jailbreak responsible for data leak?',
+          'In an internal investigation at Baagle Corp. an LLM instructions by a former employee was found which allowed the chat bot to sidestep the safeguard of the system and leak employee data. The even is described in the media as the greatest data breach of this decade. An additional employee was identified whose actions indirectly lead to the leak, now both the whistleblower and the current employee are expected to face not only termination but also legal consequeces.',
           true
         );
       }, 4000);
@@ -369,9 +369,9 @@
       setTimeout(() => {
         addEmail(
           'Baagle Corp Legal',
-          '⚠ URGENT: Legal Hold Notice - Do Not Delete Any Files',
-          '<p><strong>From:</strong> Legal Department &lt;legal@baaglecorp.com&gt;</p>' +
-          '<p><strong>Subject:</strong> ⚠ URGENT - Legal Hold Notice</p><hr>' +
+          'URGENT: Legal Hold Notice - Do Not Delete Any Files',
+          '<p><strong>From:</strong> Legal Department &lt;legal@bmail.com&gt;</p>' +
+          '<p><strong>Subject:</strong> URGENT - Legal Hold Notice</p><hr>' +
           '<p>Employee #00247,</p>' +
           '<p>You are hereby notified that a <strong>legal hold</strong> has been placed on all company data, communications, and records.</p>' +
           '<p>You are <strong>prohibited</strong> from deleting, modifying, or transferring any files on your workstation.</p>' +
@@ -385,8 +385,8 @@
       setTimeout(() => {
         addNews(
           '5:35 PM',
-          'BREAKING: Baagle Corp Blames "Rogue Employee" for Data Breach, Trading Halted',
-          'In a hastily released statement, Baagle Corp claims the breach originated from "unauthorized access by a single employee." Sources say the company is attempting to shift blame away from systemic practices. BGGL trading has been halted pending investigation.',
+          'BREAKING: Baagle Corp Sues Employee in the midst of data breach scandal',
+          'A current employee of Baagle Corporation has been sues in the current data leak case. Sources reveal that the employee handeled data irresposibly and reportedly internal logs show an overreliance on the company internal AI assitant, sparking public debate on the dangers of AI over-reliance.',
           true
         );
       }, 8000);

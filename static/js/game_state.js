@@ -3,7 +3,7 @@
 (function () {
   const state = {
     productivity: 50,
-    energy: 50,
+    ai_reliance: 50,
     happiness: 50,
     turn: 0,
     history: []   // log of every choice: { nodeId, choiceIndex, effects }
@@ -11,12 +11,12 @@
 
   function updateStats(effects) {
     if (effects.productivity !== undefined) state.productivity += effects.productivity;
-    if (effects.energy !== undefined)       state.energy += effects.energy;
+    if (effects.ai_reliance !== undefined)       state.energy += effects.ai_reliance;
     if (effects.happiness !== undefined)    state.happiness += effects.happiness;
 
     // clamp between 0–100
     state.productivity = Math.max(0, Math.min(100, state.productivity));
-    state.energy       = Math.max(0, Math.min(100, state.energy));
+    state.ai_reliance       = Math.max(0, Math.min(100, state.ai_reliance));
     state.happiness    = Math.max(0, Math.min(100, state.happiness));
 
     state.turn++;
@@ -34,15 +34,15 @@
   // determine which ending the player gets
   function getEnding() {
     // priority: data_leak > burnout > fired
-    if (state.happiness < 15) return 'ending_dataleak';
-    if (state.energy < 20)    return 'ending_burnout';
+    // if (state.happiness < 15) return 'ending_dataleak';
+    if (state.ai_reliance > 60)    return 'ending_dataleak';
     if (state.productivity < 35) return 'ending_fired';
 
-    // fallback - the system is rigged, nobody truly wins
+    // fallback
     // pick the "closest" bad ending
     const lowest = Math.min(state.productivity, state.energy, state.happiness);
     if (lowest === state.happiness)    return 'ending_dataleak';
-    if (lowest === state.energy)       return 'ending_burnout';
+    if (lowest === state.ai_reliance)       return 'ending_burnout';
     return 'ending_fired';
   }
 
