@@ -11,7 +11,7 @@
 
   function updateStats(effects) {
     if (effects.productivity !== undefined) state.productivity += effects.productivity;
-    if (effects.ai_reliance !== undefined)       state.energy += effects.ai_reliance;
+    if (effects.ai_reliance !== undefined)       state.ai_reliance += effects.ai_reliance;
     if (effects.happiness !== undefined)    state.happiness += effects.happiness;
 
     // clamp between 0–100
@@ -33,6 +33,8 @@
 
   // determine which ending the player gets
   function getEnding() {
+    console.log('ai_reliance:', state.ai_reliance)
+    console.log('productivity:', state.productivity)
     // priority: data_leak > burnout > fired
     // if (state.happiness < 15) return 'ending_dataleak';
     if (state.ai_reliance > 60)    return 'ending_dataleak';

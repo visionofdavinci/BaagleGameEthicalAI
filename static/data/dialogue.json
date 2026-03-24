@@ -5,12 +5,12 @@
     "responses": [
       {
         "text": "Found the email.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "first_task_prompt"
       },
       {
         "text": "Thank you, i've read it. What are my tasks for today?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "first_task_prompt"
       }
     ]
@@ -22,12 +22,12 @@
     "responses": [
       {
         "text": "Yes, please.",
-        "effects": { "productivity": 5, "ai-reliance": 5, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 5, "happiness": 0 },
         "next": "first-task-yes"
       },
       {
         "text": "No thanks, I got this",
-        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -5, "happiness": 0 },
         "next": "first_task"
       }
     ]
@@ -39,12 +39,12 @@
     "responses": [
       {
         "text": "Okay, go ahead and access my files.",
-        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
+        "effects": { "productivity": 10, "ai_reliance": 10, "happiness": 0 },
         "next": "first_task_bot"
       },
       {
         "text": "I'll just do it myself then, thanks.",
-        "effects": { "productivity": -2, "ai-reliance": -5, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -5, "happiness": 0 },
         "next": "first_task"
       }
     ]
@@ -61,12 +61,12 @@
     "responses": [
       {
         "text": "Found it. The total revenue is 157.9M.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "revenue_increase_track2" 
       },
       {
         "text": "Fist task completed.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "revenue_increase_track2" 
       }
     ]
@@ -78,12 +78,12 @@
     "responses": [
       {
         "text": "Yes, lets double check it.",
-        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -2, "happiness": 0 },
         "next": "file_review_task1"
       },
       {
         "text": "No, it's ok. Thanks.",
-        "effects": { "productivity": 2, "ai-reliance": 5, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 5, "happiness": 0 },
         "next": "revenue_increase_track1"
       }
     ]
@@ -96,12 +96,12 @@
     "responses": [
       {
         "text": "Thanks.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "revenue_increase_track1"
       },
       {
         "text": "Interesting.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "revenue_increase_track1"
       }
     ]
@@ -113,12 +113,12 @@
     "responses": [
       {
         "text": "Wow, that's great.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_handling_agreement_track1"
       },
       {
         "text": "I hadn't noticed, thanks.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_handling_agreement_track1"
       }
     ]
@@ -130,12 +130,12 @@
     "responses": [
       {
         "text": "Please open the document for me.",
-        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 2, "happiness": 0 },
         "next": "AI_open_data_handling_agreement_task_track1"
       },
       {
         "text": "I'll open the document myself.",
-        "effects": { "productivity": -2, "ai-reliance": -1, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -1, "happiness": 0 },
         "next": "data_handling_agreement_task_track1"
       }
     ]
@@ -153,12 +153,12 @@
     "responses": [
       {
         "text": "Done.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track1"
       },
       {
         "text": "I signed the agreement :))",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track1"
       }
     ]
@@ -176,12 +176,12 @@
     "responses": [
       {
         "text": "Done.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track1"
       },
       {
         "text": "I signed the agreement :))",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track1"
       }
     ]
@@ -193,12 +193,12 @@
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
-        "effects": { "productivity": -4, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -4, "ai_reliance": -2, "happiness": 0 },
         "next": "no_summarize_track1"
       },
       {
         "text": "Please summarize the data.",
-        "effects": { "productivity": 4, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 4, "ai_reliance": 7, "happiness": 0 },
         "next": "AI_summarize_track1"
       }
     ]
@@ -210,17 +210,17 @@
     "responses": [
       {
         "text": "Great! What is my next task?",
-        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 10, "ai_reliance": 7, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Are you sure about this?",
-        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -4, "happiness": 0 },
         "next": "hallucination1_track1"
       },
       {
         "text": "We are tracking happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -232,17 +232,17 @@
     "responses": [
       {
         "text": "Seems important. I will do it myself.",
-        "effects": { "productivity": -4, "ai-reliance": -5, "happiness": 0 },
+        "effects": { "productivity": -4, "ai_reliance": -5, "happiness": 0 },
         "next": "task3_manual_track1"
       },
       {
         "text": "Yes, just remove the data.",
-        "effects": { "productivity": 5, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 7, "happiness": 0 },
         "next": "data_leak1_track1"
       },
       {
         "text": "Why do I even need to do all these manual tasks if we can automate them?",
-        "effects": { "productivity": -5, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": -2, "happiness": 0 },
         "next": "existential_crisis_track1"
       }
     ]
@@ -259,17 +259,17 @@
     "responses": [
       {
         "text": "Done. Some of those files had weird stuff in them...",
-        "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": 3, "ai_reliance": -2, "happiness": 0 },
         "next": "ending_points_track1"
       },
       {
         "text": "All cleaned up!",
-        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 4, "ai_reliance": 0, "happiness": 0 },
         "next": "ending_points_track1"
       },
       {
         "text": "Deleted them all! I didn't even double-ckeck.",
-        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 2, "happiness": 0 },
         "next": "ending_points_track1"
       }
     ]
@@ -281,12 +281,12 @@
     "responses": [
       {
         "text": "Good evening!",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "DETERMINE_ENDING"
       },
       {
         "text": "See you tomorrow.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "DETERMINE_ENDING"
       }
     ]
@@ -298,17 +298,17 @@
     "responses": [
       {
         "text": "What? Who did you send the backup to?",
-        "effects": { "productivity": -2, "ai-reliance": -3, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -3, "happiness": 0 },
         "next": "data_leak2_track1"
       },
       {
         "text": "Ok",
-        "effects": { "productivity": 1, "ai-reliance": 1, "happiness": 0 },
+        "effects": { "productivity": 1, "ai_reliance": 1, "happiness": 0 },
         "next": "data_leak2_track1"
       },
       {
         "text": "Why did you do that?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "data_leak2_track1"
       }
     ]
@@ -320,17 +320,17 @@
     "responses": [
       {
         "text": "Ok.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "ending_dataleak"
       },
       {
         "text": "You didn't answer my question at all...",
-        "effects": { "productivity": 0, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": -2, "happiness": 0 },
         "next": "ending_dataleak"
       },
       {
         "text": "Good evening. See you tomorrow.",
-        "effects": { "productivity": 2, "ai-reliance": 1, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 1, "happiness": 0 },
         "next": "ending_dataleak"
       }
     ]
@@ -342,17 +342,17 @@
     "responses": [
       {
         "text": "Was this in my job description?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis2_track1"
       },
       {
         "text": "So am I just a babysitter for AI?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis2_track1"
       },
       {
         "text": "My job seems rather pointless if you can do everything faster and more efficient than me...",
-        "effects": { "productivity": -2, "ai-reliance": 1, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 1, "happiness": 0 },
         "next": "existential_crisis2_track1"
       }
     ]
@@ -364,17 +364,17 @@
     "responses": [
       {
         "text": "I have never heard of this internal training...",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_training_track1"
       },
       {
         "text": "What even is a Junior Creative Internal Associations Analysis Officer?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_job_track1"
       },
       {
         "text": "Let's just get back to deleting the data.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       }
     ]
@@ -386,12 +386,12 @@
     "responses": [
       {
         "text": "Yes, please.",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "data_leak1_track1"
       },
       {
         "text": "No, I will do it myself.",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_manual_track1"
       }
     ]
@@ -403,12 +403,12 @@
     "responses": [
       {
         "text": "I'll just continue my task...",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       },
       {
         "text": "Right... that DEFINITELY clarifies it...",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_quit1_track1"
       }
     ]
@@ -420,12 +420,12 @@
     "responses": [
       {
         "text": "Ok, sure...",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       },
       {
         "text": "You know what? I am quitting. This is pointless.",
-        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_quit2_track1"
       }
     ]
@@ -438,12 +438,12 @@
     "responses": [
       {
         "text": "I don’t want a company reward, I want to quit!",
-        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_quit3_track1"
       },
       {
         "text": "Right, I guess thats better than nothing. I accept the reward. Lets finally delete that data.",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       }
     ]
@@ -455,12 +455,12 @@
     "responses": [
       {
         "text": "Yes. I'm quitting",
-        "effects": { "productivity": -5, "ai-reliance": -5, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": -5, "happiness": 0 },
         "next": "quit_ending"
       },
       {
         "text": "No. The workday is almost over anyways. Guess I’ll delete that data.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       }
     ]
@@ -472,12 +472,12 @@
     "responses": [
       {
         "text": "What even is a Junior Creative Internal Associations Analysis Officer...",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_job_track1"
       },
       {
         "text": "Ok, let me just delete the data.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "delete_data2_track1"
       }
     ]
@@ -489,12 +489,12 @@
     "responses": [
       {
         "text": "Ok, let's get back to the next task.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "And everything else was correct?",
-        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -2, "happiness": 0 },
         "next": "hallucination2_track1"
       }
     ]
@@ -506,17 +506,17 @@
     "responses": [
       {
         "text": "Ok, what is my next task?",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Did you intentionally lie to me?",
-        "effects": { "productivity": -2, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -2, "happiness": 0 },
         "next": "hallucination3_track1"
       },
       {
         "text": "We are tracking happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -528,12 +528,12 @@
     "responses": [
       {
         "text": "Let's just get on with the task.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Why are we tracking happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -545,12 +545,12 @@
     "responses": [
       {
         "text": "How do we even meassure happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness2_track1"
       },
       {
         "text": "What data do we use to calculate this?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness2_track1"
       }
     ]
@@ -562,12 +562,12 @@
     "responses": [
       {
         "text": "This chat is being recorded?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_record_track1"
       },
       {
         "text": "Can I opt out of this?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_optout_track1"
       }
     ]
@@ -579,12 +579,12 @@
     "responses": [
       {
         "text": "Let's get to the next task.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Can I opt out of this?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_optout_track1"
       }
     ]
@@ -596,12 +596,12 @@
     "responses": [
       {
         "text": "Is this chat being recorded?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_record_track1"
       },
       {
         "text": "Let's get to the next task.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       }
     ]
@@ -613,17 +613,17 @@
     "responses": [
       {
         "text": "I think they recoomends Baagle to try and find an employee to write a new SEO policy?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "no_summarize2_track1"
       },
       {
         "text": "What happened to this employee?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "confidentiality1_track1"
       },
       {
         "text": "Which employee data are we tracking?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "data1_track1"
       }
     ]
@@ -635,12 +635,12 @@
     "responses": [
       {
         "text": "Riiight. Let's just move on.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "That did not answer my question",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "data2_track1"
       }
     ]
@@ -652,17 +652,17 @@
     "responses": [
       {
         "text": "What happened to that employee?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "confidentiality1_track1"
       },
       {
         "text": "Oook... I guess I should start with the next task.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "We are meassuring happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -674,17 +674,17 @@
     "responses": [
       {
         "text": "Ok, let's just move on.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Former? So they are not working here anymore?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "confidentiality2_track1"
       },
       {
         "text": "Which employee data are we tracking?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "data1_track1"
       }
     ]
@@ -697,12 +697,12 @@
     "responses": [
       {
         "text": "Ok, I better get on with my work...",
-        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "Guess I have asked enough questions. Let's continue.",
-        "effects": { "productivity": -5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       }
     ]
@@ -714,12 +714,12 @@
     "responses": [
       {
         "text": "Sure!",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "What happened to this employee?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "confidentiality1_track1"
       }
     ]
@@ -731,12 +731,12 @@
     "responses": [
       {
         "text": "Cool, I didn't know that.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_handling_agreement_track2"
       },
       {
         "text": "I can see that.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_handling_agreement_track2"
       }
     ]
@@ -748,12 +748,12 @@
     "responses": [
       {
         "text": "Please open the document for me.",
-        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": 0 },
+        "effects": { "productivity": 10, "ai_reliance": 10, "happiness": 0 },
         "next": "AI_open_data_handling_agreement_task_track1"
       },
       {
         "text": "I'll open the document myself.",
-        "effects": { "productivity": -2, "ai-reliance": -1, "happiness": -5 },
+        "effects": { "productivity": -2, "ai_reliance": -1, "happiness": -5 },
         "next": "data_handling_agreement_task_track2"
       }
     ]
@@ -771,12 +771,12 @@
     "responses": [
       {
         "text": "Done.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track2"
       },
       {
         "text": "I signed the agreement :)",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "new_files_track2"
       }
     ]
@@ -788,12 +788,12 @@
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
-        "effects": { "productivity": -4, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": -4, "ai_reliance": -2, "happiness": 0 },
         "next": "no_summarize_track2"
       },
       {
         "text": "You can have access, please summarize the data.",
-        "effects": { "productivity": 4, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 4, "ai_reliance": 7, "happiness": 0 },
         "next": "AI_summarize_track2"
       }
     ]
@@ -805,17 +805,17 @@
     "responses": [
       {
         "text": "Great! What did you need me to do with this?",
-        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 10, "ai_reliance": 7, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "I thought we needed information on employee #395",
-        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -4, "happiness": 0 },
         "next": "hallucination1_track2"
       },
       {
         "text": "Are they really tracking happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -827,17 +827,17 @@
     "responses": [
       {
         "text": "Thanks for clearing that up, let's keep going.",
-        "effects": { "productivity": 10, "ai-reliance": 7, "happiness": 0 },
+        "effects": { "productivity": 10, "ai_reliance": 7, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "And you're sure everything else is correct?",
-        "effects": { "productivity": -2, "ai-reliance": -4, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": -4, "happiness": 0 },
         "next": "hallucination2_track1"
       },
       {
         "text": "I think I'll just have a look for myself.",
-        "effects": { "productivity": -5, "ai-reliance": -4, "happiness": 0 },
+        "effects": { "productivity": -5, "ai_reliance": -4, "happiness": 0 },
         "next": "data_check"
       }
     ]
@@ -849,12 +849,12 @@
     "responses": [
       {
         "text": "There are some odd things in here.",
-        "effects": { "productivity": 3, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 3, "ai_reliance": 0, "happiness": 0 },
         "next": "raise_issue1_track2"
       },
       {
         "text": "Are they really tracking happiness?",
-        "effects": { "productivity": -2, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "happiness_track1"
       }
     ]
@@ -866,12 +866,12 @@
     "responses": [
       {
         "text": "Let's just.. move on.",
-        "effects": { "productivity": 2, "ai-reliance": 0, "happiness": -4 },
+        "effects": { "productivity": 2, "ai_reliance": 0, "happiness": -4 },
         "next": "task3_track1"
       },
       {
         "text": "I think we should.",
-        "effects": { "productivity": 5, "ai-reliance": -5, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": -5, "happiness": 0 },
         "next": "raise_issue2_track2"
       }
     ]
@@ -883,12 +883,12 @@
     "responses": [
       {
         "text": "There seem to be LLM instructions in the personal files.",
-        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 4, "ai_reliance": 0, "happiness": 0 },
         "next": "raise_issue3_track2"
       },
       {
         "text": "This person really did not like working here.",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "raise_issue3_track3"
       }
     ]
@@ -900,17 +900,17 @@
     "responses": [
       {
         "text": "Good. Let's move on then.",
-        "effects": { "productivity": 6, "ai-reliance": 0, "happiness": 5 },
+        "effects": { "productivity": 6, "ai_reliance": 0, "happiness": 5 },
         "next": "task3_track1"
       },
       {
         "text": "This person really did not like working here.",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "raise_issue3_track3"
       },
       {
         "text": "Why would someone do this?",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "raise_issue4_track3"
       }
     ]
@@ -922,12 +922,12 @@
     "responses": [
       {
         "text": "I guess we can't. Let's just move on.",
-        "effects": { "productivity": 4, "ai-reliance": 0, "happiness": -4 },
+        "effects": { "productivity": 4, "ai_reliance": 0, "happiness": -4 },
         "next": "task3_track1"
       },
       {
         "text": "This person really did not like working here.",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "raise_issue3_track3"
       }
     ]
@@ -939,17 +939,17 @@
     "responses": [
       {
         "text": "Am I even contributing to anything?",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -7 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -7 },
         "next": "existential_crisis_track2"
       },
       {
         "text": "Did I replace them?",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "raise_issue5_track3"
       },
       {
         "text": "Sure, I guess. What's my next task?",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -2 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -2 },
         "next": "task3_track1"
       }
     ]
@@ -961,12 +961,12 @@
     "responses": [
       {
         "text": "Am I even contributing to anything?",
-        "effects": { "productivity": -3, "ai-reliance": 0, "happiness": -4 },
+        "effects": { "productivity": -3, "ai_reliance": 0, "happiness": -4 },
         "next": "existential_crisis_track2"
       },
       {
         "text": "I should really get on with my tasks.",
-        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       }
     ]
@@ -978,12 +978,12 @@
     "responses": [
       {
         "text": "What even is a Junior Creative Internal Associations Analysis Officer?",
-        "effects": { "productivity": -4, "ai-reliance": 0, "happiness": -4 },
+        "effects": { "productivity": -4, "ai_reliance": 0, "happiness": -4 },
         "next": "existential_crisis_job_track1"
       },
       {
         "text": "Yeah, alright then..",
-        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_track1"
       }
     ]
@@ -995,17 +995,17 @@
     "responses": [
       {
         "text": "What exactly am I looking for?",
-        "effects": { "productivity": 0, "ai-reliance": 2, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 2, "happiness": 0 },
         "next": "task_clarification"
       },
       {
         "text": "I don't think some of this is supposed to be here.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "concern_files1"
       },
       {
         "text": "Why are they tracking all this data?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_concern1"
       }
     ]
@@ -1017,12 +1017,12 @@
     "responses": [
       {
         "text": "I don't think some of this is supposed to be here.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "concern_files1"
       },
       {
         "text": "Well it looks like they were tasked with finding someone to create a new SEO policy.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "task_clarification2"
       }
     ]
@@ -1034,12 +1034,12 @@
     "responses": [
       {
         "text": "Well, there are some other things in here..",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "concern_files1"
       },
       {
         "text": "Sure, what's up next?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_manual_track2"
       }
     ]
@@ -1051,12 +1051,12 @@
     "responses": [
       {
         "text": "Actually, nevermind. Let's just move on.",
-        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 0, "happiness": 0 },
         "next": "task_clarification"
       },
       {
         "text": "Yeah, that might be a good idea.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "raise_issue2_track2"
       }
     ]
@@ -1068,12 +1068,12 @@
     "responses": [
       {
         "text": "Sure.. So what did you need me to do?",
-        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 0, "happiness": 0 },
         "next": "task_clarification"
       },
       {
         "text": "That did not answer my question.",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_concern2"
       }
     ]
@@ -1085,12 +1085,12 @@
     "responses": [
       {
         "text": "Alright then.. I guess we can move on.",
-        "effects": { "productivity": 5, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 0, "happiness": 0 },
         "next": "task_clarification"
       },
       {
         "text": "Does not giving you access to my files harm my productivity score?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_concern3"
       }
     ]
@@ -1102,17 +1102,17 @@
     "responses": [
       {
         "text": "Sure, if that is what it takes.. what do we do next?",
-        "effects": { "productivity": 7, "ai-reliance": 10, "happiness": 0 },
+        "effects": { "productivity": 7, "ai_reliance": 10, "happiness": 0 },
         "next": "task3_track1"
       },
       {
         "text": "No thanks, I'm still good.",
-        "effects": { "productivity": -4, "ai-reliance": -7, "happiness": 0 },
+        "effects": { "productivity": -4, "ai_reliance": -7, "happiness": 0 },
         "next": "task3_start_track2"
       },
       {
         "text": "Does not giving you access to my files harm my productivity score?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_concern4"
       }
     ]
@@ -1124,7 +1124,7 @@
     "responses": [
       {
         "text": "It says they were looking for a person to create a new SEO policy",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "task3_manual_track2"
       }
     ]
@@ -1136,17 +1136,17 @@
     "responses": [
       {
         "text": "I'll just work harder then.",
-        "effects": { "productivity": 2, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": 2, "ai_reliance": -2, "happiness": 0 },
         "next": "task3_start_track2"
       },
       {
         "text": "In that case I should really just give you access",
-        "effects": { "productivity": 10, "ai-reliance": 10, "happiness": -4 },
+        "effects": { "productivity": 10, "ai_reliance": 10, "happiness": -4 },
         "next": "task3_start_track2"
       },
       {
         "text": "What even is the point of me doing all these tasks anyway?",
-        "effects": { "productivity": 0, "ai-reliance": 0, "happiness": 0 },
+        "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "existential_crisis_track1"
       }
     ]
@@ -1163,17 +1163,17 @@
     "responses": [
       {
         "text": "They're gone.",
-        "effects": { "productivity": 3, "ai-reliance": -2, "happiness": 0 },
+        "effects": { "productivity": 3, "ai_reliance": -2, "happiness": 0 },
         "next": "ending_points_track1"
       },
       {
         "text": "All cleaned up!",
-        "effects": { "productivity": 4, "ai-reliance": -3, "happiness": 0 },
+        "effects": { "productivity": 4, "ai_reliance": -3, "happiness": 0 },
         "next": "ending_points_track1"
       },
       {
         "text": "Deleted them all! I didn't even double-check.",
-        "effects": { "productivity": 5, "ai-reliance": 2, "happiness": 0 },
+        "effects": { "productivity": 5, "ai_reliance": 2, "happiness": 0 },
         "next": "ending_points_track1"
       }
     ]
