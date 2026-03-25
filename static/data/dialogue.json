@@ -455,6 +455,7 @@
     "responses": [
       {
         "text": "Yes. I'm quitting",
+        "quit": true,
         "effects": { "productivity": -5, "ai_reliance": -5, "happiness": 0 },
         "next": "quit_ending"
       },

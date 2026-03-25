@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/window.css">
   <link rel="stylesheet" href="css/chatbot.css">
   <link rel="stylesheet" href="css/contract.css">
+  <link rel="stylesheet" href="css/terminal.css">
 </head>
 
 <div id="start-screen">
@@ -406,7 +407,7 @@
   <!-- task countdown timer -->
   <div id="task-timer"></div>
  
-  <div id="ending-terminal" style="
+  <!--<div id="ending-terminal" style="
   position: fixed;
   top: 0;
   left: 0;
@@ -419,9 +420,12 @@
   display: none;
   z-index: 99999;
   overflow-y: auto;
-  ">
+  "> -->
 
-  <div id="terminal-text"></div>
+  <div id="ending-terminal">
+    <div id="terminal-header"></div>
+    <div id="terminal-text"></div>
+</div>
 
   </div>
   <!--scripts-->
@@ -431,10 +435,10 @@
   <script src="js/tasks.js"></script>
   <script src="js/desktop.js"></script>
   <script src="js/explorer.js?v=1"></script>
-  <script src="js/tasks.js?v=11"></script>
+  <script src="js/tasks.js?v=12"></script>
   <script src="js/events.js?v=12"></script>
   <!--<script src="js/audio.js"></script>-->
-  <script src="js/chatbot.js?v=11"></script>
+  <script src="js/chatbot.js?v=18"></script>
   <script src="js/contract.js?v=1"></script>
 
 </body>
