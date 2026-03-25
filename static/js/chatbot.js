@@ -310,7 +310,7 @@
       const assistedResponses = [{
         text: "Thanks for handling that.",
         effects: node.responses[0].effects,
-        next: node.responses[0].next
+        next: node.task.aiNext
       }];
 
       showResponses(assistedResponses);
