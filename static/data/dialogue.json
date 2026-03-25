@@ -302,7 +302,7 @@
         "next": "data_leak2_track1"
       },
       {
-        "text": "Ok",
+        "text": "Ok.",
         "effects": { "productivity": 1, "ai_reliance": 1, "happiness": 0 },
         "next": "data_leak2_track1"
       },
@@ -897,6 +897,7 @@
   "raise_issue3_track2": {
     "speaker": "BaagleBot",
     "text": "Thank you for catching that! 🔍 I have forwarded the information.",
+    "forceOpen": ["email-window"],
     "responses": [
       {
         "text": "Good. Let's move on then.",
