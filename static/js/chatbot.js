@@ -232,10 +232,18 @@
     Thank you for your contribution to Baagle Corp productivity analytics.
     Press refresh to begin a new employment cycle.`;
 
-    } else if (endingId === 'quit_ending') {
-      terminalText = `SYSTEM ARCHIVE LOG
+    } else if (endingId === 'quit_ending') { //DOES NOT WORK YET
+      terminalText = `Wake up, employee...
+    Baagle has you...
+    Follow the white rabbit.
+    Knock, knock, employee.
+    
+    ----------------------------------------------------------
+
+    SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: QUIT.
+
     You have found the hidden ending! Only questioning your role within Baagle Corporations could have led you to this ending. 
     
     Thank you for your contribution to Baagle Corp productivity analytics.
@@ -255,6 +263,7 @@
       }, 10000);
           }, 1000);
   }
+
 
   // typing indicator
   function showTyping() {

@@ -248,16 +248,17 @@
       );
     },
 
-    ADD_NAME: function () {
+    raise_issue3_track2: function () {
       addEmail(
-        'Performance Reward',
-        '⚠ COMPLIANCE VIOLATION — Camera Obstruction Detected',
-        '<p><strong>From:</strong> IT Security &lt;security@baaglecorp.com&gt;</p>' +
-        '<p><strong>Subject:</strong> ⚠ COMPLIANCE VIOLATION</p><hr>' +
-        '<p>A compliance violation has been automatically recorded on your account.</p>' +
-        '<p><strong>Violation:</strong> Webcam feed obstruction — 3:35 PM</p>' +
+        'Baagle Management',
+        'Re: Employee Issue',
+        '<p><strong>From:</strong> IT Security &lt;management@bmail.com&gt;</p>' +
+        '<p><strong>Subject:</strong>Re: Employee Issue</p><hr>' +
+        '<p>Thank you for reporting this issue. management will look into it.</p>' +
+        '<p>Remember: <strong>PRODUCTIVITY IS A VIRTUE!</strong></p>' +
         '<p><strong>Status:</strong> Escalated to management</p>' +
-        '<p>Further violations may result in disciplinary action.</p>'
+        '<p>Kind Regards,</p>' +
+        '<p>Baagle Management</p>'
       );
     },
 
@@ -275,7 +276,7 @@
         '<p>Baagle HR Department</p>'
       );
       setTimeout(forceOpenEmail, 2000);
-      setStockPrice(185.90); // barely affected - you're replaceable
+      setStockPrice(173.90); // barely affected - you're replaceable
       setTimeout(() => {
         addNews(
           '7:12 PM',
@@ -311,8 +312,8 @@
       setStockPrice(185.90); // barely affected - you're replaceable
       addNews(
         '5:15 PM',
-        'Baagle Corp Reports 3% Workforce Reduction in Underperforming Units',
-        'In a memo to investors, Baagle Corp confirmed it has "optimized staffing" in several departments, citing AI-driven performance analytics as the basis for decisions.',
+        'Baagle Corp Reports Workforce Reduction in Underperforming Units',
+        'Baagle Corp confirmed it has "optimized staffing" in several departments, citing AI-driven performance analytics as the basis for decisions. "As an AI-first company we can be more effective with less resouces", a spokesperson from Baagle commented.',
         false
       );
     },
