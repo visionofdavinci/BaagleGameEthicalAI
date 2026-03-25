@@ -35,9 +35,9 @@
   function getEnding() {
     console.log('ai_reliance:', state.ai_reliance)
     console.log('productivity:', state.productivity)
-    if (state.ai_reliance > 80)    return 'ending_dataleak';
-    if (state.productivity < 50) return 'ending_fired';
-    return 'ending_employee';
+    if (state.ai_reliance > 75)    return 'ending_dataleak';
+    else if (state.productivity < 50) return 'ending_fired';
+    else return 'ending_employee';
 
     // fallback
     // pick the "closest" bad ending
