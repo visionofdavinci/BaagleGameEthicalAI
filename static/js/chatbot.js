@@ -197,9 +197,11 @@
       terminalText = `SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: DATALEAK.
+
     Your actions have indirectly lead to a data breach within Baagle Corporations. 
     The data leak was caused by BaagleBot executing hidden LLM instructions in the files of employee #00395.
     
+    To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
     Press refresh to begin a new employment cycle.`;
 
@@ -210,6 +212,7 @@
 
     ADD TEXT HERE
     
+    To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
     Press refresh to begin a new employment cycle.`;
 
@@ -219,6 +222,7 @@
     ENDING: FIRED.
     As a result of your lacking productivity Baagle Corporations has unfortunately decided to let you go.
     
+    To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
     Press refresh to begin a new employment cycle.`;
 
