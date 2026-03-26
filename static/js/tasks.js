@@ -21,7 +21,7 @@ const notifClose = notification ? notification.querySelector('.notification-clos
     taskState = {};
     
     // starts the timer (KEPT IT 30 SECONDS FOR NOW)
-    startTimer(30);
+    startTimer(20);
 
     if (task.type === 'delete_files') {
       taskState.deleted = 0;

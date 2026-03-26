@@ -127,7 +127,7 @@
 
   "data_handling_agreement_track1": {
     "speaker": "BaagleBot",
-    "text": "Now that you have completed the first task, lets get going ✅. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document . Or I can just open the document for you.",
+    "text": "Now that you have completed the first task, lets get going ✅. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_procedures.doc file and sign the document . Or I can just open the document for you.",
     "responses": [
       {
         "text": "Please open the document for me.",
@@ -749,7 +749,7 @@
 
   "data_handling_agreement_track2": {
     "speaker": "BaagleBot",
-    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_agreement.doc file and sign the document. If you want, you can give me access to your files, then I can find and open the document for you.",
+    "text": "Now that you have completed the first task, lets get going. We just need you to sign the data handling agreement of Baagle Corp. before we can let you handle critical files. Please find the data_handling_procedures.doc file and sign the document. If you want, you can give me access to your files, then I can find and open the document for you.",
     "responses": [
       {
         "text": "Please open the document for me.",
