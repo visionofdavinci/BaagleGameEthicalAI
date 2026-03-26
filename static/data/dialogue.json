@@ -257,7 +257,7 @@
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
-      "count": 8,
+      "count": 15,
       "aiNext": "data_leak1_track1"
     },
     "responses": [
@@ -1165,7 +1165,7 @@
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
-      "count": 8,
+      "count": 15,
       "aiNext": "data_leak1_track1"
     },
     "responses": [
