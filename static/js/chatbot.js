@@ -218,7 +218,9 @@
     Employee Record: #00247
     ENDING: EMPLOYEE OF THE MONTH
 
-    ADD TEXT HERE
+    Your hard work and responsibility have lead you to become employee of the month!
+    Unfortunately, many of your coworkers got fired due to a lack of productivity. 
+    Management keeps expecting more output, and you're constantly double checking the AI output to ensure it is behaving right.
     
     Thank you for your contribution to Baagle Corp productivity analytics.
     Press refresh to begin a new employment cycle.`;
