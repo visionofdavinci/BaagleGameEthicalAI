@@ -204,7 +204,7 @@
     let terminalText = '';
 
     if (endingId === 'ending_dataleak') {
-      terminalText = `SYSTEM ARCHIVE LOG
+      terminalText = `    SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: DATALEAK.
 
@@ -216,7 +216,7 @@
     Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'ending_employee') {
-      terminalText = `SYSTEM ARCHIVE LOG
+      terminalText = `    SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: EMPLOYEE OF THE MONTH
 
@@ -229,7 +229,7 @@
     Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'ending_fired') {
-      terminalText = `SYSTEM ARCHIVE LOG
+      terminalText = `    SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: FIRED.
     As a result of your lacking productivity Baagle Corporations has unfortunately decided to let you go.
@@ -239,7 +239,7 @@
     Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'quit_ending') { //DOES NOT WORK YET
-      terminalText = `SYSTEM ARCHIVE LOG
+      terminalText = `    SYSTEM ARCHIVE LOG
     Wake up, employee...
     Baagle has you...
     Follow the white rabbit.
