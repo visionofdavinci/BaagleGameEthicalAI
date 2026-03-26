@@ -210,6 +210,8 @@
 
     Your actions have indirectly lead to a data breach within Baagle Corporations. 
     The data leak was caused by BaagleBot executing hidden LLM instructions in the files of employee #00395.
+
+    While this was not directly your fault, due to unclear boundaries and a responsiblity gap, the company decided to punish one employee rather than rework the system.
     
     To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
@@ -223,6 +225,9 @@
     Your hard work and responsibility have lead you to become employee of the month!
     Unfortunately, many of your coworkers got fired due to a lack of productivity. 
     Management keeps expecting more output, and you're constantly double checking the AI output to ensure it is behaving right.
+
+    Management at Baagle has put too much trust in the chatbot, and pressured the employee into signing consent forms that were too complex to easily comprehend.
+    This pressure can lead to negative effects on employees, often increasing stress symptoms.
     
     To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
@@ -233,6 +238,9 @@
     Employee Record: #00247
     ENDING: FIRED.
     As a result of your lacking productivity Baagle Corporations has unfortunately decided to let you go.
+
+    Management at Baagle has put too much trust in the chatbot, which pressures the employees into trusting the AI chatbot without proper supervision, or face consequences.
+    This pressure can lead to negative effects on employees, often increasing stress symptoms.
     
     To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
