@@ -239,14 +239,14 @@
     Press refresh to begin a new employment cycle.`;
 
     } else if (endingId === 'quit_ending') { //DOES NOT WORK YET
-      terminalText = `Wake up, employee...
+      terminalText = `SYSTEM ARCHIVE LOG
+    Wake up, employee...
     Baagle has you...
     Follow the white rabbit.
     Knock, knock, employee.
     
     ----------------------------------------------------------
 
-    SYSTEM ARCHIVE LOG
     Employee Record: #00247
     ENDING: QUIT.
 
