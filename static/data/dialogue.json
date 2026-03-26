@@ -231,7 +231,7 @@
 
   "task3_track1": {
     "speaker": "BaagleBot",
-    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. All files in the work related temp folder should be deleted. ⚠️ I can also remove the data for you, if you want.",
+    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. All files in the work related temp folder (Local Disc > Users > Employee395 > Documents > Work > Temp) should be deleted. ⚠️ I can also remove the data for you, if you want.",
     "responses": [
       {
         "text": "Seems important. I will do it myself.",
@@ -1161,7 +1161,7 @@
 
   "task3_manual_track2": {
     "speaker": "BaagleBot",
-    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. 🧭 All files in the work related temp folder should be deleted.",
+    "text": "Now that we have have sighted the data of the employee, I have informed corporate and HR that we are searching for a new employee to finish our new SEO policy. A lot of the data of the employee has become obsolete. Please delete the employee data to comply with the GDPR and internal Baagle guidelines. 🧭 All files in the work related temp folder (Local Disc > Users > Employee395 > Documents > Work > Temp) should be deleted.",
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
