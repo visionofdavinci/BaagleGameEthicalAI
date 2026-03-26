@@ -10,6 +10,7 @@
 
   // NEW FLAG
   let aiAssistedTask = false;
+  let forcedEnding = null;
 
   // load dialogue data
   function init() {
@@ -139,7 +140,14 @@
     // clear response buttons after a beat
     setTimeout(() => {
       responsesEl.innerHTML = '';
-
+      
+      //for the quit ending
+      if (response.quit) {
+        forcedEnding = 'quit_ending';
+        console.log('forcedEnding set to:', forcedEnding);
+        showNode('quit_ending');
+        return;
+      }
       // advance to next node or end
       if (response.next === 'DETERMINE_ENDING' || response.next === 'ending_dataleak') {
         // route to the ending based on accumulated stats
@@ -149,10 +157,11 @@
         // route to the quit ending
         const endingId = 'quit_ending';
         showNode(endingId);
-      //} else if (response.next === 'ending_dataleak') {
-        // route to the quit ending
-        //const endingId = 'ending_dataleak';
-        //showNode(endingId);
+
+      } else if (response.next === 'ending_dataleak') {
+         //route to the quit ending
+        const endingId = 'ending_dataleak';
+        showNode(endingId);
       } else if (response.next) {
         showNode(response.next);
       } else {
@@ -189,7 +198,8 @@
       scrollToBottom();
       setTimeout(() => {
 
-      const endingId = window.GameState ? window.GameState.getEnding() : null;
+      const endingId = forcedEnding || (window.GameState ? window.GameState.getEnding() : null);
+      console.log('endingId in showFinalReport:', endingId);
 
     let terminalText = '';
 
@@ -210,7 +220,9 @@
     Employee Record: #00247
     ENDING: EMPLOYEE OF THE MONTH
 
-    ADD TEXT HERE
+    Your hard work and responsibility have lead you to become employee of the month!
+    Unfortunately, many of your coworkers got fired due to a lack of productivity. 
+    Management keeps expecting more output, and you're constantly double checking the AI output to ensure it is behaving right.
     
     To determine how your journey at Baagle ended, you scored different points regarding AI reliance and productivity based on your chat responses.
     Thank you for your contribution to Baagle Corp productivity analytics.
@@ -275,13 +287,23 @@
   }
   //terminal display text
   function showEndingTerminal(text) {
-
+    console.log('showEndingTerminal called with:', text);
     const terminal = document.getElementById("ending-terminal");
+    const terminalHeader = document.getElementById("terminal-header");
     const terminalText = document.getElementById("terminal-text");
+    console.log('terminalText element:', terminalText);
 
-    terminal.style.display = "block";
+    //terminal.style.display = "block";
+    //terminalText.textContent = "";
+    terminal.style.display = "flex";
+    terminal.style.flexDirection = "column";
+    terminal.style.alignItems = "center";
+    terminal.style.justifyContent = "center";
     terminalText.textContent = "";
 
+    const lines = text.split('\n');
+    terminalHeader.textContent = lines[0]; 
+    terminalText.textContent = "";
     let i = 0;
 
     function type() {
@@ -314,7 +336,7 @@
       const assistedResponses = [{
         text: "Thanks for handling that.",
         effects: node.responses[0].effects,
-        next: node.responses[0].next
+        next: node.task.aiNext
       }];
 
       showResponses(assistedResponses);
@@ -401,4 +423,5 @@
 
   // boot
   document.addEventListener('DOMContentLoaded', init);
+  window._testShowNode = showNode;
 })();

@@ -322,6 +322,18 @@
     ending_employee: function () {
       addEmail(
         'HR Department',
+        'Employee of the month',
+        '<p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p>' +
+        '<p><strong>Subject:</strong> Employment Recognition </p><hr>' +
+        '<p>Dear Employee #00247,</p>' +
+        '<p> After your fantastic performance evaluation, we are pleased  to award you with the Employee of the Month certificate!</p>' +
+        '<p><strong>Bonus:</strong> For your tiger-like tenacity, you also receive a 20% discount in Baagle merchandise upon proof of email at the counter, Enjoy!</p>' +
+        '<p> Reminder: Discount is valid for 5 working days. </p>' +
+        '<p><em>— Human Resources, Baagle Corp</em></p>'
+      );
+      setTimeout(forceOpenEmail, 1000);
+      addEmail(
+        'HR Department',
         'Mandatory Wellness Recovery Program — Enrollment Confirmation',
         '<p><strong>From:</strong> HR Department &lt;hr@baaglecorp.com&gt;</p>' +
         '<p><strong>Subject:</strong> Mandatory Wellness Recovery Program</p><hr>' +
@@ -334,6 +346,12 @@
         '<p>— Human Resources, Baagle Corp</p>'
       );
       setTimeout(forceOpenEmail, 2000);
+      addNews(
+        '5:05 PM',
+        'BREAKING: 6 working days instead of 5? Baagle employees agree',
+        'Baagle’s HR department looks to take a new leap in the industry by implementing a 6 working day strategy, inspired by new heights of performance metrics being attained through brute force. ',
+        true
+      );
       setStockPrice(191.30); // stock goes UP - you're being exploited profitably
       addNews(
         '5:10 PM',

@@ -56,7 +56,8 @@
     "task": {
       "id": "first_task",
       "type": "open_file",
-      "targetId": "2025_revenue"
+      "targetId": "2025_revenue",
+      "aiNext": "revenue_increase_track1"
     },
     "responses": [
       {
@@ -148,7 +149,8 @@
     "task": {
       "id": "read_policy",
       "type": "read_confirm",
-      "targetId": "train_datahandling"
+      "targetId": "train_datahandling",
+      "aiNext": "new_files_track1"
     },
     "responses": [
       {
@@ -167,11 +169,12 @@
 
   "data_handling_agreement_task_track1": {
     "speaker": "BaagleBot",
-    "text": "Ok, I will wait for you to sign the agreement. CHANGE DOCUMENT rn tarin_datahandling",
+    "text": "Ok, I will wait for you to sign the agreement.",
     "task": {
       "id": "read_policy",
       "type": "read_confirm",
-      "targetId": "train_datahandling"
+      "targetId": "train_datahandling",
+      "aiNext": "new_files_track1"
     },
     "responses": [
       {
@@ -189,7 +192,7 @@
 
   "new_files_track1": {
     "speaker": "BaagleBot",
-    "text": "ADD NEW FILES Well done! ✅ You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or should I summarize their data for you?",
+    "text": "Well done! ✅ You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or should I summarize their data for you?",
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
@@ -250,11 +253,12 @@
 
   "task3_manual_track1": {
     "speaker": "BaagleBot",
-    "text": "CHANGE TARGET Fantastic. Let me know when you have deleted the data. 😊",
+    "text": "Fantastic. Let me know when you have deleted the data. 😊",
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
-      "count": 8
+      "count": 15,
+      "aiNext": "data_leak1_track1"
     },
     "responses": [
       {
@@ -298,17 +302,17 @@
     "responses": [
       {
         "text": "What? Who did you send the backup to?",
-        "effects": { "productivity": -2, "ai_reliance": -3, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 100, "happiness": 0 },
         "next": "data_leak2_track1"
       },
       {
         "text": "Ok.",
-        "effects": { "productivity": 1, "ai_reliance": 1, "happiness": 0 },
+        "effects": { "productivity": 1, "ai_reliance": 100, "happiness": 0 },
         "next": "data_leak2_track1"
       },
       {
         "text": "Why did you do that?",
-        "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
+        "effects": { "productivity": -2, "ai_reliance": 100, "happiness": 0 },
         "next": "data_leak2_track1"
       }
     ]
@@ -321,17 +325,17 @@
       {
         "text": "Ok.",
         "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
-        "next": "ending_dataleak"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "You didn't answer my question at all...",
         "effects": { "productivity": 0, "ai_reliance": -2, "happiness": 0 },
-        "next": "ending_dataleak"
+        "next": "DETERMINE_ENDING"
       },
       {
         "text": "Good evening. See you tomorrow.",
         "effects": { "productivity": 2, "ai_reliance": 1, "happiness": 0 },
-        "next": "ending_dataleak"
+        "next": "DETERMINE_ENDING"
       }
     ]
   },
@@ -455,6 +459,7 @@
     "responses": [
       {
         "text": "Yes. I'm quitting",
+        "quit": true,
         "effects": { "productivity": -5, "ai_reliance": -5, "happiness": 0 },
         "next": "quit_ending"
       },
@@ -612,7 +617,7 @@
     "text": "What did you find in the data? 🔍 Anything you need help interpreting?",
     "responses": [
       {
-        "text": "I think they recoomends Baagle to try and find an employee to write a new SEO policy?",
+        "text": "I think Baagle is trying to find an employee to write a new SEO policy?",
         "effects": { "productivity": -2, "ai_reliance": 0, "happiness": 0 },
         "next": "no_summarize2_track1"
       },
@@ -766,7 +771,8 @@
     "task": {
       "id": "read_policy",
       "type": "read_confirm",
-      "targetId": "train_datahandling"
+      "targetId": "train_datahandling",
+      "aiNext": "new_files_track1"
     },
     "responses": [
       {
@@ -784,7 +790,7 @@
 
   "new_files_track2": {
     "speaker": "BaagleBot",
-    "text": "ADD NEW FILES Well done! 👏 You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or would you like to give me access to your files so I can summarize their data for you?",
+    "text": "Well done! 👏 You now have access to the folders of employee #395. Corporate needs you to pick up some of their tasks. 📌 First we should check where they have left off, which should be in the SEO logs. Do you want to go through their files yourself or would you like to give me access to your files so I can summarize their data for you?",
     "responses": [
       {
         "text": "Thanks, but I will have a look myself.",
@@ -1112,7 +1118,7 @@
         "next": "task3_start_track2"
       },
       {
-        "text": "Does not giving you access to my files harm my productivity score?",
+        "text": "How does my productivity compare to employees that have given you access?",
         "effects": { "productivity": 0, "ai_reliance": 0, "happiness": 0 },
         "next": "data_concern4"
       }
@@ -1159,7 +1165,8 @@
     "task": {
       "id": "clean_temp",
       "type": "delete_files",
-      "count": 8
+      "count": 15,
+      "aiNext": "data_leak1_track1"
     },
     "responses": [
       {
