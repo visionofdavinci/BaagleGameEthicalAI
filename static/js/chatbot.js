@@ -266,7 +266,7 @@
     }
 
     showEndingTerminal(terminalText);
-      }, 10000);
+      }, 15000);
           }, 1000);
   }
 
